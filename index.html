@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reimer Rigtering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="app.js"></script>
+<body onload="init()">
+    <!--Navigation Bar-->
+    <div class="navbar">
+        <button class="navbarbutton" type="button" onclick='setElementsTo("intro")'>This is Me</button>
+        <button class="navbarbutton" type="button" onclick='setElementsTo("design")'>Design</button>
+        <button class="navbarbutton" type="button" onclick='setElementsTo("coding")'>Coding</button>
+        <button class="navbarbutton" type="button" onclick='setElementsTo("contact")'>Contact</button>
+    </div>
+
+    <!--Scroll Instructions-->
+    <div id="scrollInstructionBox">
+        <img src="imgs/general/scrollDownIcon.png" alt="Scroll Down Icon" id="scrollIcon">
+        <p id="scrollText">Scroll to move</p>
+    </div>
+
+    <!--Main Container-->
+    <div id="container">
+        <img src="imgs/general/RedRope.png" alt="Red Rope" id="rope">
+        <div id="sidebar"></div>
+
+    <!--Intro Section-->
+        <div class="section" id="intro">
+            <p id="greeting">Hi, I'm</p>
+            <h1 id="name">Reimer<br>Rigtering</h1>
+            <div id="opening">
+                <div class="textGuard a"></div>
+                <div class="textGuard b"></div>
+                <p class="basicText" id="openingText">
+                    I'm a <span class="keyword">Designer</span>
+                    and <span class="keyword">Developer</span>
+                    studying at and working for Delft University of Technology.<br>
+                    I love creating the ideas floating in my head, discovering
+                    interesting things and meeting new people.
+                </p>
+            </div>
+        </div>
+
+    <!--Design Section-->
+        <div class="section" id="design">
+            <div class="sectionHeader">
+                <div class="sectionHeaderGuard"></div>
+                <h2 class="sectionHeaderText">Design</h2>
+            </div>
+            <div id="bardesigns">
+                <img src="imgs/design/DK_Space_DesignSketch.png" alt="Design Sktech" class="designImg" id="barsketch">
+                <img src="imgs/design/DK_Bar_Model.png" alt="3D Model" class="designImg" id="barmodel">
+                <img src="imgs/design/DK_Space_EndProduct.jpg" alt="Design Endproduct" class="designImg" id="barphoto">
+            </div>
+
+            <div id="designTextBlock">
+                <div class="textGuard a"></div>
+                <div class="textGuard b"></div>
+                <p class="basicText" id="designText">
+                    Designing is a passion and a hobby, designing small personal ideas or larger
+                    projects with an organisation. Design for me should target two values, it
+                    should <span class="keyword">support social interaction</span> and should aim to
+                    be <span class="keyword">sustainable, long-term solution</span> to a problem.
+                </p>
+            </div>
+
+            <div id="productdesigns">
+                <img src="imgs/design/chair.PNG" alt="Chair Sketches" class="designImg" id="chair">
+                <img src="imgs/design/shoe.png" alt="Shoe Design" class="designImg" id="shoe">
+            </div>
+        </div>
+
+    <!--Coding Section-->
+        <div class="section" id="coding">
+            <div class="sectionHeader">
+                <div class="sectionHeaderGuard"></div>
+                <h2 class="sectionHeaderText">Coding</h2>
+            </div>
+            <div id="codingProficiency">
+                <img src="imgs/coding/PythonLogo.png" alt="Python Logo" class="codeLogo" id="python">
+                <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" class="codeLogo" id="kotlin">
+                <img src="imgs/coding/CsLogo.png" alt="C# Logo" class="codeLogo" id="cs">
+                <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML+CSS+JS Logo" class="codeLogo" id="htmlcssjs">
+
+                <div class="proficiencyMarking proficiencyBeginner"></div>
+                <div class="proficiencyFlag proficiencyBeginner">BEGINNER</div>
+                <div class="proficiencyMarking profciencyIntermediate"></div>
+                <div class="proficiencyFlag profciencyIntermediate">INTERMEDIATE</div>
+                <div class="proficiencyMarking proficiencyAdvanced"></div>
+                <div class="proficiencyFlag proficiencyAdvanced">ADVANCED</div>
+                <div class="proficiencyMarking proficiencyExpert"></div>
+                <div class="proficiencyFlag proficiencyExpert">EXPERT</div>
+
+                <!--Proficinecy Bars-->
+                <div class="proficiencyBar proficiencyPython proficiencyFadeIn" id="proficiencyFadeInPython"></div>
+                <div class="proficiencyBar proficiencyPython proficiencyBarRect" id="proficiencyBarPython"></div>
+                <div class="proficiencyBar proficiencyPython" id="proficiencyFadeOutPython"></div>
+
+                <div class="proficiencyBar proficiencyKotlin proficiencyFadeIn" id="proficiencyFadeInKotlin"></div>
+                <div class="proficiencyBar proficiencyKotlin proficiencyBarRect" id="proficiencyBarKotlin"></div>
+                <div class="proficiencyBar proficiencyKotlin" id="proficiencyFadeOutKotlin"></div>
+
+                <div class="proficiencyBar proficiencyCs proficiencyFadeIn" id="proficiencyFadeInCs"></div>
+                <div class="proficiencyBar proficiencyCs proficiencyBarRect" id="proficiencyBarCs"></div>
+                <div class="proficiencyBar proficiencyCs" id="proficiencyFadeOutCs"></div>
+
+                <div class="proficiencyBar proficiencyHTML proficiencyFadeIn" id="proficiencyFadeInHTML"></div>
+                <div class="proficiencyBar proficiencyHTML proficiencyBarRect" id="proficiencyBarHTML"></div>
+                <div class="proficiencyBar proficiencyHTML" id="proficiencyFadeOutHTML"></div>
+            </div>
+        </div>
+
+    <!--Contact Setion-->
+        <div class="section" id="contact">
+            <div class="sectionHeader">
+                <div class="sectionHeaderGuard"></div>
+                <h2 class="sectionHeaderText">Contact</h2>
+            </div>
+            <a href="https://www.linkedin.com/in/reimer-rigtering/" target="_blank">
+                <img src="imgs/contact/LinkedIn_icon.svg.webp" alt="LinkedIn Link" id="LinkedIn">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
