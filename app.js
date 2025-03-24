@@ -3,7 +3,7 @@ let containerPos = 0;
 let startTime = Date.now()
 let hasScrolled = false
 let instruction = null
-instructionTimer = 10000
+instructionTimer = 5000
 maxScroll = 400
 
 

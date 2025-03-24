@@ -18,7 +18,7 @@ body {
 }
 .fade-in {
     animation-name: fadeInOpacity;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 @keyframes fadeInOpacity {
     0% {opacity: 0;}
@@ -134,7 +134,6 @@ body {
 }
 .sectionHeaderGuard {
     position: absolute;
-    background-color: darkseagreen;
     border-radius: 10px;
     width: 2.5%;
     height: 100%;
@@ -191,6 +190,23 @@ body {
     left: 1.5vh;
     border-radius: 20px;
 }
+.expandArrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    clip-path: circle(50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 10%;
+    right: 0;
+}
+.expandArrowSymbol {
+    position: absolute;
+    height: 70%;
+    top: 15%;
+}
 
 /*Intro Section*/
 #intro {
@@ -224,45 +240,68 @@ body {
 
 /*Design Section*/
 #design {
-    height: 100%;
     width: 100vw;
     left: 75vw;
 }
+#designHeaderGuard {
+    background-color: darkseagreen;
+}
 
+/*Design Project 1*/
 #designContent1 {
-    background-color: mediumpurple;
+    background-color: yellowgreen;
     top: 15%;
 }
-#designContent2 {
-    background-color: orange;
-    top: 32%;
-}
-#designContent3 {
-    background-color: deepskyblue;
-    top: 49%;
-}
-
 #designContent1 #d1content {
     display: none;
 }
 #designContent1:hover #d1content {
     display: block;
 }
+#designContent1 #d1wrapper {
+    display: block;
+}
+#designContent1:hover #d1wrapper {
+    display: none;
+}
 
+/*Design Project 2*/
+#designContent2 {
+    background-color: palevioletred;
+    top: 32%;
+}
 #designContent2 #d2content {
     display: none;
 }
 #designContent2:hover #d2content {
     display: block;
 }
+#designContent2 #d2wrapper {
+    display: block;
+}
+#designContent2:hover #d2wrapper {
+    display: none;
+}
 
+/*Design Project 3*/
+#designContent3 {
+    background-color: teal;
+    top: 49%;
+}
 #designContent3 #d3content {
     display: none;
 }
 #designContent3:hover #d3content {
     display: block;
 }
+#designContent3 #d3wrapper {
+    display: block;
+}
+#designContent3:hover #d3wrapper {
+    display: none;
+}
 
+/*Objects*/
 .designImage {
     position: absolute;
     border-radius: 20px;
@@ -304,12 +343,73 @@ body {
     width: 100vw;
     left: 175vw;
 }
+#codingHeaderGuard {
+    background-color: #a88edb;
+}
+
+/*Coding Projects*/
+/*Coding Project 1*/
+#codingContent1 {
+    background-color: mediumpurple;
+    top: 15%;
+}
+#codingContent1 #c1content {
+    display: none;
+}
+#codingContent1:hover #c1content {
+    display: block;
+}
+#codingContent1 #c1wrapper {
+    display: block;
+}
+#codingContent1:hover #c1wrapper {
+    display: none;
+}
+
+/*Coding Project 2*/
+#codingContent2 {
+    background-color: orange;
+    top: 32%;
+}
+#codingContent2 #c2content {
+    display: none;
+}
+#codingContent2:hover #c2content {
+    display: block;
+}
+#codingContent2 #c2wrapper {
+    display: block;
+}
+#codingContent2:hover #c2wrapper {
+    display: none;
+}
+
+/*Coding Project 3*/
+#codingContent3 {
+    background-color: deepskyblue;
+    top: 49%;
+}
+#codingContent3 #c3content {
+    display: none;
+}
+#codingContent3:hover #c3content {
+    display: block;
+}
+#codingContent3 #c3wrapper {
+    display: block;
+}
+#codingContent3:hover #c3wrapper {
+    display: none;
+}
+
+/*Coding proficiency*/
 #codingProficiency {
     position: absolute;
-    left: 90vh;
-    top: calc(5% + 8vh);
-    height: 60%;
-    aspect-ratio: 3 / 2;
+    left: 50%;
+    top: 15%;
+    width: min(40vw, 75vh);
+    aspect-ratio: 3.5 / 2;
+    z-index: 1;
 }
 .codeLogo {
     position: absolute;
@@ -420,7 +520,7 @@ body {
     height: 8%;
     background-color: darkturquoise;
     font-weight: bold;
-    font-size: 1.5vh;
+    font-size: 1.2vh;
     color: white;
     border-radius: 25px 10px 10px 0;
 }
@@ -442,6 +542,10 @@ body {
     left: 275vw;
     width: 50vw
 }
+#contactHeaderGuard {
+    background-color: darkseagreen;
+}
+
 #contactPages {
     position: absolute;
     width: calc(100% - 5vh);
