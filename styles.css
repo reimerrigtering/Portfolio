@@ -117,6 +117,7 @@ body {
 /*Portfolio sections general*/
 .section {
     position: absolute;
+    height: 100%;
     z-index: 3;
 }
 .sectionHeader {
@@ -166,7 +167,6 @@ body {
 
 /*Intro Section*/
 #intro {
-    height: 100%;
     width: 150vh;
     z-index: -2;
 }
@@ -256,7 +256,6 @@ body {
 
 /*Coding Section*/
 #coding {
-    height: 100%;
     width: 200vh;
     left: 350vh;
 }
@@ -395,12 +394,28 @@ body {
 
 /*Contact Section*/
 #contact {
-    height: 100%;
     left: 550vh;
+    width: 100vh
 }
-#LinkedIn {
+#contactPages {
+    position: absolute;
+    width: calc(100% - 5vh);
+    top: calc(15% + 8vh);
+    height: calc(85% - 8vh);
+    left: 5vh;
+}
+.contactLogo {
     position: absolute;
     height: 20%;
-    left: 40px;
-    top: calc(15% + 8vh);
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+}
+#LinkedIn {
+    background-image: url("imgs/contact/LinkedIn_icon.svg.webp");
+    background-size: 100% auto;
+}
+#Github {
+    background-image: url("imgs/contact/github_icon.webp");
+    background-size: 100% auto;
+    left: 20%;
 }
