@@ -543,19 +543,19 @@ body {
     width: 50vw
 }
 #contactHeaderGuard {
-    background-color: darkseagreen;
+    background-color: #3d8ebb;
 }
 
 #contactPages {
     position: absolute;
     width: calc(100% - 5vh);
-    top: calc(15% + 8vh);
     height: calc(85% - 8vh);
+    top: 15%;
     left: 5vh;
 }
 .contactLogo {
     position: absolute;
-    height: 20%;
+    height: 15vh;
     aspect-ratio: 1 / 1;
     border-radius: 20%;
 }
@@ -566,5 +566,5 @@ body {
 #Github {
     background-image: url("imgs/contact/github_icon.webp");
     background-size: 100% auto;
-    left: 20%;
+    left: 20vh;
 }
