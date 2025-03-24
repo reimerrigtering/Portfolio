@@ -1,10 +1,10 @@
-elementHome = {"intro": 0, "design": 1000, "coding": 2500, "contact": 4000}
+elementHome = {"intro": 0, "design": 150, "coding": 350, "contact": 550}
 let containerPos = 0;
 let startTime = Date.now()
 let hasScrolled = false
 let instruction = null
 instructionTimer = 10000
-maxScroll = 6000
+maxScroll = 900
 
 
 function init() {
@@ -23,12 +23,12 @@ function showScrollInstruction() {
 }
 
 function setElements() {
-    document.getElementById("container").style.left = containerPos + 'px';
+    document.getElementById("container").style.left = containerPos + 'vh';
 }
 
 function setElementsTo(scrollPosition) {
     if (Object.keys(elementHome).includes(scrollPosition)) {
-        scrollPosition = Math.max(elementHome[scrollPosition] - 50, 0);
+        scrollPosition = Math.max(elementHome[scrollPosition] - 5, 0);
     } else {
         return
     }
@@ -45,7 +45,7 @@ function scrollElements(event) {
     }
     let direction = event.deltaY;
     if (containerPos <= -maxScroll && direction > 0) { return }
-    containerPos = Math.min(containerPos - direction, 0)
+    containerPos = Math.min(containerPos - direction / 10, 0)
     setElements()
 }
 

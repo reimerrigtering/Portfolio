@@ -46,14 +46,14 @@ body {
 #sidebar {
     position: absolute;
     height: 100%;
-    width: 300px;
+    width: 36vh;
     background-color: darkseagreen;
     z-index: -3;
 }
 #rope {
     position: absolute;
     bottom: 2%;
-    width: 7500px;
+    height: 90vh;
     z-index: -2;
 }
 #scrollInstructionBox {
@@ -167,7 +167,7 @@ body {
 /*Intro Section*/
 #intro {
     height: 100%;
-    width: 1000px;
+    width: 150vh;
     z-index: -2;
 }
 #greeting {
@@ -188,7 +188,7 @@ body {
 #opening {
     position: absolute;
     top: 50%;
-    left: calc(300px + 4%);
+    left: 40vh;
     height: 30%;
     aspect-ratio: 2.3 / 1;
 }
@@ -199,8 +199,8 @@ body {
 /*Design Section*/
 #design {
     height: 100%;
-    width: 1500px;
-    left: 1000px;
+    width: 200vh;
+    left: 150vh;
 }
 .designImg {
     position: absolute;
@@ -214,22 +214,22 @@ body {
     top: 22vh;
 }
 #barsketch {
-    left: 40px;
+    left: 5vh;
 }
 #barmodel {
-    left: 80px;
+    left: 10vh;
     top: 33%;
 }
 #barphoto {
-    left: 120px;
+    left: 15vh;
     top: 66%;
 }
 
 #designTextBlock {
     position: absolute;
     height: 30vh;
-    width: 450px;
-    left: 450px;
+    width: 60vh;
+    left: 60vh;
     top: 16vh;
 }
 #designText {
@@ -238,7 +238,7 @@ body {
 
 #productdesigns {
     position: absolute;
-    left: 950px;
+    left: 130vh;
     top: 16vh;
     width: 60vh;
     height: 56vh;
@@ -246,7 +246,7 @@ body {
 }
 #chair {
     height: 50%;
-    left: 50px;
+    left: 5vh;
     z-index: 4;
 }
 #shoe {
@@ -257,12 +257,12 @@ body {
 /*Coding Section*/
 #coding {
     height: 100%;
-    width: 1500px;
-    left: 2500px
+    width: 200vh;
+    left: 350vh;
 }
 #codingProficiency {
     position: absolute;
-    left: 720px;
+    left: 90vh;
     top: calc(5% + 8vh);
     height: 60%;
     aspect-ratio: 3 / 2;
@@ -396,7 +396,7 @@ body {
 /*Contact Section*/
 #contact {
     height: 100%;
-    left: 4000px
+    left: 550vh;
 }
 #LinkedIn {
     position: absolute;
