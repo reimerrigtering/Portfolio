@@ -1,10 +1,10 @@
-elementHome = {"intro": 0, "design": 150, "coding": 350, "contact": 550}
+elementHome = {"intro": 0, "design": 75, "coding": 175, "contact": 275}
 let containerPos = 0;
 let startTime = Date.now()
 let hasScrolled = false
 let instruction = null
 instructionTimer = 10000
-maxScroll = 900
+maxScroll = 400
 
 
 function init() {
@@ -23,7 +23,7 @@ function showScrollInstruction() {
 }
 
 function setElements() {
-    document.getElementById("container").style.left = containerPos + 'vh';
+    document.getElementById("container").style.left = containerPos + 'vw';
 }
 
 function setElementsTo(scrollPosition) {

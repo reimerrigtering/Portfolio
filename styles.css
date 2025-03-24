@@ -46,7 +46,7 @@ body {
 #sidebar {
     position: absolute;
     height: 100%;
-    width: 36vh;
+    width: min(20vw, 37vh);
     background-color: darkseagreen;
     z-index: -3;
 }
@@ -117,13 +117,13 @@ body {
 /*Portfolio sections general*/
 .section {
     position: absolute;
-    height: 100%;
+    top: 9vh;
+    height: calc(100% - 9vh);
     z-index: 3;
 }
 .sectionHeader {
     position: absolute;
-    font-size: 5vh;
-    top: 10vh;
+    font-size: min(2.5vw, 5vh);
     height: 1.8em;
     width: 8em;
 }
@@ -164,100 +164,145 @@ body {
     font-weight: bold;
     color: darkseagreen;
 }
+.contentBlock {
+    position: absolute;
+    width: 40%;
+    height: 15%;
+    border-radius: 30px;
+}
+.contentBlock:hover {
+    position: absolute;
+    animation-name: resizeContentBlock;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: 5;
+}
+@keyframes resizeContentBlock {
+    0% {width: 40%; height: 15%}
+    100% {width: 90%; height: 64%; top: 15%}
+}
+.content {
+    position: absolute;
+    width: calc(100% - 3vh);
+    height: calc(100% - 3vh);
+    top: 1.5vh;
+    left: 1.5vh;
+    border-radius: 20px;
+}
 
 /*Intro Section*/
 #intro {
-    width: 150vh;
+    width: 75vw;
     z-index: -2;
 }
 #greeting {
     position: absolute;
-    font-size: 5.5vh;
-    left: 2.75vh;
-    top: 8vh;
+    font-size: min(3vw, 5.5vh);
+    left: min(1.5vw, 2.75vh);
     margin: 0;
 }
 #name {
     position: absolute;
-    font-size: 15vh;
-    left: 2vh;
-    top: 12vh;
+    font-size: min(8vw, 15vh);
+    left: min(1vw, 2vh);
+    top: min(3vw, 6vh);
     margin: 0;
     z-index: 3;
 }
 #opening {
     position: absolute;
     top: 50%;
-    left: 40vh;
-    height: 30%;
-    aspect-ratio: 2.3 / 1;
+    left: min(22vw, 42vh);
+    width: min(40vw, 92vh);
+    height: min(15vw, 30vh);
 }
 #openingText {
-    font-size: 4vh;
+    font-size: min(2vw, 4vh);
 }
 
 /*Design Section*/
 #design {
     height: 100%;
-    width: 200vh;
-    left: 150vh;
+    width: 100vw;
+    left: 75vw;
 }
-.designImg {
+
+#designContent1 {
+    background-color: mediumpurple;
+    top: 15%;
+}
+#designContent2 {
+    background-color: orange;
+    top: 32%;
+}
+#designContent3 {
+    background-color: deepskyblue;
+    top: 49%;
+}
+
+#designContent1 #d1content {
+    display: none;
+}
+#designContent1:hover #d1content {
+    display: block;
+}
+
+#designContent2 #d2content {
+    display: none;
+}
+#designContent2:hover #d2content {
+    display: block;
+}
+
+#designContent3 #d3content {
+    display: none;
+}
+#designContent3:hover #d3content {
+    display: block;
+}
+
+.designImage {
     position: absolute;
     border-radius: 20px;
-    height: 30%;
+    object-fit: cover;
 }
-#bardesigns {
-    position: absolute;
-    height: calc(100% - 22vh);
-    aspect-ratio: 4 / 5;
-    top: 22vh;
+
+.designImage.d1 {
+    height: 32%;
+    width: 20%;
 }
 #barsketch {
-    left: 5vh;
 }
 #barmodel {
-    left: 10vh;
-    top: 33%;
+    top: 34%;
 }
-#barphoto {
-    left: 15vh;
-    top: 66%;
+#barresult {
+    top: 68%;
 }
 
-#designTextBlock {
-    position: absolute;
-    height: 30vh;
-    width: 60vh;
-    left: 60vh;
-    top: 16vh;
+.designImage.d2 {
+    height: 100%;
+    aspect-ratio: 1 / 1;
 }
-#designText {
-    font-size: 3vh;
+#fnsproject {
 }
 
-#productdesigns {
-    position: absolute;
-    left: 130vh;
-    top: 16vh;
-    width: 60vh;
-    height: 56vh;
-    z-index: 3;
+.designImage.d3 {
+    height: 48%;
+    aspect-ratio: 1.5 / 1;
 }
 #chair {
-    height: 50%;
-    left: 5vh;
-    z-index: 4;
 }
 #shoe {
-    height: 40%;
-    top: 60%;
+    bottom: 0;
 }
 
 /*Coding Section*/
 #coding {
-    width: 200vh;
-    left: 350vh;
+    width: 100vw;
+    left: 175vw;
 }
 #codingProficiency {
     position: absolute;
@@ -394,8 +439,8 @@ body {
 
 /*Contact Section*/
 #contact {
-    left: 550vh;
-    width: 100vh
+    left: 275vw;
+    width: 50vw
 }
 #contactPages {
     position: absolute;
