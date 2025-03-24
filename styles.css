@@ -408,7 +408,7 @@ body {
     position: absolute;
     height: 20%;
     aspect-ratio: 1 / 1;
-    border-radius: 20px;
+    border-radius: 20%;
 }
 #LinkedIn {
     background-image: url("imgs/contact/LinkedIn_icon.svg.webp");
