@@ -39,7 +39,7 @@
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/reime/WebstormProjects/Portfolio/imgs/general&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/reime/WebstormProjects/Portfolio/imgs/coding&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -53,11 +53,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\reime\WebstormProjects\Portfolio" />
@@ -96,7 +96,8 @@
       <workItem from="1742476251068" duration="1865000" />
       <workItem from="1742481981644" duration="42639000" />
       <workItem from="1742652414408" duration="50064000" />
-      <workItem from="1742856195993" duration="3567000" />
+      <workItem from="1742856195993" duration="7377000" />
+      <workItem from="1742899546252" duration="395000" />
     </task>
     <servers />
   </component>

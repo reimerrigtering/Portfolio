@@ -123,7 +123,7 @@ body {
 }
 .sectionHeader {
     position: absolute;
-    font-size: min(2.5vw, 5vh);
+    font-size: 5vh;
     height: 1.8em;
     width: 8em;
 }
@@ -163,13 +163,19 @@ body {
     font-weight: bold;
     color: darkseagreen;
 }
-.contentBlock {
+.contentBlocks {
+    position: absolute;
+    width: 90%;
+    height: 64%;
+    top: 15%;
+}
+.contentCard {
     position: absolute;
     width: 40%;
-    height: 15%;
-    border-radius: 30px;
+    height: 25%;
+    border-radius: 3vmin;
 }
-.contentBlock:hover {
+.contentCard:hover {
     position: absolute;
     animation-name: resizeContentBlock;
     animation-duration: 0.25s;
@@ -179,8 +185,8 @@ body {
     z-index: 5;
 }
 @keyframes resizeContentBlock {
-    0% {width: 40%; height: 15%}
-    100% {width: 90%; height: 64%; top: 15%}
+    0% {width: 40%; height: 25%}
+    100% {width: 100%; height: 100%; top: 0}
 }
 .content {
     position: absolute;
@@ -188,7 +194,12 @@ body {
     height: calc(100% - 3vh);
     top: 1.5vh;
     left: 1.5vh;
-    border-radius: 20px;
+    border-radius: 2vmin;
+}
+.contentImage {
+    position: absolute;
+    border-radius: 2vmin;
+    object-fit: cover;
 }
 .expandArrow {
     position: absolute;
@@ -250,7 +261,6 @@ body {
 /*Design Project 1*/
 #designContent1 {
     background-color: yellowgreen;
-    top: 15%;
 }
 #designContent1 #d1content {
     display: none;
@@ -268,7 +278,7 @@ body {
 /*Design Project 2*/
 #designContent2 {
     background-color: palevioletred;
-    top: 32%;
+    top: 30%;
 }
 #designContent2 #d2content {
     display: none;
@@ -286,7 +296,7 @@ body {
 /*Design Project 3*/
 #designContent3 {
     background-color: teal;
-    top: 49%;
+    top: 60%;
 }
 #designContent3 #d3content {
     display: none;
@@ -302,13 +312,7 @@ body {
 }
 
 /*Objects*/
-.designImage {
-    position: absolute;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.designImage.d1 {
+.contentImage.d1 {
     height: 32%;
     width: 20%;
 }
@@ -321,14 +325,14 @@ body {
     top: 68%;
 }
 
-.designImage.d2 {
+.contentImage.d2 {
     height: 100%;
     aspect-ratio: 1 / 1;
 }
 #fnsproject {
 }
 
-.designImage.d3 {
+.contentImage.d3 {
     height: 48%;
     aspect-ratio: 1.5 / 1;
 }
@@ -351,7 +355,6 @@ body {
 /*Coding Project 1*/
 #codingContent1 {
     background-color: mediumpurple;
-    top: 15%;
 }
 #codingContent1 #c1content {
     display: none;
@@ -369,7 +372,7 @@ body {
 /*Coding Project 2*/
 #codingContent2 {
     background-color: orange;
-    top: 32%;
+    top: 30%;
 }
 #codingContent2 #c2content {
     display: none;
@@ -387,7 +390,7 @@ body {
 /*Coding Project 3*/
 #codingContent3 {
     background-color: deepskyblue;
-    top: 49%;
+    top: 60%;
 }
 #codingContent3 #c3content {
     display: none;
@@ -402,18 +405,41 @@ body {
     display: none;
 }
 
+/*Objects*/
+.contentImage.c1 {
+    height: 100%;
+}
+.contentImage.c2 {
+    height: 60%;
+}
+.contentImage.c3 {
+    height: 60%;
+}
+
 /*Coding proficiency*/
-#codingProficiency {
+#codingProficiencyBlock {
     position: absolute;
-    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64%;
+    width: 50%;
+    left: 40%;
     top: 15%;
-    width: min(40vw, 75vh);
-    aspect-ratio: 3.5 / 2;
+}
+
+#codingProficiency {
+    /*position: absolute;*/
+    /*left: 40%;*/
+    /*top: 15%;*/
+    /*width: 50vw;*/
+    aspect-ratio: 1.75 / 1;
     z-index: 1;
 }
 .codeLogo {
     position: absolute;
-    height: 19%;
+    left: 0;
+    height: 10vmin;
     z-index: 6;
 }
 #python {
@@ -512,15 +538,16 @@ body {
     border-radius: 3px;
 }
 .proficiencyFlag {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     width: 15%;
     height: 8%;
+    top: 0;
     background-color: darkturquoise;
     font-weight: bold;
-    font-size: 1.2vh;
+    font-size: min(0.9vw, 1.5vh);
     color: white;
     border-radius: 25px 10px 10px 0;
 }
@@ -551,7 +578,6 @@ body {
     width: calc(100% - 5vh);
     height: calc(85% - 8vh);
     top: 15%;
-    left: 5vh;
 }
 .contactLogo {
     position: absolute;
