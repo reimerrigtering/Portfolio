@@ -208,9 +208,9 @@ body {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    grid-area: text;
     padding: 2%;
-    right: 0;
-    width: 60%;
+    width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 2vmin;
@@ -300,7 +300,12 @@ body {
     display: none;
 }
 #designCard1:target #d1content {
-    display: block;
+    display: grid;
+    grid-template-areas:
+    'd1img1 text text text'
+    'd1img2 text text text'
+    'd1img3 text text text';
+    gap: 5%;
 }
 #designCard1 #d1wrapper {
     display: block;
@@ -318,7 +323,10 @@ body {
     display: none;
 }
 #designCard2:target #d2content {
-    display: block;
+    display: grid;
+    grid-template-areas:
+    'd2img1 d2img1 text text text';
+    gap: 5%;
 }
 #designCard2 #d2wrapper {
     display: block;
@@ -336,7 +344,11 @@ body {
     display: none;
 }
 #designCard3:target #d3content {
-    display: block;
+    display: grid;
+    grid-template-areas:
+    'd3img1 text text'
+    'd3img2 text text';
+    gap: 5%;
 }
 #designCard3 #d3wrapper {
     display: block;
@@ -347,33 +359,37 @@ body {
 
 /*Objects*/
 .contentImage.d1 {
-    height: 32%;
-    width: 20%;
+    width: 100%;
+    height: 100%;
 }
 #barsketch {
+    grid-area: d1img1;
 }
 #barmodel {
-    top: 34%;
+    grid-area: d1img2;
 }
 #barresult {
-    top: 68%;
+    grid-area: d1img3;
 }
 
 .contentImage.d2 {
+    width: 100%;
     height: 100%;
-    aspect-ratio: 1 / 1;
 }
 #fnsproject {
+    grid-area: d2img1;
 }
 
 .contentImage.d3 {
-    height: 48%;
-    aspect-ratio: 1.5 / 1;
+    width: 100%;
+    height: 100%;
 }
 #chair {
+    grid-area: d3img1;
 }
 #shoe {
-    bottom: 0;
+    grid-area: d3img2;
+    object-position: bottom;
 }
 
 /*Coding Section*/
@@ -393,7 +409,10 @@ body {
     display: none;
 }
 #codingCard1:target #c1content {
-    display: block;
+    display: grid;
+    grid-template-areas:
+    'c1img1 text text text';
+    gap: 5%;
 }
 #codingCard1 #c1wrapper {
     display: block;
@@ -411,7 +430,11 @@ body {
     display: none;
 }
 #codingCard2:target #c2content {
-    display: block;
+    display: grid;
+    grid-template-areas:
+    'c2img1 text text'
+    'c2img2 text text';
+    gap: 5%;
 }
 #codingCard2 #c2wrapper {
     display: block;
@@ -429,7 +452,10 @@ body {
     display: none;
 }
 #codingCard3:target #c3content {
-    display: block;
+    display: grid;
+    grid-template-areas:
+    'c3img1 c3img1 text text text';
+    gap: 5%;
 }
 #codingCard3 #c3wrapper {
     display: block;
@@ -440,21 +466,25 @@ body {
 
 /*Objects*/
 .contentImage.c1 {
+    grid-area: c1img1;
     height: 100%;
+    max-width: 100%;
 }
 .contentImage.c2 {
-    height: 48%;
+    width: 100%;
+    height: 100%;
 }
 .contentImage.c3 {
-    height: 100%;
-    aspect-ratio: 1 / 1;
+    grid-area: c3img1;
     object-position: left;
+    height: 100%;
+    max-width: 100%;
 }
 #pythonCode {
-    top: 0;
+    grid-area: c2img1;
 }
 #pythonTest {
-    bottom: 0;
+    grid-area: c2img2;
 }
 
 /*Coding proficiency*/
