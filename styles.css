@@ -177,7 +177,7 @@ body {
     height: 25%;
     border-radius: 3vmin;
 }
-.contentCard:hover {
+.contentCard:target {
     position: absolute;
     animation-name: resizeContentBlock;
     animation-duration: 0.25s;
@@ -203,7 +203,7 @@ body {
     border-radius: 2vmin;
     object-fit: cover;
 }
-.expandArrow {
+.expandCard {
     position: absolute;
     display: flex;
     align-items: center;
@@ -215,10 +215,24 @@ body {
     top: 10%;
     right: 0;
 }
-.expandArrowSymbol {
-    position: absolute;
+.expandCardSymbol {
     height: 70%;
-    top: 15%;
+}
+.closeCard {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    aspect-ratio: 1 / 1;
+    clip-path: circle(50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 1%;
+    top: 0;
+    right: 0;
+}
+.closeCardSymbol {
+    height: 70%;
 }
 
 /*Intro Section*/
@@ -234,7 +248,7 @@ body {
 }
 #name {
     position: absolute;
-    font-size: min(8vw, 15vh);
+    font-size: min(8vw, 16vh);
     left: min(1vw, 2vh);
     top: min(3vw, 6vh);
     margin: 0;
@@ -267,13 +281,13 @@ body {
 #designContent1 #d1content {
     display: none;
 }
-#designContent1:hover #d1content {
+#designContent1:target #d1content {
     display: block;
 }
 #designContent1 #d1wrapper {
     display: block;
 }
-#designContent1:hover #d1wrapper {
+#designContent1:target #d1wrapper {
     display: none;
 }
 
@@ -285,13 +299,13 @@ body {
 #designContent2 #d2content {
     display: none;
 }
-#designContent2:hover #d2content {
+#designContent2:target #d2content {
     display: block;
 }
 #designContent2 #d2wrapper {
     display: block;
 }
-#designContent2:hover #d2wrapper {
+#designContent2:target #d2wrapper {
     display: none;
 }
 
@@ -303,13 +317,13 @@ body {
 #designContent3 #d3content {
     display: none;
 }
-#designContent3:hover #d3content {
+#designContent3:target #d3content {
     display: block;
 }
 #designContent3 #d3wrapper {
     display: block;
 }
-#designContent3:hover #d3wrapper {
+#designContent3:target #d3wrapper {
     display: none;
 }
 
@@ -361,13 +375,13 @@ body {
 #codingContent1 #c1content {
     display: none;
 }
-#codingContent1:hover #c1content {
+#codingContent1:target #c1content {
     display: block;
 }
 #codingContent1 #c1wrapper {
     display: block;
 }
-#codingContent1:hover #c1wrapper {
+#codingContent1:target #c1wrapper {
     display: none;
 }
 
@@ -379,13 +393,13 @@ body {
 #codingContent2 #c2content {
     display: none;
 }
-#codingContent2:hover #c2content {
+#codingContent2:target #c2content {
     display: block;
 }
 #codingContent2 #c2wrapper {
     display: block;
 }
-#codingContent2:hover #c2wrapper {
+#codingContent2:target #c2wrapper {
     display: none;
 }
 
@@ -397,13 +411,13 @@ body {
 #codingContent3 #c3content {
     display: none;
 }
-#codingContent3:hover #c3content {
+#codingContent3:target #c3content {
     display: block;
 }
 #codingContent3 #c3wrapper {
     display: block;
 }
-#codingContent3:hover #c3wrapper {
+#codingContent3:target #c3wrapper {
     display: none;
 }
 

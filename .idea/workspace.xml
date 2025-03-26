@@ -32,29 +32,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.Portfolio.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/reime/WebstormProjects/Portfolio/imgs/coding&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/reime/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Portfolio.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "C:/Users/reime/WebstormProjects/Portfolio/imgs/general",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/reime/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs" />
@@ -97,7 +97,7 @@
       <workItem from="1742481981644" duration="42639000" />
       <workItem from="1742652414408" duration="50064000" />
       <workItem from="1742856195993" duration="7377000" />
-      <workItem from="1742899546252" duration="19671000" />
+      <workItem from="1742899546252" duration="23585000" />
     </task>
     <servers />
   </component>
