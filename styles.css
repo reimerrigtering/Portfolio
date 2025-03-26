@@ -8,7 +8,7 @@ body {
     font-family:Helvetica, sans-serif;
     font-weight: normal;
     background-image: linear-gradient(#eefce6, #c0ffc5);
-    background-size: 100% 100vh;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     margin: 0;
 }
@@ -216,6 +216,7 @@ body {
     right: 0;
 }
 .expandCardSymbol {
+    margin-left: 5%;
     height: 70%;
 }
 .closeCard {
@@ -232,7 +233,7 @@ body {
     right: 0;
 }
 .closeCardSymbol {
-    height: 70%;
+    height: 60%;
 }
 
 /*Intro Section*/
