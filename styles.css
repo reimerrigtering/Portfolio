@@ -218,10 +218,14 @@ body {
 }
 .contentHeader {
     margin: 0;
-    font-size: 5vmin;
+    font-size: 6vmin;
+}
+.contentInfo {
+    margin: 0;
+    height: calc(97% - 5vmin);
+    font-size: 2.5vmin;
 }
 .expandCard {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,8 +233,6 @@ body {
     aspect-ratio: 1 / 1;
     clip-path: circle(50%);
     background-color: rgba(255, 255, 255, 0.5);
-    top: 10%;
-    right: 0;
 }
 .expandCardSymbol {
     margin-left: 5%;
@@ -251,6 +253,12 @@ body {
 }
 .closeCardSymbol {
     height: 60%;
+}
+.cardHeader {
+    margin: 0;
+    width: 70%;
+    font-size: 4vmin;
+    color: black;
 }
 
 /*Intro Section*/
@@ -308,7 +316,9 @@ body {
     gap: 5%;
 }
 #designCard1 #d1wrapper {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #designCard1:target #d1wrapper {
     display: none;
@@ -329,7 +339,9 @@ body {
     gap: 5%;
 }
 #designCard2 #d2wrapper {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #designCard2:target #d2wrapper {
     display: none;
@@ -351,7 +363,9 @@ body {
     gap: 5%;
 }
 #designCard3 #d3wrapper {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #designCard3:target #d3wrapper {
     display: none;
@@ -415,7 +429,9 @@ body {
     gap: 5%;
 }
 #codingCard1 #c1wrapper {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #codingCard1:target #c1wrapper {
     display: none;
@@ -437,7 +453,9 @@ body {
     gap: 5%;
 }
 #codingCard2 #c2wrapper {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #codingCard2:target #c2wrapper {
     display: none;
@@ -458,7 +476,9 @@ body {
     gap: 5%;
 }
 #codingCard3 #c3wrapper {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #codingCard3:target #c3wrapper {
     display: none;
