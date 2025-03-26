@@ -275,55 +275,55 @@ body {
 }
 
 /*Design Project 1*/
-#designContent1 {
+#designCard1 {
     background-color: yellowgreen;
 }
-#designContent1 #d1content {
+#designCard1 #d1content {
     display: none;
 }
-#designContent1:target #d1content {
+#designCard1:target #d1content {
     display: block;
 }
-#designContent1 #d1wrapper {
+#designCard1 #d1wrapper {
     display: block;
 }
-#designContent1:target #d1wrapper {
+#designCard1:target #d1wrapper {
     display: none;
 }
 
 /*Design Project 2*/
-#designContent2 {
+#designCard2 {
     background-color: palevioletred;
     top: 30%;
 }
-#designContent2 #d2content {
+#designCard2 #d2content {
     display: none;
 }
-#designContent2:target #d2content {
+#designCard2:target #d2content {
     display: block;
 }
-#designContent2 #d2wrapper {
+#designCard2 #d2wrapper {
     display: block;
 }
-#designContent2:target #d2wrapper {
+#designCard2:target #d2wrapper {
     display: none;
 }
 
 /*Design Project 3*/
-#designContent3 {
+#designCard3 {
     background-color: teal;
     top: 60%;
 }
-#designContent3 #d3content {
+#designCard3 #d3content {
     display: none;
 }
-#designContent3:target #d3content {
+#designCard3:target #d3content {
     display: block;
 }
-#designContent3 #d3wrapper {
+#designCard3 #d3wrapper {
     display: block;
 }
-#designContent3:target #d3wrapper {
+#designCard3:target #d3wrapper {
     display: none;
 }
 
@@ -367,57 +367,56 @@ body {
     background-color: #a88edb;
 }
 
-/*Coding Projects*/
 /*Coding Project 1*/
-#codingContent1 {
+#codingCard1 {
     background-color: mediumpurple;
 }
-#codingContent1 #c1content {
+#codingCard1 #c1content {
     display: none;
 }
-#codingContent1:target #c1content {
+#codingCard1:target #c1content {
     display: block;
 }
-#codingContent1 #c1wrapper {
+#codingCard1 #c1wrapper {
     display: block;
 }
-#codingContent1:target #c1wrapper {
+#codingCard1:target #c1wrapper {
     display: none;
 }
 
 /*Coding Project 2*/
-#codingContent2 {
+#codingCard2 {
     background-color: orange;
     top: 30%;
 }
-#codingContent2 #c2content {
+#codingCard2 #c2content {
     display: none;
 }
-#codingContent2:target #c2content {
+#codingCard2:target #c2content {
     display: block;
 }
-#codingContent2 #c2wrapper {
+#codingCard2 #c2wrapper {
     display: block;
 }
-#codingContent2:target #c2wrapper {
+#codingCard2:target #c2wrapper {
     display: none;
 }
 
 /*Coding Project 3*/
-#codingContent3 {
+#codingCard3 {
     background-color: deepskyblue;
     top: 60%;
 }
-#codingContent3 #c3content {
+#codingCard3 #c3content {
     display: none;
 }
-#codingContent3:target #c3content {
+#codingCard3:target #c3content {
     display: block;
 }
-#codingContent3 #c3wrapper {
+#codingCard3 #c3wrapper {
     display: block;
 }
-#codingContent3:target #c3wrapper {
+#codingCard3:target #c3wrapper {
     display: none;
 }
 
