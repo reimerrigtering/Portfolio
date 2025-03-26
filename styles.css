@@ -585,11 +585,17 @@ body {
     border-radius: 20%;
 }
 #LinkedIn {
-    background-image: url("imgs/contact/LinkedIn_icon.svg.webp");
+    background-image: url("imgs/contact/linkedin_icon.webp");
     background-size: 100% auto;
 }
 #Github {
     background-image: url("imgs/contact/github_icon.webp");
     background-size: 100% auto;
     left: 20vh;
+}
+#Gmail {
+    background-color: white;
+    background-image: url("imgs/contact/gmail_icon.webp");
+    background-size: 100% auto;
+    left: 40vh;
 }
