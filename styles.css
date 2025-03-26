@@ -203,6 +203,23 @@ body {
     border-radius: 2vmin;
     object-fit: cover;
 }
+.contentText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 2%;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2vmin;
+    gap: 3%;
+}
+.contentHeader {
+    margin: 0;
+    font-size: 5vmin;
+}
 .expandCard {
     position: absolute;
     display: flex;
@@ -224,7 +241,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15%;
+    height: 8vmin;
     aspect-ratio: 1 / 1;
     clip-path: circle(50%);
     background-color: rgba(255, 255, 255, 0.5);
@@ -426,10 +443,18 @@ body {
     height: 100%;
 }
 .contentImage.c2 {
-    width: 40%;
+    height: 48%;
 }
 .contentImage.c3 {
-    width: 40%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-position: left;
+}
+#pythonCode {
+    top: 0;
+}
+#pythonTest {
+    bottom: 0;
 }
 
 /*Coding proficiency*/
