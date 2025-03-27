@@ -555,6 +555,7 @@ body {
 }
 .codeLogo {
     width: 10%;
+    forced-color-adjust: none;
     z-index: 6;
 }
 .proficiencyBar {
