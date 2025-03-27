@@ -1,7 +1,7 @@
 elementHome = {"intro": 0, "design": 75, "coding": 175, "contact": 275}
 let containerPos = 0;
 let startTime = Date.now()
-let hasScrolled = false
+let hasMoved = false
 let instruction = null
 let lastTouchPosition = null
 instructionTimer = 5000
@@ -16,8 +16,8 @@ function init() {
 function showScrollInstruction() {
     instruction = setTimeout(showScrollInstruction, 1000)
     if (Date.now() - startTime > instructionTimer) {
-        if (!hasScrolled) {
-            document.getElementById("scrollInstructionBox").classList.add("fade-in")
+        if (!hasMoved) {
+            document.getElementById("moveInstructionBox").classList.add("fade-in")
         }
         clearTimeout(instruction)
     }
@@ -37,13 +37,17 @@ function setElementsTo(scrollPosition) {
     setElements()
 }
 
-function scrollElements(event) {
-    if (!hasScrolled) {
-        hasScrolled = true
+function processMove() {
+    if (!hasMoved) {
+        hasMoved = true
         if (Date.now() - startTime > instructionTimer) {
-            document.getElementById("scrollInstructionBox").classList.add("fade-out")
+            document.getElementById("moveInstructionBox").classList.add("fade-out")
         }
     }
+}
+
+function scrollElements(event) {
+    processMove()
     let direction = event.deltaY;
     if (containerPos <= -maxScroll && direction > 0) { return }
     containerPos = Math.min(containerPos - direction / 10, 0)
@@ -51,6 +55,7 @@ function scrollElements(event) {
 }
 
 function swipeElements(event) {
+    processMove()
     let touchPosistion = event.touches[0].pageX
     if (lastTouchPosition !== null) {
         let distance = lastTouchPosition - touchPosistion

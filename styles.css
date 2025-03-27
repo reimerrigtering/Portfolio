@@ -59,7 +59,7 @@ body {
     height: 90vh;
     z-index: -2;
 }
-#scrollInstructionBox {
+#moveInstructionBox {
     position: absolute;
     background-color: rgba(200, 200, 200, 0.75);
     border-radius: 3vw;
@@ -76,7 +76,26 @@ body {
     top: 5%;
     left: 2.5%;
 }
-#scrollText {
+#swipeIcon {
+
+}
+@media (any-pointer: fine) {
+    #scrollText, #scrollIcon {
+        visibility: visible;
+    }
+    #swipeText, #swipeIcon {
+        visibility: hidden;
+    }
+}
+@media (any-pointer: coarse) {
+    #scrollText, #scrollIcon {
+        visibility: hidden;
+    }
+    #swipeText, #swipeIcon {
+        visibility: visible;
+    }
+}
+.moveText {
     position: absolute;
     height: 90%;
     width: 60%;
