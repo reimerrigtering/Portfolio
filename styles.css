@@ -77,7 +77,10 @@ body {
     left: 2.5%;
 }
 #swipeIcon {
-
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 2.5%;
 }
 @media (any-pointer: fine) {
     #scrollText, #scrollIcon {
