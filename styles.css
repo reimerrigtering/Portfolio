@@ -127,7 +127,9 @@ body {
     aspect-ratio: 2.75 / 1;
     font-size: calc(0.3 * var(--nav-height));
     border-radius: 30px;
-    background-color: whitesmoke;
+    background-color: #222222;
+    color: white;
+    font-weight: bold;
     border: 0;
     z-index: 11;
 }
