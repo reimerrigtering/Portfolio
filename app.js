@@ -3,6 +3,7 @@ let containerPos = 0;
 let startTime = Date.now()
 let hasScrolled = false
 let instruction = null
+let lastTouchPosition = null
 instructionTimer = 5000
 maxScroll = 400
 
@@ -49,4 +50,21 @@ function scrollElements(event) {
     setElements()
 }
 
+function swipeElements(event) {
+    let touchPosistion = event.touches[0].pageX
+    if (lastTouchPosition !== null) {
+        let distance = lastTouchPosition - touchPosistion
+        if (containerPos <= -maxScroll && distance > 0) { return }
+        containerPos = Math.min(containerPos - distance / 10, 0)
+        setElements()
+    }
+    lastTouchPosition = touchPosistion
+}
+
+function swipeEnd() {
+    lastTouchPosition = null
+}
+
 document.addEventListener("wheel", scrollElements);
+document.addEventListener("touchmove", swipeElements);
+document.addEventListener("touchend", swipeEnd);
