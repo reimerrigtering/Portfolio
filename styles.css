@@ -168,7 +168,7 @@ body {
 }
 .textGuard.a, .textGuard.b {
     position: absolute;
-    background-color: darkseagreen;
+    background-color: cornflowerblue;
     border-radius: 10px;
     width: 1.5%;
     height: 100%;
@@ -179,6 +179,7 @@ body {
 }
 .basicText {
     position: absolute;
+    color: whitesmoke;
     margin: 0;
     left: 4%;
     top: 2%;
@@ -188,7 +189,7 @@ body {
 }
 .keyword {
     font-weight: bold;
-    color: darkseagreen;
+    color: cornflowerblue;
 }
 .contentBlocks {
     position: absolute;
@@ -554,7 +555,9 @@ body {
     width: 100%;
 }
 .codeLogo {
-    width: 10%;
+    max-width: 10%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
     forced-color-adjust: none;
     z-index: 6;
 }
@@ -660,9 +663,9 @@ body {
     height: 10%;
     width: 19%;
     background-color: deepskyblue;
-    font-weight: bold;
     font-size: min(0.9vw, 1.5vh);
-    color: white;
+    font-weight: bold;
+    color: black;
     border-radius: 3vmin 1.5vmin 1.5vmin 0;
 }
 
