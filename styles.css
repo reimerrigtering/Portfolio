@@ -594,7 +594,6 @@ body {
     max-height: 100%;
     aspect-ratio: 1 / 1;
     z-index: 6;
-    appearance: none;
 }
 .proficiencyBar {
     height: 40%;
