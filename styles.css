@@ -61,7 +61,7 @@ body {
     position: absolute;
     height: 100%;
     width: min(20vw, 37vh);
-    background-color: darkseagreen;
+    background-image: linear-gradient(90deg, #000080, rgba(0, 0, 80, 0));
     z-index: -3;
 }
 #rope {
@@ -726,7 +726,7 @@ body {
 }
 .contactLogo {
     position: absolute;
-    height: 15dvmax;
+    height: 10dvmax;
     aspect-ratio: 1 / 1;
     border-radius: 20%;
 }
@@ -745,17 +745,17 @@ body {
 }
 @media (orientation: landscape) {
     #Github {
-        left: 20dvw;
+        left: 15dvw;
     }
     #Gmail {
-        left: 40dvw;
+        left: 30dvw;
     }
 }
 @media (orientation: portrait) {
     #Github {
-        top: 20dvh;
+        top: 15dvh;
     }
     #Gmail {
-        top: 40dvh;
+        top: 30dvh;
     }
 }
