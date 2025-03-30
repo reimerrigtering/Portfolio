@@ -329,13 +329,11 @@ body {
     display: flex;
     justify-content: center;
     padding-left: min(1vw, 2vh);
-    /*width: min(40vw, 92vh);*/
-    /*height: min(15vw, 30vh);*/
 }
 @media (orientation: landscape) {
     #opening {
-        left: 55%;
-        width: 40%;
+        left: 52%;
+        width: 38%;
         top: 10%;
         height: 60%;
     }
