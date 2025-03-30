@@ -60,7 +60,7 @@ function swipeElements(event) {
     if (lastTouchPosition !== null) {
         let distance = lastTouchPosition - touchPosistion
         if (containerPos <= -maxScroll && distance > 0) { return }
-        containerPos = Math.min(containerPos - distance / 10, 0)
+        containerPos = Math.min(containerPos - distance / 5, 0)
         setElements()
     }
     lastTouchPosition = touchPosistion

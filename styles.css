@@ -726,7 +726,7 @@ body {
 }
 .contactLogo {
     position: absolute;
-    height: 15vh;
+    height: 15dvmax;
     aspect-ratio: 1 / 1;
     border-radius: 20%;
 }
@@ -737,11 +737,25 @@ body {
 #Github {
     background-image: url("imgs/contact/github_icon.webp");
     background-size: 100% auto;
-    left: 20vh;
 }
 #Gmail {
     background-color: white;
     background-image: url("imgs/contact/gmail_icon.webp");
     background-size: 100% auto;
-    left: 40vh;
+}
+@media (orientation: landscape) {
+    #Github {
+        left: 20dvw;
+    }
+    #Gmail {
+        left: 40dvw;
+    }
+}
+@media (orientation: portrait) {
+    #Github {
+        top: 20dvh;
+    }
+    #Gmail {
+        top: 40dvh;
+    }
 }
