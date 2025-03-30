@@ -1,6 +1,14 @@
 :root {
     --nav-height: min(7dvh, 9.5dvw);
     --nav-width: min(95dvw, 10 * var(--nav-height));
+    @media (orientation: landscape) {
+        --intro-width: 35dvw;
+        --font-multiplier: 1;
+    }
+    @media (orientation: portrait) {
+        --intro-width: 70dvw;
+        --font-multiplier: 2;
+    }
 }
 html {
     overflow: hidden;
@@ -169,7 +177,7 @@ body {
     height: 100%;
     z-index: 3;
 }
-.textGuard.a, .textGuard.b {
+.textGuardA, .textGuardB {
     position: absolute;
     background-color: cornflowerblue;
     border-radius: 10px;
@@ -177,7 +185,10 @@ body {
     height: 100%;
     z-index: 3;
 }
-.textGuard.b {
+.textGuardA {
+    left: 0;
+}
+.textGuardB {
     right: 0;
 }
 .basicText {
@@ -299,28 +310,55 @@ body {
 }
 #greeting {
     position: absolute;
-    font-size: min(3vw, 5.5vh);
-    left: min(1.5vw, 2.75vh);
+    font-size: calc(min(3vw, 5.5vh) * var(--font-multiplier));
+    padding-left: calc(min(1.5vw, 2.75vh) * var(--font-multiplier));
     margin: 0;
+    color: white;
 }
 #name {
     position: absolute;
-    font-size: min(8vw, 16vh);
-    left: min(1vw, 2vh);
-    top: min(3vw, 6vh);
+    font-size: calc(min(8vw, 16vh) * var(--font-multiplier));
+    padding-left: calc(min(1vw, 2vh) * var(--font-multiplier));
+    top: calc(min(3vw, 6vh) * var(--font-multiplier));
     margin: 0;
     z-index: 3;
+    color: white;
 }
 #opening {
     position: absolute;
-    top: 50%;
-    left: min(22vw, 42vh);
-    width: min(40vw, 92vh);
-    height: min(15vw, 30vh);
+    display: flex;
+    justify-content: center;
+    padding-left: min(1vw, 2vh);
+    /*width: min(40vw, 92vh);*/
+    /*height: min(15vw, 30vh);*/
 }
-#openingText {
-    font-size: min(2vw, 4vh);
+@media (orientation: landscape) {
+    #opening {
+        left: 55%;
+        width: 40%;
+        top: 10%;
+        height: 60%;
+    }
+    #openingText {
+        font-size: min(2.4dvw, 4.8dvh);
+    }
 }
+@media (orientation: portrait) {
+    #opening {
+        font-size: calc(min(8vw, 16vh) * var(--font-multiplier));
+        top: 3em;
+        left: 10%;
+        width: 80%;
+        aspect-ratio: 2 / 1;
+    }
+    #openingText {
+        font-size: min(3.5vw, 7vh);
+    }
+}
+
+/*#openingText {*/
+/*    font-size: min(2vw, 4vh);*/
+/*}*/
 
 /*Design Section*/
 #design {
