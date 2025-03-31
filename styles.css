@@ -61,7 +61,7 @@ body {
     position: absolute;
     height: 100%;
     width: min(20vw, 37vh);
-    background-image: linear-gradient(90deg, #000080, rgba(0, 0, 80, 0));
+    background-image: linear-gradient(90deg, #000080, #00008000);
     z-index: -3;
 }
 #rope {
@@ -216,6 +216,8 @@ body {
     width: 40%;
     height: 25%;
     border-radius: 3vmin;
+    container-name: card;
+    container-type: inline-size;
 }
 .contentCard:target {
     position: absolute;
@@ -270,7 +272,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    max-height: 80%;
+    max-width: 80%;
     aspect-ratio: 1 / 1;
     clip-path: circle(50%);
     background-color: rgba(255, 255, 255, 0.5);
@@ -295,12 +298,24 @@ body {
 .closeCardSymbol {
     height: 60%;
 }
+.wrapper {
+    align-items: center;
+    justify-content: space-between;
+
+    @container card (width < 200px) {
+        justify-content: center;
+    }
+}
 .cardHeader {
     margin: 0;
     width: 70%;
     font-size: 4vmin;
     padding-left: 5%;
     color: black;
+
+    @container card (width < 200px) {
+        display: none;
+    }
 }
 
 /*Intro Section*/
@@ -310,14 +325,14 @@ body {
 }
 #greeting {
     position: absolute;
-    font-size: calc(min(3vw, 5.5vh) * var(--font-multiplier));
+    font-size: calc(min(3dvw, 5.5dvh) * var(--font-multiplier));
     padding-left: calc(min(1.5vw, 2.75vh) * var(--font-multiplier));
     margin: 0;
     color: white;
 }
 #name {
     position: absolute;
-    font-size: calc(min(8vw, 16vh) * var(--font-multiplier));
+    font-size: calc(min(7dvw, 15dvh) * var(--font-multiplier));
     padding-left: calc(min(1vw, 2vh) * var(--font-multiplier));
     top: calc(min(3vw, 6vh) * var(--font-multiplier));
     margin: 0;
@@ -380,8 +395,6 @@ body {
 }
 #designCard1 #d1wrapper {
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #designCard1:target #d1wrapper {
     display: none;
@@ -403,8 +416,6 @@ body {
 }
 #designCard2 #d2wrapper {
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #designCard2:target #d2wrapper {
     display: none;
@@ -427,8 +438,6 @@ body {
 }
 #designCard3 #d3wrapper {
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #designCard3:target #d3wrapper {
     display: none;
@@ -493,8 +502,6 @@ body {
 }
 #codingCard1 #c1wrapper {
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #codingCard1:target #c1wrapper {
     display: none;
@@ -517,8 +524,6 @@ body {
 }
 #codingCard2 #c2wrapper {
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #codingCard2:target #c2wrapper {
     display: none;
@@ -540,8 +545,6 @@ body {
 }
 #codingCard3 #c3wrapper {
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #codingCard3:target #c3wrapper {
     display: none;
