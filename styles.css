@@ -454,6 +454,7 @@ body {
 }
 #barmodel {
     grid-area: d1img2;
+    object-position: top;
 }
 #barresult {
     grid-area: d1img3;
@@ -563,7 +564,7 @@ body {
 }
 .contentImage.c3 {
     grid-area: c3img1;
-    object-position: left;
+    object-position: right;
     height: 100%;
     max-width: 100%;
 }
