@@ -261,6 +261,7 @@ body {
 .contentHeader {
     margin: 0;
     font-size: 6vmin;
+    width: 85%;
 }
 .contentInfo {
     margin: 0;
@@ -302,7 +303,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @container card (width < 200px) {
+    @container card (width < 210px) {
         justify-content: center;
     }
 }
@@ -313,7 +314,7 @@ body {
     padding-left: 5%;
     color: black;
 
-    @container card (width < 200px) {
+    @container card (width < 210px) {
         display: none;
     }
 }
