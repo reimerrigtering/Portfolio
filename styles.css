@@ -61,7 +61,7 @@ body {
     position: absolute;
     height: 100%;
     width: min(20vw, 37vh);
-    background-image: linear-gradient(90deg, #000080, #00008000);
+    background-image: linear-gradient(90deg, #4444d0, #4444d000);
     z-index: -3;
 }
 #rope {
@@ -601,7 +601,7 @@ body {
     z-index: 6;
 }
 .proficiencyBar {
-    height: 40%;
+    height: 60%;
     z-index: 5;
 }
 .proficiencyFadeIn {
