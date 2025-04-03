@@ -17,7 +17,9 @@ function showScrollInstruction() {
     instruction = setTimeout(showScrollInstruction, 1000)
     if (Date.now() - startTime > instructionTimer) {
         if (!hasMoved) {
-            document.getElementById("moveInstructionBox").classList.add("fade-in")
+            let instruction = document.getElementById("moveInstructionBox");
+            instruction.style.display = "block";
+            instruction.classList.add("fade-in");
         }
         clearTimeout(instruction)
     }
@@ -41,7 +43,11 @@ function processMove() {
     if (!hasMoved) {
         hasMoved = true
         if (Date.now() - startTime > instructionTimer) {
-            document.getElementById("moveInstructionBox").classList.add("fade-out")
+            let instruction = document.getElementById("moveInstructionBox");
+            instruction.classList.add("fade-out");
+            setTimeout(function () {
+                instruction.style.display = "none";
+            }, 500)
         }
     }
 }
