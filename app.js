@@ -73,8 +73,3 @@ function swipeEnd() {
 document.addEventListener("wheel", scrollElements);
 document.addEventListener("touchmove", swipeElements);
 document.addEventListener("touchend", swipeEnd);
-
-let ropeImg = document.getElementById("rope")
-ropeImg.addEventListener("contextmenu", event => {
-    event.preventDefault()
-})
