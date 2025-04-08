@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/imgs/design/RoverBuildup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/design/RoverInside.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/design/RoverTop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/3DmodelRook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/ClockModel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/EnergySystem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/FohnSketches.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/GearboxModel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/Mower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/PrototypePoster.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/SharpenerSketch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/SpaceDesign.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/VRSketching.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/chair.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs/design/gallery/shoe.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/chair.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/shoe.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
@@ -49,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/reime/WebstormProjects/Portfolio/imgs/design",
+    "last_opened_file_path": "C:/Users/reime/WebstormProjects/Portfolio/imgs/design/gallery",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,11 +70,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\reime\WebstormProjects\Portfolio" />
@@ -108,7 +115,7 @@
       <workItem from="1742652414408" duration="50064000" />
       <workItem from="1742856195993" duration="7377000" />
       <workItem from="1742899546252" duration="56038000" />
-      <workItem from="1743079140687" duration="74129000" />
+      <workItem from="1743079140687" duration="80066000" />
     </task>
     <servers />
   </component>
