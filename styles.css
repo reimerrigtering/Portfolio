@@ -267,7 +267,7 @@ body {
 .contentInfo {
     margin: 0;
     height: calc(97% - 6vmin);
-    font-size: 2vmin;
+    font-size: 1.95vmin;
     overflow: hidden;
 }
 .expandCard {
