@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/EnergySystem.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/gallery/EnergySystem.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/reime/WebstormProjects/Portfolio/imgs/coding",
+    "last_opened_file_path": "C:/Users/reime/WebstormProjects/Portfolio/imgs/design/gallery",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,8 +57,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
@@ -103,7 +102,7 @@
       <workItem from="1742652414408" duration="50064000" />
       <workItem from="1742856195993" duration="7377000" />
       <workItem from="1742899546252" duration="56038000" />
-      <workItem from="1743079140687" duration="84372000" />
+      <workItem from="1743079140687" duration="85131000" />
     </task>
     <servers />
   </component>
