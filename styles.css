@@ -389,10 +389,19 @@ body {
 }
 #designCard1:target #d1content {
     display: grid;
-    grid-template-areas:
-    'd1img1 text text text'
-    'd1img2 text text text'
-    'd1img3 text text text';
+    @media (orientation: landscape) {
+        grid-template-areas:
+        'd1img1 text text text'
+        'd1img2 text text text'
+        'd1img3 text text text';
+    }
+    @media (orientation: portrait) {
+        grid-template-areas:
+        'text text text'
+        'text text text'
+        'text text text'
+        'd1img1 d1img2 d1img3';
+    }
     gap: 5%;
 }
 #designCard1 #d1wrapper {
@@ -412,8 +421,18 @@ body {
 }
 #designCard2:target #d2content {
     display: grid;
-    grid-template-areas:
-    'd2img1 d2img1 text text text';
+    @media (orientation: landscape) {
+        grid-template-areas:
+        'd2img1 d2img1 text text text';
+    }
+    @media (orientation: portrait) {
+        grid-template-areas:
+        'text'
+        'text'
+        'text'
+        'd2img1'
+        'd2img1';
+    }
     gap: 5%;
 }
 #designCard2 #d2wrapper {
@@ -433,9 +452,19 @@ body {
 }
 #designCard3:target #d3content {
     display: grid;
-    grid-template-areas:
-    'd3img1 text text'
-    'd3img2 text text';
+    @media (orientation: landscape) {
+        grid-template-areas:
+        'd3img1 text text text'
+        'd3img2 text text text'
+        'd3img3 text text text';
+    }
+    @media (orientation: portrait) {
+        grid-template-areas:
+        'text text text'
+        'text text text'
+        'text text text'
+        'd3img1 d3img2 d3img3';
+    }
     gap: 5%;
 }
 #designCard3 #d3wrapper {
@@ -473,12 +502,14 @@ body {
     width: 100%;
     height: 100%;
 }
-#chair {
+#roverTop {
     grid-area: d3img1;
 }
-#shoe {
+#roverInside {
     grid-area: d3img2;
-    object-position: bottom;
+}
+#roverBuildup {
+    grid-area: d3img3;
 }
 
 /*Coding Section*/
@@ -520,9 +551,17 @@ body {
 }
 #codingCard2:target #c2content {
     display: grid;
-    grid-template-areas:
-    'c2img1 text text'
-    'c2img2 text text';
+    @media (orientation: landscape) {
+        grid-template-areas:
+        'c2img1 text text'
+        'c2img2 text text';
+    }
+    @media (orientation: portrait) {
+        grid-template-areas:
+        'text text'
+        'text text'
+        'c2img1 c2img2';
+    }
     gap: 5%;
 }
 #codingCard2 #c2wrapper {
@@ -542,8 +581,18 @@ body {
 }
 #codingCard3:target #c3content {
     display: grid;
-    grid-template-areas:
-    'c3img1 c3img1 text text text';
+    @media  (orientation: landscape) {
+        grid-template-areas:
+        'c3img1 c3img1 text text text';
+    }
+    @media (orientation: portrait) {
+        grid-template-areas:
+        'text'
+        'text'
+        'text'
+        'c3img1'
+        'c3img1';
+    }
     gap: 5%;
 }
 #codingCard3 #c3wrapper {
@@ -565,9 +614,16 @@ body {
 }
 .contentImage.c3 {
     grid-area: c3img1;
-    object-position: right;
-    height: 100%;
-    max-width: 100%;
+    @media (orientation: landscape) {
+        object-position: right;
+        height: 100%;
+        max-width: 100%;
+    }
+    @media (orientation: portrait) {
+        object-position: top;
+        width: 100%;
+        max-height: 100%;
+    }
 }
 #pythonCode {
     grid-area: c2img1;
