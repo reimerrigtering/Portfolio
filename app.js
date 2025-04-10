@@ -54,7 +54,13 @@ function processMove() {
 
 function scrollElements(event) {
     processMove()
-    let direction = event.deltaY;
+    let direction
+    if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+        direction = event.deltaY;
+    }
+    else {
+        direction = event.deltaX;
+    }
     if (containerPos <= -maxScroll && direction > 0) { return }
     containerPos = Math.min(containerPos - direction / 10, 0)
     setElements()
