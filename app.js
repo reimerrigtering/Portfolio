@@ -1,4 +1,4 @@
-elementHome = {"intro": 0, "design": 75, "gallery": 100, "coding": 175, "contact": 275}
+elementHome = {"intro": 0, "design": 75, "coding": 175, "contact": 275}
 let containerPos = 0;
 let startTime = Date.now()
 let hasMoved = false
