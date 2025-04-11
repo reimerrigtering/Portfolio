@@ -267,8 +267,8 @@ body {
 .contentInfo {
     margin: 0;
     height: calc(97% - 6vmin);
-    font-size: 1.95vmin;
-    overflow: hidden;
+    font-size: 2.4dvmin;
+    overflow: auto;
 }
 .expandCard {
     display: flex;
@@ -549,7 +549,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 7%;
+    width: 6dvmin;
     aspect-ratio: 1 / 1;
     margin: 2%;
     background-color: rgba(255, 255, 255, 0.5);

@@ -52,7 +52,13 @@ function processMove() {
     }
 }
 
+function checkScrollableElement(x, y) {
+    let hoverElement = document.elementFromPoint(x, y);
+    return hoverElement.scrollHeight > hoverElement.clientHeight;
+}
+
 function scrollElements(event) {
+    if (checkScrollableElement(event.x, event.y)) {return}
     processMove()
     let direction
     if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
