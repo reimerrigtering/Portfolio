@@ -140,16 +140,20 @@ body {
     font-size: calc(0.3 * var(--nav-height));
     border-radius: 30px;
     background-color: #222222;
-    color: white;
+    color: #ffffff;
     font-weight: bold;
     border: 0;
     z-index: 11;
 }
-.navbarbutton.a {
-    left: 5px;
+.navbarbutton:hover {
+    animation-name: navbarButtonColor;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
-.navbarbutton.a {
-    left: 5px;
+@keyframes navbarButtonColor {
+    100% {background-color: #ffffff; color: #222222}
 }
 
 /*Portfolio sections general*/
@@ -290,6 +294,15 @@ body {
 .expandCardSymbol {
     margin-left: 5%;
     height: 70%;
+}
+@keyframes rotateExpandCard {
+    100% {transform: rotate(360deg);}
+}
+.contentCard:hover .expandCardSymbol {
+    animation-name: rotateExpandCard;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
 .closeCard {
     position: absolute;
@@ -534,7 +547,13 @@ body {
     max-width: 30%;
     z-index: 2;
 }
-
+.galleryImg:hover {
+    animation-name: teaseGalleryImg;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
 .galleryImg:target {
     position: absolute;
     animation-name: openGalleryImg;
@@ -542,6 +561,23 @@ body {
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
     object-fit: cover;
+}
+@keyframes teaseGalleryImg {
+    100% {
+        height: 40%;
+        max-width: 60%;
+        z-index: 3;
+        will-change: transform;
+    }
+}
+@keyframes openGalleryImg {
+    100% {
+        height: 100%;
+        max-width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        will-change: transform;}
 }
 
 .galleryImgClickable {
@@ -610,16 +646,6 @@ body {
 #galleryImg10 {left: 30%; top: 0;}
 #galleryImg11 {left: 50%; top: 65%;}
 #galleryImg12 {left: 0; top: 43%;}
-
-@keyframes openGalleryImg {
-    100% {
-        height: 100%;
-        max-width: 100%;
-        left: 0;
-        top: 0;
-        z-index: 3;
-        will-change: transform;}
-}
 
 /*Coding Section*/
 #coding {
@@ -891,42 +917,53 @@ body {
 
 #contactPages {
     position: absolute;
-    width: calc(100% - 5vh);
-    height: calc(85% - 8vh);
     top: 15%;
+    display: grid;
+    align-items: start;
+    justify-content: left;
+    @media (orientation: landscape) {
+        grid-template-areas:
+            'LinkedIn GitHub Email';
+    }
+    @media (orientation: portrait) {
+        grid-template-areas:
+            'LinkedIn'
+            'GitHub'
+            'Email';
+    }
+    gap: 5%;
 }
 .contactLogo {
-    position: absolute;
-    height: 10dvmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 20dvh;
+    max-width: 40dvw;
     aspect-ratio: 1 / 1;
+}
+.contactLogoImg {
+    width: 80%;
+    height: 80%;
     border-radius: 20%;
 }
+.contactLogoImg:hover {
+    animation-name: enlargeLogo;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes enlargeLogo {
+    100% {width: 100%; height: 100%;}
+}
+
 #LinkedIn {
-    background-image: url("imgs/contact/linkedin_icon.webp");
-    background-size: 100% auto;
+    grid-area: LinkedIn;
 }
 #Github {
-    background-image: url("imgs/contact/github_icon.webp");
-    background-size: 100% auto;
+    grid-area: GitHub;
 }
 #Gmail {
+    grid-area: Email;
     background-color: white;
-    background-image: url("imgs/contact/gmail_icon.webp");
-    background-size: 100% auto;
-}
-@media (orientation: landscape) {
-    #Github {
-        left: 15dvw;
-    }
-    #Gmail {
-        left: 30dvw;
-    }
-}
-@media (orientation: portrait) {
-    #Github {
-        top: 15dvh;
-    }
-    #Gmail {
-        top: 30dvh;
-    }
 }
