@@ -549,6 +549,7 @@ body {
 }
 .galleryImg:hover {
     animation-name: teaseGalleryImg;
+    animation-delay: 0.2s;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
