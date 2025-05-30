@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +15,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -30,7 +29,6 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2uXKNG5Zis74TRVUAXfMsIdbmfz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,7 +40,7 @@
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;portfolio-new&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/reime/WebstormProjects/Portfolio/imgs/design/gallery&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -64,14 +62,17 @@
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio" />
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\old" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" uri="http://localhost:63342/Portfolio/new-portfolio.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Portfolio/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -84,7 +85,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -107,7 +108,9 @@
       <workItem from="1744275388113" duration="18963000" />
       <workItem from="1744404035604" duration="672000" />
       <workItem from="1744880157060" duration="419000" />
-      <workItem from="1744903654873" duration="3281000" />
+      <workItem from="1744903654873" duration="3495000" />
+      <workItem from="1748630706128" duration="322000" />
+      <workItem from="1748631044875" duration="3524000" />
     </task>
     <servers />
   </component>

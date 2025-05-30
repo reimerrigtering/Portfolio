@@ -1,0 +1,57 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+.banner {
+    position: absolute;
+    width: 100dvw;
+    height: 20dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+}
+
+.banner .top {
+    top: 0;
+}
+
+.banner .bottom {
+    bottom: 0;
+}
+
+.moverBackground {
+    position: absolute;
+    width: 100%;
+    height: 2dvh;
+    background-color: deepskyblue;
+}
+
+.mover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #5ee50000, #5ee500ff, #5ee500ff, #5ee50000);
+
+    animation-name: rotateMover;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateMover {
+    0% {left: 100%}
+    100% {left: -100%}
+}
+
+.pageHeader {
+    font-size: 8dvh;
+    color: deepskyblue;
+    font-weight: bold;
+}
