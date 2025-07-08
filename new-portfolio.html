@@ -2,18 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no">
     <title>Reimer Rigtering</title>
     <link rel="stylesheet" href="new-styles.css">
 </head>
 <body>
-    <div class="banner">
-        <div class="moverBackground top">
-            <div class="mover"></div>
-        </div>
-        <div class="moverBackground bottom">
-            <div class="mover"></div>
-        </div>
+    <div id="banner">
         <h2 class="pageHeader">Reimer Rigtering</h2>
+        <div class="moving-background"></div>
     </div>
+
+    <div id="introduction" class="page-object">
+        <div id="picture"></div>
+        <h2 id="header">Hi!</h2>
+        <p id="intro-text">
+            I'm a <span class="keyword">Designer</span>
+            and <span class="keyword">Developer</span>
+            studying at and working for Delft University of Technology.<br>
+            I study Industrial Design Engineering and work as Student Coding
+            and Media Support for the TU Delft Library.
+        </p>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="menu">
+        <a href="#about-me" class="button-link">
+            <div class="button about-me-color">
+                <h2 class="title-text">About Me</h2>
+                <div class="image-background"></div>
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+        <a href="#design" class="button-link">
+            <div class="button design-color">
+                <h2 class="title-text">Design</h2>
+                <div class="image-background"></div>
+                <img src="imgs/design/FohnSketches.png" alt="Design" class="image">
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+        <a href="#coding" class="button-link">
+            <div class="button coding-color">
+                <h2 class="title-text">Coding</h2>
+                <div class="image-background"></div>
+                <img src="imgs/coding/PythonLogo.png" alt="Coding" class="image">
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+        <a href="#contact-me" class="button-link">
+            <div class="button contact-me-color">
+                <h2 class="title-text">Contact Me</h2>
+                <div class="image-background"></div>
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="about-me" class="page-object">
+        <p id="about-text">
+            Creation is the most fun of all things. Creating an idea and shaping it into something
+            that works is what I love to do. Starting out with bricks when I was young, I started
+            building my ideas and putting them into the world. Later on I discovered coding. Building
+            things with an unlimited number of bricks and tools to work with to show my ideas to others.
+        </p>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="design"></div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="coding"></div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="contact-me"></div>
 </body>
 </html>

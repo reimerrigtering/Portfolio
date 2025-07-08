@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/FohnSketches.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/FohnSketches.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/new-portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/new-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +43,11 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript Debug.Portfolio.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.new-portfolio.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;portfolio-new&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/reime/WebstormProjects/Portfolio/imgs/design/gallery&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -62,23 +69,23 @@
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
+      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\old" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" uri="http://localhost:63342/Portfolio/new-portfolio.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.new-portfolio.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Portfolio/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Portfolio/index.html" useBuiltInWebServerPort="true">
+    <configuration name="new-portfolio.html" type="JavascriptDebugType" uri="http://localhost:63342/Portfolio/new-portfolio.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.new-portfolio.html" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +117,12 @@
       <workItem from="1744880157060" duration="419000" />
       <workItem from="1744903654873" duration="3495000" />
       <workItem from="1748630706128" duration="322000" />
-      <workItem from="1748631044875" duration="3524000" />
+      <workItem from="1748631044875" duration="3617000" />
+      <workItem from="1751364964129" duration="5369000" />
+      <workItem from="1751404691668" duration="9678000" />
+      <workItem from="1751887471014" duration="2692000" />
+      <workItem from="1751893382390" duration="1832000" />
+      <workItem from="1751903149622" duration="6128000" />
     </task>
     <servers />
   </component>

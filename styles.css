@@ -392,7 +392,7 @@ body {
 }
 
 /*Design Section*/
-#design {
+#design-button {
     width: 100vw;
     left: 75vw;
 }
@@ -649,7 +649,7 @@ body {
 #galleryImg12 {left: 0; top: 43%;}
 
 /*Coding Section*/
-#coding {
+#coding-button {
     width: 100vw;
     left: 175vw;
 }
