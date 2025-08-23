@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/old-app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old-portfolio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/DK_Space_EndProduct.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/DK_Project_End.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/3DmodelRook.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/3DmodelRook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/ClockModel.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/ClockModel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/EnergySystem.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/EnergySystem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/GearboxModel.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/GearboxModel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/Mower.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/Mower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/PrototypePoster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/PrototypePoster.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/SharpenerSketch.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/SharpenerSketch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/SpaceDesign.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/SpaceDesign.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/VRSketching.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/VRSketching.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/chair.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/chair.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/design/gallery/shoe.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/shoe.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-portfolio.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +29,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -53,28 +40,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.Portfolio.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.new-portfolio.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;portfolio-new&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WebstormProjects/Portfolio&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/reime/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Portfolio.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.new-portfolio.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "portfolio-new",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/WebstormProjects/Portfolio",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/reime/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
@@ -148,7 +135,7 @@
       <workItem from="1752606694116" duration="19467000" />
       <workItem from="1753797347630" duration="6000" />
       <workItem from="1753883512753" duration="1368000" />
-      <workItem from="1755926745994" duration="11024000" />
+      <workItem from="1755926745994" duration="16814000" />
     </task>
     <servers />
   </component>

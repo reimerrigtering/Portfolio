@@ -3,7 +3,7 @@ let designProjectNames = ["project-bar", "project-fns", "project-rover", "projec
 
 function resetDesignText() {
     let generalDesignText = document.getElementById("general-design-text");
-    generalDesignText.style.display = "block";
+    generalDesignText.style.display = "flex";
 }
 
 function deselectDesignProjects(enableGeneral = true) {
@@ -21,7 +21,7 @@ function deselectDesignProjects(enableGeneral = true) {
 function selectProject(project) {
     deselectDesignProjects(false)
     let projectText = document.getElementById(`${project}-text`);
-    projectText.style.display = "block";
+    projectText.style.display = "flex";
 }
 
 function selectDesignProject(project) {

@@ -276,11 +276,19 @@ h1, h2, h3, h4, h5, h6, p {
     object-fit: cover;
 }
 
+@keyframes color-in-image {
+    0% {filter: grayscale(100%);}
+    100% {filter: grayscale(0%);}
+}
+
 #design #projects-menu #project-bar {
     filter: grayscale(100%);
 }
-#design #projects-menu #project-bar:hover {
-    filter: none;
+#design #projects-menu #project-bar:hover:not(:target) {
+    animation-name: color-in-image;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 #design #projects-menu #project-bar:target {
     filter: none;
@@ -288,8 +296,11 @@ h1, h2, h3, h4, h5, h6, p {
 #design #projects-menu #project-fns {
     filter: grayscale(100%);
 }
-#design #projects-menu #project-fns:hover {
-    filter: none;
+#design #projects-menu #project-fns:hover:not(:target) {
+    animation-name: color-in-image;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 #design #projects-menu #project-fns:target {
     filter: none;
@@ -297,8 +308,11 @@ h1, h2, h3, h4, h5, h6, p {
 #design #projects-menu #project-rover {
     filter: grayscale(100%);
 }
-#design #projects-menu #project-rover:hover {
-    filter: none;
+#design #projects-menu #project-rover:hover:not(:target) {
+    animation-name: color-in-image;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 #design #projects-menu #project-rover:target {
     filter: none;
@@ -306,30 +320,42 @@ h1, h2, h3, h4, h5, h6, p {
 #design #projects-menu #project-mower {
     filter: grayscale(100%);
 }
-#design #projects-menu #project-mower:hover {
-    filter: none;
+#design #projects-menu #project-mower:hover:not(:target) {
+    animation-name: color-in-image;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 #design #projects-menu #project-mower:target {
     filter: none;
 }
 
+#design .project-text-window {
+    min-height: 15dvw;
+    max-height: 100em;
+    overflow-y: auto;
+    background-color: light-dark(var(--color-white), var(--color-grey));
+}
+
+#design .project-text-all {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    color: light-dark(var(--color-black), var(--color-white));
+}
+
 #design .project-text-header {
-    color: light-dark(var(--color-white), var(--color-black));
-    font-size: 8dvmin;
+    font-size: 7dvmin;
     font-weight: bold;
 }
 
-#design .project-text-window {
-    width: 100%;
-    min-height: 40dvh;
-    background-color: light-dark(var(--color-grey), var(--color-white));
-    border-radius: var(--element-corner-radius);
-}
-
 #design .project-text {
-    color: light-dark(var(--color-white), var(--color-black))
+    font-size: 3dvmin;
 }
 
+#design #general-design-text {
+    display: flex;
+}
 #design #project-bar-text {
     display: none;
 }
