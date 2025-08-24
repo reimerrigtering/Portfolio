@@ -80,7 +80,18 @@ h1, h2, h3, h4, h5, h6, p {
 
 .page-object {
     box-sizing: border-box;
-    padding: 2dvw;
+    padding: 2dvw 2dvw 2dvw 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2dvw;
+    align-items: start;
+    justify-content: left;
+    width: 100%;
+}
+
+.sidebar-banner {
+    width: 1.5dvw;
+    height: 100%;
 }
 
 /* Top banner */
@@ -245,7 +256,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* About Me */
 #about-me {
+}
 
+#about-me #about-me-banner {
+    background-color: var(--color-yellow);
 }
 
 #about-me #about-text {
@@ -255,6 +269,10 @@ h1, h2, h3, h4, h5, h6, p {
 /* Design */
 #design {
     width: 100%;
+}
+
+#design #design-banner {
+    background-color: var(--color-turquoise);
 }
 
 #design #projects-menu {
