@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6, p {
     color: light-dark(var(--color-black), var(--color-white));
     margin: 0;
 }
+p {
+    font-size: 3dvmin;
+}
 
 .about-me-color {
     background-color: var(--color-yellow);
@@ -90,7 +93,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .sidebar-banner {
-    width: 1.5dvw;
+    width: 1dvw;
     height: 100%;
 }
 
@@ -127,7 +130,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #introduction #intro-text {
-    font-size: 2dvw;
     margin: 0;
 }
 
@@ -263,7 +265,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #about-me #about-text {
-    font-size: 1.5dvw;
 }
 
 /* Design */
@@ -368,7 +369,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #design .project-text {
-    font-size: 3dvmin;
 }
 
 #design #general-design-text {
