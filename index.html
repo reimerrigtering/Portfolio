@@ -75,7 +75,7 @@
     </div>
 
     <div id="about-me" class="page-object">
-        <div class="sidebar-banner" id="about-me-banner"></div>
+        <div class="sidebar-banner about-me-color"></div>
         <p id="about-text">
             Creation is the most fun of all things. Creating an idea and shaping it into something
             that works is what I love to do. Starting out with bricks when I was young, I started
@@ -88,26 +88,26 @@
     </div>
 
     <div id="design">
-        <div id="projects-menu">
-            <a href="#project-bar" class="project-button" onclick=selectDesignProject('project-bar')>
+        <div class="projects-menu">
+            <a href="#project-bar" class="project-button" onclick=selectProject('project-bar','design')>
                 <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img"
                      id="project-bar">
             </a>
-            <a href="#project-fns" class="project-button" onclick=selectDesignProject('project-fns')>
+            <a href="#project-fns" class="project-button" onclick=selectProject('project-fns','design')>
                 <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img"
                      id="project-fns">
             </a>
-            <a href="#project-rover" class="project-button" onclick=selectDesignProject('project-rover')>
+            <a href="#project-rover" class="project-button" onclick=selectProject('project-rover','design')>
                 <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img"
                      id="project-rover">
             </a>
-            <a href="#project-mower" class="project-button" onclick=selectDesignProject('project-mower')>
+            <a href="#project-mower" class="project-button" onclick=selectProject('project-mower','design')>
                 <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img"
                      id="project-mower">
             </a>
         </div>
         <div class="page-object">
-            <div class="sidebar-banner" id="design-banner"></div>
+            <div class="sidebar-banner design-color"></div>
             <div class="project-text-window">
                 <div id="general-design-text" class="project-text-all">
                     <h3 class="project-text-header">Design</h3>
@@ -173,11 +173,75 @@
         <div class="moving-background"></div>
     </div>
 
-    <div id="coding"></div>
+    <div id="coding">
+        <div class="projects-menu">
+            <a href="#project-QE" class="project-button" onclick=selectProject('project-QE','coding')>
+                <img src="imgs/general/close.png" alt="Coding Project Photo" class="project-window-img"
+                     id="project-QE">
+            </a>
+            <a href="#project-pUI" class="project-button" onclick=selectProject('project-pUI','coding')>
+                <img src="imgs/general/close.png" alt="Coding Project Photo" class="project-window-img"
+                     id="project-pUI">
+            </a>
+            <a href="#project-game" class="project-button" onclick=selectProject('project-game','coding')>
+                <img src="imgs/general/close.png" alt="Coding Project Photo" class="project-window-img"
+                     id="project-game">
+            </a>
+            <a href="#project-0" class="project-button" onclick=selectProject('project-0','coding')>
+                <img src="imgs/general/close.png" alt="Coding Project Photo" class="project-window-img"
+                     id="project-0">
+            </a>
+        </div>
+        <div class="page-object">
+            <div class="sidebar-banner coding-color"></div>
+            <div class="project-text-window">
+                <div id="general-coding-text" class="project-text-all">
+                    <h3 class="project-text-header">Coding</h3>
+                    <p class="project-text"></p>
+                </div>
+                <div id="project-QE-text" class="project-text-all">
+                    <h3 class="project-text-header">Quantum English Art Project</h3>
+                    <p class="project-text"></p>
+                </div>
+                <div id="project-pUI-text" class="project-text-all">
+                    <h3 class="project-text-header">Pygame UI Library</h3>
+                    <p class="project-text"></p>
+                </div>
+                <div id="project-game-text" class="project-text-all">
+                    <h3 class="project-text-header">Game Desing</h3>
+                    <p class="project-text"></p>
+                </div>
+                <div id="project-0-text" class="project-text-all">
+                    <h3 class="project-text-header">_</h3>
+                    <p class="project-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="seperator">
         <div class="moving-background"></div>
     </div>
 
-    <div id="contact-me"></div>
+    <div id="contact-me">
+        <div class="page-object">
+            <div class="sidebar-banner contact-me-color"></div>
+            <div id="contact-pages">
+                <h3 id="contact-title">Contact Me</h3>
+                <a href="mailto:reimer.rigtering@gmail.com" target="_blank">
+                    <img src="imgs/contact/gmail_icon.webp" alt="Gmail Icon" class="contact-link-image" id="contact-gmail">
+                </a>
+                <a href="https://www.linkedin.com/in/reimer-rigtering/" target="_blank">
+                <img src="imgs/contact/linkedin_icon.webp" alt="LinkedIn Icon" class="contact-link-image" id="contact-linkedin">
+                </a>
+                <a href="https://www.github.com/reimerrigtering" target="_blank">
+                    <picture>
+                        <source srcset="imgs/contact/github.webp" media="(prefers-color-scheme: light)">
+                        <source srcset="imgs/contact/github-dark.webp" media="(prefers-color-scheme: dark)">
+                        <img src="imgs/contact/github-dark.webp" alt="Github Icon" class="contact-link-image" id="contact-github">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

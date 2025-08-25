@@ -1,9 +1,15 @@
 let designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
+let codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-0"];
 
 
 function resetDesignText() {
     let generalDesignText = document.getElementById("general-design-text");
     generalDesignText.style.display = "flex";
+}
+
+function resetCodingText() {
+    let generalCodingText = document.getElementById("general-coding-text");
+    generalCodingText.style.display = "flex";
 }
 
 function deselectDesignProjects(enableGeneral = true) {
@@ -18,20 +24,34 @@ function deselectDesignProjects(enableGeneral = true) {
     }
 }
 
-function selectProject(project) {
-    deselectDesignProjects(false)
-    let projectText = document.getElementById(`${project}-text`);
-    projectText.style.display = "flex";
+function deselectCodingProjects(enableGeneral = true) {
+    codingProjectNames.forEach((project) =>
+    {
+        let projectText = document.getElementById(`${project}-text`);
+        projectText.style.display = "none";
+    });
+
+    if (enableGeneral) {
+        resetCodingText();
+    }
 }
 
-function selectDesignProject(project) {
-    let generalText = document.getElementById("general-design-text");
+function selectProject(project, section) {
+    let generalText = document.getElementById(`general-${section}-text`);
     generalText.style.display = "none";
-    selectProject(project);
+
+    deselectDesignProjects(section !== 'design')
+    deselectCodingProjects(section !== 'coding')
+
+    let projectText = document.getElementById(`${project}-text`);
+    projectText.style.display = "flex";
 }
 
 window.onhashchange = function () {
     if (!designProjectNames.includes(window.location.hash.substring(1))) {
         deselectDesignProjects()
+    }
+    if (!codingProjectNames.includes(window.location.hash.substring(1))) {
+        deselectCodingProjects()
     }
 }
