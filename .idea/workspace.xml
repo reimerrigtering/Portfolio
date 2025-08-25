@@ -7,7 +7,6 @@
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/contact/github_icon.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
@@ -136,7 +135,7 @@
       <workItem from="1753797347630" duration="6000" />
       <workItem from="1753883512753" duration="1368000" />
       <workItem from="1755926745994" duration="21759000" />
-      <workItem from="1756076145284" duration="9993000" />
+      <workItem from="1756076145284" duration="11186000" />
     </task>
     <servers />
   </component>

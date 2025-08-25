@@ -1,5 +1,5 @@
 let designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
-let codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-0"];
+let codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
 
 
 function resetDesignText() {

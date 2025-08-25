@@ -427,16 +427,16 @@ p {
 #coding .projects-menu #project-game:target {
     filter: none;
 }
-#coding .projects-menu #project-0 {
+#coding .projects-menu #project-poem {
     filter: grayscale(100%);
 }
-#coding .projects-menu #project-0:hover:not(:target) {
+#coding .projects-menu #project-poem:hover:not(:target) {
     animation-name: color-in-image;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-#coding .projects-menu #project-0:target {
+#coding .projects-menu #project-poem:target {
     filter: none;
 }
 
@@ -452,7 +452,7 @@ p {
 #coding #project-game-text {
     display: none;
 }
-#coding #project-0-text {
+#coding #project-poem-text {
     display: none;
 }
 
