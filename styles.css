@@ -492,7 +492,7 @@ p {
 }
 
 #coding .code-logo-image {
-    width: 10%;
+    width: min(20%, 10dvmax);
     aspect-ratio: 1/1;
 }
 
