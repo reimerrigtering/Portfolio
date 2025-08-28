@@ -1,93 +1,57 @@
-elementHome = {"intro": 0, "design": 75, "coding": 175, "contact": 275}
-let containerPos = 0;
-let startTime = Date.now()
-let hasMoved = false
-let instruction = null
-let lastTouchPosition = null
-instructionTimer = 5000
-maxScroll = 400
+let designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
+let codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
 
 
-function init() {
-    setElements()
-    showScrollInstruction()
+function resetDesignText() {
+    let generalDesignText = document.getElementById("general-design-text");
+    generalDesignText.style.display = "flex";
 }
 
-function showScrollInstruction() {
-    instruction = setTimeout(showScrollInstruction, 1000)
-    if (Date.now() - startTime > instructionTimer) {
-        if (!hasMoved) {
-            let instruction = document.getElementById("moveInstructionBox");
-            instruction.style.display = "block";
-            instruction.classList.add("fade-in");
-        }
-        clearTimeout(instruction)
+function resetCodingText() {
+    let generalCodingText = document.getElementById("general-coding-text");
+    generalCodingText.style.display = "flex";
+}
+
+function deselectDesignProjects(enableGeneral = true) {
+    designProjectNames.forEach((project) =>
+    {
+        let projectText = document.getElementById(`${project}-text`);
+        projectText.style.display = "none";
+    });
+
+    if (enableGeneral) {
+        resetDesignText();
     }
 }
 
-function setElements() {
-    document.getElementById("container").style.left = containerPos + 'vw';
-}
+function deselectCodingProjects(enableGeneral = true) {
+    codingProjectNames.forEach((project) =>
+    {
+        let projectText = document.getElementById(`${project}-text`);
+        projectText.style.display = "none";
+    });
 
-function setElementsTo(scrollPosition) {
-    if (Object.keys(elementHome).includes(scrollPosition)) {
-        scrollPosition = Math.max(elementHome[scrollPosition] - 5, 0);
-    } else {
-        return
-    }
-    containerPos = Math.min(-Math.min(scrollPosition, maxScroll), 0);
-    setElements()
-}
-
-function processMove() {
-    if (!hasMoved) {
-        hasMoved = true
-        if (Date.now() - startTime > instructionTimer) {
-            let instruction = document.getElementById("moveInstructionBox");
-            instruction.classList.add("fade-out");
-            setTimeout(function () {
-                instruction.style.display = "none";
-            }, 500)
-        }
+    if (enableGeneral) {
+        resetCodingText();
     }
 }
 
-function checkScrollableElement(x, y) {
-    let hoverElement = document.elementFromPoint(x, y);
-    return hoverElement.scrollHeight > hoverElement.clientHeight;
+function selectProject(project, section) {
+    let generalText = document.getElementById(`general-${section}-text`);
+    generalText.style.display = "none";
+
+    deselectDesignProjects(section !== 'design')
+    deselectCodingProjects(section !== 'coding')
+
+    let projectText = document.getElementById(`${project}-text`);
+    projectText.style.display = "flex";
 }
 
-function scrollElements(event) {
-    if (checkScrollableElement(event.x, event.y)) {return}
-    processMove()
-    let direction
-    if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-        direction = event.deltaY;
+window.onhashchange = function () {
+    if (!designProjectNames.includes(window.location.hash.substring(1))) {
+        deselectDesignProjects()
     }
-    else {
-        direction = event.deltaX;
+    if (!codingProjectNames.includes(window.location.hash.substring(1))) {
+        deselectCodingProjects()
     }
-    if (containerPos <= -maxScroll && direction > 0) { return }
-    containerPos = Math.min(containerPos - direction / 10, 0)
-    setElements()
 }
-
-function swipeElements(event) {
-    processMove()
-    let touchPosistion = event.touches[0].pageX
-    if (lastTouchPosition !== null) {
-        let distance = lastTouchPosition - touchPosistion
-        if (containerPos <= -maxScroll && distance > 0) { return }
-        containerPos = Math.min(containerPos - distance / 5, 0)
-        setElements()
-    }
-    lastTouchPosition = touchPosistion
-}
-
-function swipeEnd() {
-    lastTouchPosition = null
-}
-
-document.addEventListener("wheel", scrollElements);
-document.addEventListener("touchmove", swipeElements);
-document.addEventListener("touchend", swipeEnd);

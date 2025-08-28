@@ -2,523 +2,366 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no">
-    <meta name="color-scheme" content="only light">
+    <meta name="viewport" content=
+            "height=device-height,
+            initial-scale=1.0,
+            user-scalable=no">
     <title>Reimer Rigtering</title>
     <link rel="icon" href="imgs/general/protfolioIcon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <script src="app.js"></script>
-<body onload="init()">
-    <!--Navigation Bar-->
-    <div class="navbar">
-        <button class="navbarbutton" type="button" onclick='setElementsTo("intro")'>About Me</button>
-        <button class="navbarbutton" type="button" onclick='setElementsTo("design")'>Design</button>
-        <button class="navbarbutton" type="button" onclick='setElementsTo("coding")'>Coding</button>
-        <button class="navbarbutton" type="button" onclick='setElementsTo("contact")'>Contact</button>
+<body>
+    <div id="banner">
+        <h2 class="pageHeader">Reimer Rigtering</h2>
+        <div class="moving-background"></div>
     </div>
 
-    <!--Scroll Instructions-->
-    <div id="moveInstructionBox">
-        <img src="imgs/general/scrollDownIcon.png" alt="Scroll Down Icon" id="scrollIcon">
-        <p class="moveText" id="scrollText">Scroll to move</p>
-        <img src="imgs/general/swipeLeftIcon.png" alt="Swipe Left Icon" id="swipeIcon">
-        <p class="moveText" id="swipeText">Swipe to move</p>
+    <div id="introduction">
+        <h2 id="header">Hi!</h2>
+        <p id="intro-text">
+            I'm a <span class="keyword">Designer</span>
+            and <span class="keyword">Developer</span>
+            studying at and working for Delft University of Technology.
+            I study Industrial Design Engineering and work as Student Coding
+            and Media Support for the TU Delft Library.
+        </p>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
     </div>
 
-    <!--Main Container-->
-    <div id="container">
-        <img src="imgs/general/RedRope.png" alt="Red Rope" id="rope" oncontextmenu="return false">
-        <div id="sidebar"></div>
-
-    <!--Intro Section-->
-        <div class="section" id="intro">
-            <p id="greeting">Hi, I'm</p>
-            <h1 id="name">Reimer<br>Rigtering</h1>
-            <div id="opening">
-                <div class="textGuardA"></div>
-                <div class="textGuardB"></div>
-                <p class="basicText" id="openingText">
-                    I'm a <span class="keyword">Designer</span>
-                    and <span class="keyword">Developer</span>
-                    studying at and working for Delft University of Technology.<br>
-                    I study Industrial Design Engineering and work as Student Coding
-                    and Media Support for the TU Delft Library.
-                </p>
+    <div id="menu" class="page-object">
+        <a href="#about-me" class="button-link">
+            <div class="button about-me-color">
+                <h2 class="title-text">About Me</h2>
+                <div class="image-background"></div>
+                <img src="imgs/general/exclamation.webp" alt="About Me" class="image">
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
             </div>
+        </a>
+        <a href="#design" class="button-link">
+            <div class="button design-color">
+                <h2 class="title-text">Design</h2>
+                <div class="image-background"></div>
+                <img src="imgs/design/FohnSketches.png" alt="Design" class="image">
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+        <a href="#coding" class="button-link">
+            <div class="button coding-color">
+                <h2 class="title-text">Coding</h2>
+                <div class="image-background"></div>
+                <img src="imgs/coding/PythonLogo.png" alt="Coding" class="image">
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+        <a href="#contact-me" class="button-link">
+            <div class="button contact-me-color">
+                <h2 class="title-text">Contact Me</h2>
+                <div class="image-background"></div>
+                <img src="imgs/contact/gmail_icon.webp" alt="Contact" class="image">
+                <p class="read-text">Read more</p>
+                <div class="expand-arrow-circle"></div>
+                <img src="imgs/general/expand.png" alt=">" class="expand-arrow">
+            </div>
+        </a>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="about-me" class="page-object">
+        <div class="sidebar-banner about-me-color"></div>
+        <p id="about-text">
+            Creation is the most fun of all things. Creating an idea and shaping it into something that works is what
+            I love to do. Starting out with bricks when I was young, I started building my ideas and putting them into
+            the world. Later on, I discovered coding. Building things with an unlimited number of bricks and tools to
+            work with to show my ideas to others.
+            <br><br>
+            Designing is the process of creating, building something together. It is this process, this challenge,
+            which I think is the most interesting part. Finding the best way to combine strengths, cover each other's
+            weaknesses to create the absolute best things possible. This is why I will always be excited to design
+            and develop with others.
+        </p>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
+
+    <div id="design">
+        <div class="projects-menu">
+            <a href="#project-bar" class="project-button" onclick=selectProject('project-bar','design')>
+                <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img"
+                     id="project-bar">
+            </a>
+            <a href="#project-fns" class="project-button" onclick=selectProject('project-fns','design')>
+                <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img"
+                     id="project-fns">
+            </a>
+            <a href="#project-rover" class="project-button" onclick=selectProject('project-rover','design')>
+                <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img"
+                     id="project-rover">
+            </a>
+            <a href="#project-mower" class="project-button" onclick=selectProject('project-mower','design')>
+                <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img"
+                     id="project-mower">
+            </a>
         </div>
-
-    <!--Design Section-->
-        <div class="section" id="design">
-            <div class="sectionHeader">
-                <div class="sectionHeaderGuard" id="designHeaderGuard"></div>
-                <h2 class="sectionHeaderText">Design</h2>
-            </div>
-            <div class="contentBlocks">
-                <div class="contentCard" id="designCard1">
-                    <!--Folded in-->
-                    <a href="#designCard1" onclick="setElementsTo('design')">
-                        <div class="content wrapper" id="d1wrapper">
-                            <h3 class="cardHeader">Be Social, Make Friends</h3>
-                            <div class="expandCard">
-                                <img src="imgs/general/expand.png" alt="Arrow" class="expandCardSymbol">
-                            </div>
-                        </div>
-                    </a>
-                    <!--Folded out-->
-                    <div class="content" id="d1content">
-                        <img src="imgs/design/DK_Space_DesignSketch.png" alt="Design Sketch"
-                             class="contentImage d1" id="barsketch">
-                        <img src="imgs/design/DK_Bar_Model.png" alt="3D Model"
-                             class="contentImage d1" id="barmodel">
-                        <img src="imgs/design/DK_Space_EndProduct.jpg" alt="End Product"
-                             class="contentImage d1" id="barresult">
-
-                        <div class="contentText">
-                            <h3 class="contentHeader">Be Social, Make Friends</h3>
-                            <p class="contentInfo">
-                                I designed a social gathering space for teenagers to meet on
-                                Sunday evenings so they can meet up and play games. This is a space created to give
-                                teenagers a meeting place and is open to everybody. The idea is to stimulate contact
-                                between these teenagers and take them outside their own daily bubble. This is all to
-                                combat loneliness, provide new perspectives, and offer teenagers a sense of community
-                                with people their own age. This way, they have opportunities to help and support
-                                each other.<br><br>This space started as a messy upstairs area of a church in the
-                                city center of Heemskerk. Over a period of about 3 months, I designed and built, with
-                                the help of some friends, the entire space. Taking into account budget constraints,
-                                flexibility in the purpose of the space, and the fact that the church is a monument,
-                                which brings its own restrictions. This project involved sketching, pitching to the
-                                church board for a budget, 3D modeling, and ultimately building everything, among
-                                many other tasks.
-                            </p>
-                        </div>
-
-                        <a href="#">
-                            <div class="closeCard">
-                                <img src="imgs/general/close.png" alt="Close" class="closeCardSymbol">
-                            </div>
-                        </a>
-                    </div>
+        <div class="page-object">
+            <div class="sidebar-banner design-color"></div>
+            <div class="project-text-window">
+                <div id="general-design-text" class="project-text-all">
+                    <h3 class="project-text-header">Design</h3>
+                    <p class="project-text">
+                        Designing is easy, everyone can do it. But designing something well is hard, really hard,
+                        actually. This is for me the most important lesson I learned as a designer.
+                        It describes the beauty of design for me. Everyone can design. It is something that binds
+                        us as people, no matter where you’re from, no matter which language you speak, we all design.
+                        It is a connection between all of us.
+                        <br><br>
+                        But designing well is challenging. It requires creativity,
+                        the ability to look at things from a point of view you have never considered yourself and
+                        maybe the hardest of all, it requires you to fail, a lot. This is why I think design is best
+                        done together. Designing together already helps against pitfalls like being stuck in one
+                        perspective or not realizing an idea could be better if you would change it somehow.
+                        Generating ideas together will always, always result in a better end product. And this is
+                        also what makes design so enjoyable, talking to each other, figuring out what someone means,
+                        drawing some quick sketches on a bit of paper lying around. And then, finally, creating
+                        something together.
+                    </p>
                 </div>
-                <div class="contentCard" id="designCard2">
-                    <!--Folded in-->
-                    <a href="#designCard2" onclick="setElementsTo('design')">
-                        <div class="content wrapper" id="d2wrapper">
-                            <h3 class="cardHeader">Curious 'bout Art</h3>
-                            <div class="expandCard">
-                                <img src="imgs/general/expand.png" alt="Arrow" class="expandCardSymbol">
-                            </div>
-                        </div>
-                    </a>
-                    <!--Folded out-->
-                    <div class="content" id="d2content">
-                        <img src="imgs/design/FnS_Project.jpg" alt="Design Artwork"
-                             class="contentImage d2" id="fnsproject">
-
-                        <div class="contentText">
-                            <h3 class="contentHeader">Curious 'bout Art</h3>
-                            <p class="contentInfo">
-                                This artwork was created by a team with the goal of stimulating
-                                the senses by using sound, lights, and haptics to draw the user in and make
-                                the surroundings fade away. Felt was used to stimulate touch within the artwork, while
-                                lights and connected headphones created light and sounds based on the position of your
-                                hands within the piece.<br><br>The artwork has "invisible strings"
-                                you can play. Three vertical lines where your hands generate and mix sounds and lights.
-                                Different heights produced vibrant tones within octaves, and the various strings
-                                corresponded to different colors. When playing multiple strings simultaneously, the
-                                sound and light would combine into completely new patterns and effects.
-                            </p>
-                        </div>
-
-                        <a href="#">
-                            <div class="closeCard">
-                                <img src="imgs/general/close.png" alt="Close" class="closeCardSymbol">
-                            </div>
-                        </a>
-                    </div>
+                <div id="project-bar-text" class="project-text-all">
+                    <h3 class="project-text-header">Church Youth Group Space Design</h3>
+                    <p class="project-text">
+                        To create opportunities to connect and stay connected, I wanted to create a new social
+                        gathering space by transforming a room in a church located in the Heemskerk city center.
+                        <br><br>
+                        I designed a social gathering space for teenagers to meet on Sunday evenings so they can meet
+                        up and play games. This is a space created to give teenagers a meeting place and is open to
+                        everybody. The idea is to stimulate contact between these teenagers and take them outside
+                        their own daily bubble. This is all to combat loneliness, provide new perspectives, and offer
+                        teenagers a sense of community with people around their own age. This way, they have
+                        opportunities to help and support each other.
+                        <br><br>
+                        This space started as a messy upstairs area of a church in the city center of Heemskerk.
+                        Over a period of about 3 months, I designed and built, with the help of some friends, the
+                        entire space. First sketching, then over to 3D-moddeling for the bar itself. Creating plans
+                        for different possible layouts and talking with many different people about budget,
+                        possibilities and how the space could be used outside the youth group as well. And ultimately
+                        building everything to realize all the plans.
+                    </p>
                 </div>
-                <div class="contentCard" id="designCard3">
-                    <!--Folded in-->
-                    <a href="#designCard3" onclick="setElementsTo('design')">
-                        <div class="content wrapper" id="d3wrapper">
-                            <h3 class="cardHeader">VR Designing</h3>
-                            <div class="expandCard">
-                                <img src="imgs/general/expand.png" alt="Arrow" class="expandCardSymbol">
-                            </div>
-                        </div>
-                    </a>
-                    <!--Folded out-->
-                    <div class="content" id="d3content">
-                        <img src="imgs/design/RoverTop.png" alt="VR Sketch Render"
-                             class="contentImage d3" id="roverTop">
-                        <img src="imgs/design/RoverInside.png" alt="VR Sketch Render"
-                             class="contentImage d3" id="roverInside">
-                        <img src="imgs/design/RoverBuildup.png" alt="VR Sketch Process"
-                             class="contentImage d3" id="roverBuildup">
-
-                        <div class="contentText">
-                            <h3 class="contentHeader">VR Designing</h3>
-                            <p class="contentInfo">
-                                With a team of three people, I designed a Mars rover using VR
-                                sketching. The rover was created by moving in VR and sketching directly into the
-                                virtual environment. After many iterations and changes, this was the final
-                                result.<br><br>We began by creating a full-scale frame to establish the basic shape.
-                                Then, through an extensive process, the frame was enclosed using sheets that
-                                connected all the ribs. We ensured that every component had double walls to avoid
-                                paper-thin surfaces and to provide an interior living space. We added all the necessary
-                                elements to make the rover suitable for multi-day missions in the future.<br><br>
-                                Finally, the rover was rendered in Blender to produce high-quality visuals and present
-                                the concept.
-                            </p>
-                        </div>
-
-                        <a href="#">
-                            <div class="closeCard">
-                                <img src="imgs/general/close.png" alt="Close" class="closeCardSymbol">
-                            </div>
-                        </a>
-                    </div>
+                <div id="project-fns-text" class="project-text-all">
+                    <h3 class="project-text-header">Form and Senses Art Project</h3>
+                    <p class="project-text">
+                        To stimulate different senses in new ways, my team and I wanted to approach the senses in new
+                        and creative ways. We wanted to do this by creating an artwork which targeted the senses
+                        in interesting ways.
+                        <br><br>
+                        We created this artwork for an exibition within the TU Delft library where it was displayed.
+                        The artwork was created focusing on touch, sight, and hearing. Starting by making it possible
+                        to touch the artwork everywhere. Feel the interesting shapes and textures throughout the
+                        artwork. Then the main part of the artwork consisted of "invisible strings." Using sensors to
+                        detect hand movement within the artwork, you could play these strings and different hand
+                        positions would correspond to different sounds and lights.
+                        <br><br>
+                        The lights created new perspectives and lit up different parts of the brightly colored artwork.
+                        Next to that, you could even combine sounds and lights by playing multiple strings
+                        simultaneously.
+                    </p>
                 </div>
-            </div>
-            <div id="designGallery">
-                <div class="galleryImg" id="galleryImg1">
-                    <img src="imgs/design/gallery/chair.PNG" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg1" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
+                <div id="project-rover-text" class="project-text-all">
+                    <h3 class="project-text-header">Rover Design and 3D-modeling </h3>
+                    <p class="project-text">
+                        To learn VR-sketching, my team wanted to make a finalized project by creating a
+                        hypothetical Mars rover and render our model using Blender.
+                        <br><br>
+                        We began by creating a full-scale frame to establish the basic shape. Then, through an
+                        extensive process, the frame was enclosed using sheets that connected all the ribs. We
+                        ensured that every component had double walls to avoid paper-thin surfaces and to provide
+                        an interior living space. We added all the necessary elements to make the rover suitable
+                        for multi-day missions in the future. Finally, the rover was rendered in Blender to produce
+                        high-quality visuals and present the concept in its final form.
+                    </p>
                 </div>
-                <div class="galleryImg" id="galleryImg2">
-                    <img src="imgs/design/gallery/VRSketching.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg2" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg3">
-                    <img src="imgs/design/gallery/EnergySystem.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg3" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg4">
-                    <img src="imgs/design/gallery/FohnSketches.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg4" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg5">
-                    <img src="imgs/design/gallery/Mower.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg5" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg6">
-                    <img src="imgs/design/gallery/ClockModel.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg6" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg7">
-                    <img src="imgs/design/gallery/SharpenerSketch.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg7" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg8">
-                    <img src="imgs/design/gallery/shoe.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg8" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg9">
-                    <img src="imgs/design/gallery/SpaceDesign.jpg" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg9" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg10">
-                    <img src="imgs/design/gallery/3DmodelRook.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg10" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg11">
-                    <img src="imgs/design/gallery/GearboxModel.png" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg11" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
-                </div>
-                <div class="galleryImg" id="galleryImg12">
-                    <img src="imgs/design/gallery/PrototypePoster.jpg" alt="img1" class="galleryImgFormat">
-                    <a href="#galleryImg12" onclick="setElementsTo('design')">
-                        <div class="galleryImgClickable"></div>
-                    </a>
-
-                    <a href="#">
-                        <div class="closeGalleryImg">
-                            <img src="imgs/general/close.png" alt="Close" class="closeGalleryImgSymbol">
-                        </div>
-                    </a>
+                <div id="project-mower-text" class="project-text-all">
+                    <h3 class="project-text-header">Sketching, Drawing and Editing</h3>
+                    <p class="project-text">
+                        Sketching, drawing, and editing are all import skills while designing. They are essential
+                        to create a good design and to communicate with others.
+                        <br><br>
+                        Sketching lays out a plan, using quick and easy visuals. It is the best way to communicate
+                        quickly and is absolutely crucial while brainstorming with a team of people to get your ideas
+                        across in the best possible way.
+                        <br><br>
+                        Drawing and Editing are the next steps. Sketches are nice, but they only take you so far. By
+                        drawing your ideas, they are presentable to clients. Being able to edit photos is an important
+                        step in finalizing your drawings. Often being needed to best transition your design into digital
+                        images for production posters and websites.
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
 
-    <!--Coding Section-->
-        <div class="section" id="coding">
-            <div class="sectionHeader">
-                <div class="sectionHeaderGuard" id="codingHeaderGuard"></div>
-                <h2 class="sectionHeaderText">Coding</h2>
-            </div>
-            <div class="contentBlocks">
-                <div class="contentCard" id="codingCard1">
-                    <!--Folded in-->
-                    <a href="#codingCard1" onclick="setElementsTo('coding')">
-                        <div class="content wrapper" id="c1wrapper">
-                            <h3 class="cardHeader">Quantum-English</h3>
-                            <div class="expandCard">
-                                <img src="imgs/general/expand.png" alt="Arrow" class="expandCardSymbol">
-                            </div>
-                        </div>
-                    </a>
-                    <!--Folded out-->
-                    <div class="content" id="c1content">
-                        <img src="imgs/coding/qp_gif.gif" alt="Quantum Poiesis Artwork" class="contentImage c1">
-
-                        <div class="contentText">
-                            <h3 class="contentHeader">Quantum-English</h3>
-                            <p class="contentInfo">The Quantum Poiesis project is a piece where I did the coding for
-                                an artist. It is the first step towards a quantum computer speaking Old English.
-                                <br><br>This piece runs a quantum computer simulation based on a quantum computer
-                                from QuTech. The data from these quantum bits are plotted on a sphere, which are then
-                                translated into letters. After linking the letters together into words, phonemes of
-                                these words are generated. These are then spoken aloud by the computer using
-                                a Text-to-Speech engine. To ensure this system runs continuously in an exhibition,
-                                it needed to be robust and capable of running indefinitely without human intervention.
-                                <br><br>This piece uses a combination of Python for all the background tasks and
-                                Kotlin with OPENRNDR for the foreground.
-                            </p>
-                        </div>
-
-                        <a href="#">
-                            <div class="closeCard">
-                                <img src="imgs/general/close.png" alt="Close" class="closeCardSymbol">
-                            </div>
-                        </a>
+    <div id="coding">
+        <div class="projects-menu">
+            <a href="#project-QE" class="project-button" onclick=selectProject('project-QE','coding')>
+                <img src="imgs/coding/qp_gif_frame.png" alt="Coding Project Photo" class="project-window-img" id="project-QE"
+                onmouseover="this.src='imgs/coding/qp_gif.gif'" onmouseout="this.src='imgs/coding/qp_gif_frame.png'">
+            </a>
+            <a href="#project-pUI" class="project-button" onclick=selectProject('project-pUI','coding')>
+                <img src="imgs/coding/PythonLibTesting.png" alt="Coding Project Photo" class="project-window-img"
+                     id="project-pUI">
+            </a>
+            <a href="#project-game" class="project-button" onclick=selectProject('project-game','coding')>
+                <img src="imgs/coding/UnityGameBuidling.jpg" alt="Coding Project Photo" class="project-window-img"
+                     id="project-game">
+            </a>
+            <a href="#project-poem" class="project-button" onclick=selectProject('project-poem','coding')>
+                <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo" class="project-window-img"
+                     id="project-poem">
+            </a>
+        </div>
+        <div class="page-object">
+            <div class="sidebar-banner coding-color"></div>
+            <div class="project-text-window">
+                <div id="general-coding-text" class="project-text-all">
+                    <h3 class="project-text-header">Coding</h3>
+                    <p class="project-text">
+                        Making things is amazing. Well, coding is like building something, but with an infinite number
+                        of building blocks and opportunities right at your fingertips. So many people who
+                        have never met, but are collaborating over the internet and helping each other because of their
+                        passion for making something great.
+                        <br><br>
+                        The only real limit in coding is your imagination. Use every building block available and if you
+                        can't find the correct blocks? Create them yourself! Explore different languages with their own
+                        pros and cons and use your knowledge from one to improve the other and be even
+                        better for it.
+                    </p>
+                    <div class="code-logo-list">
+                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
+                        <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin" class="code-logo-image">
+                        <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
+                        <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML-CSS-JS Logo" title="HTML5 / CSS3 / JS"
+                             class="code-logo-image">
                     </div>
                 </div>
-                <div class="contentCard" id="codingCard2">
-                    <!--Folded in-->
-                    <a href="#codingCard2" onclick="setElementsTo('coding')">
-                        <div class="content wrapper" id="c2wrapper">
-                            <h3 class="cardHeader">Love some good UI</h3>
-                            <div class="expandCard">
-                                <img src="imgs/general/expand.png" alt="Arrow" class="expandCardSymbol">
-                            </div>
-                        </div>
-                    </a>
-                    <!--Folded out-->
-                    <div class="content" id="c2content">
-                        <img src="imgs/coding/ShowPython.png" alt="Python Code"
-                             class="contentImage c2" id="pythonCode">
-                        <img src="imgs/coding/PythonLibTesting.png" alt="Python Library Showcase"
-                             class="contentImage c2" id="pythonTest">
-
-                        <div class="contentText">
-                            <h3 class="contentHeader">Love some good UI</h3>
-                            <p class="contentInfo">I coded many small personal projects using Python, often creating
-                                simple games with Pygame. Wanting an easier way to create UI elements, I developed
-                                my own library to support Pygame and make UI elements more straightforward. Using
-                                this library, scenes, animations, buttons, bars, and much more only require
-                                a few lines of code, while maintaining a great deal of customizability.
-                            </p>
-                        </div>
-
-                        <a href="#">
-                            <div class="closeCard">
-                                <img src="imgs/general/close.png" alt="Close" class="closeCardSymbol">
-                            </div>
-                        </a>
+                <div id="project-QE-text" class="project-text-all">
+                    <h3 class="project-text-header">Quantum English Art Project</h3>
+                    <p class="project-text">
+                        The Quantum Poiesis project is a piece where I did the coding for
+                        an artist. It is the first step towards a quantum computer speaking Old English.
+                        It was displayed on an art exibition within the TU Delft library.
+                        <br><br>
+                        This piece runs a quantum computer simulation based on a quantum computer
+                        from QuTech. The data from these quantum bits are plotted on a sphere, which are then
+                        translated into letters. After linking the letters together into words, phonemes of
+                        these words are generated. These are then spoken aloud by the computer using
+                        a Text-to-Speech engine. To ensure this system runs continuously in an exhibition,
+                        it needed to be robust and capable of running indefinitely without human intervention.
+                        <br><br>
+                        This piece required a combination of different coding languages, I coded the backend in Python
+                        and was asked to do the frontend in Kotlin and
+                        <a href="https://openrndr.org/" target="_blank">OPENRNDR</a>. So I learned Kotlin to make it
+                        possible, and although the communication between languages created its own challenges,
+                        it all worked out amazingly.
+                    </p>
+                    <div class="project-code-logo-list">
+                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
+                        <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin" class="code-logo-image">
                     </div>
                 </div>
-                <div class="contentCard" id="codingCard3">
-                    <!--Folded in-->
-                    <a href="#codingCard3" onclick="setElementsTo('coding')">
-                        <div class="content wrapper" id="c3wrapper">
-                            <h3 class="cardHeader">Attention Gamers</h3>
-                            <div class="expandCard">
-                                <img src="imgs/general/expand.png" alt="Arrow" class="expandCardSymbol">
-                            </div>
-                        </div>
-                    </a>
-                    <!--Folded out-->
-                    <div class="content" id="c3content">
-                        <img src="imgs/coding/UnityGameBuidling.jpg" alt="Unity Game" class="contentImage c3">
-
-                        <div class="contentText">
-                            <h3 class="contentHeader">Attention Gamers</h3>
-                            <p class="contentInfo">I created games in Unity twice with a group of people, using C# to
-                                develop relatively complex games within a matter of weeks. I worked on creating
-                                different mechanics and interactions between objects, as well as various game modes
-                                for different gaming experiences.<br><br>I also created games without an engine like
-                                Unity, often using my own library or OPENRNDR to develop games in Python or Kotlin.
-                            </p>
-                        </div>
-
-                        <a href="#">
-                            <div class="closeCard">
-                                <img src="imgs/general/close.png" alt="Close" class="closeCardSymbol">
-                            </div>
-                        </a>
+                <div id="project-pUI-text" class="project-text-all">
+                    <h3 class="project-text-header">Pygame UI Library</h3>
+                    <p class="project-text">
+                        I do a lot of coding just for fun for years now. And my go-to small project has always been
+                        small games. I used <a href="https://www.pygame.org/news" target="_blank">pygame</a> for most
+                        of these games, but quickly ran into problems with UI elements being too complicated to quickly
+                        implement.
+                        <br><br>
+                        So I decided to create a library on top of pygame that would make it possible to create
+                        simple and easy-to-use UI elements. I created a library that would allow you to create
+                        buttons, sliders, text boxes, and more. I put a lot of effort into it to make it incredibly
+                        flexible and usable in many different contexts and usecases. And I still develop it to
+                        this day. And creating games using the library has made my coding experience for these small
+                        games infinitely more enjoyable.
+                    </p>
+                    <div class="project-code-logo-list">
+                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
                     </div>
                 </div>
-            </div>
-            <div id="codingProficiency">
-                <div class="proficiencyBlock proficiencyPython">
-                    <img src="imgs/coding/PythonLogo.png" alt="Python Logo" class="codeLogo" title="Python">
-                    <div class="proficiencyBar proficiencyFadeIn" id="proficiencyFadeInPython"></div>
-                    <div class="proficiencyBar proficiencyBarRect" id="proficiencyBarPython">
-                        <p>Python</p>
+                <div id="project-game-text" class="project-text-all">
+                    <h3 class="project-text-header">Game Desing</h3>
+                    <p class="project-text">
+                        Designing games is fun, I have made countless quick playable games or translated existing
+                        games to the computer screen. I've also built larger games twice, using
+                        <a href="https://unity.com/" target="_blank">Unity</a> as the game engine to build the game
+                        within.
+                        <br><br>
+                        The two larger games I have made were both with other people, working in a team to create the
+                        best game we could in a tiny bit of time. Using C# for these games to build the scripts which
+                        run the game itself. I coded multiple things, but the largest thing I implemented into these
+                        group projects was a fully implemented inventory system. Including power-ups and tools for
+                        the player to use, yielding different effects and uses.
+                    </p>
+                    <div class="project-code-logo-list">
+                        <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
                     </div>
-                    <div class="proficiencyBar" id="proficiencyFadeOutPython"></div>
                 </div>
-
-                <div class="proficiencyBlock proficiencyKotlin">
-                    <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" class="codeLogo" title="Kotlin">
-                    <div class="proficiencyBar proficiencyFadeIn" id="proficiencyFadeInKotlin"></div>
-                    <div class="proficiencyBar proficiencyBarRect" id="proficiencyBarKotlin">
-                        <p>Kotlin</p>
+                <div id="project-poem-text" class="project-text-all">
+                    <h3 class="project-text-header">Infinite Poem Generation</h3>
+                    <p class="project-text">
+                        This project was aimed at infinite generatable poem generation within its simpelest form. Using
+                        related words to create an infinitly varying chain of related words.
+                        <br><br>
+                        This was done with two main tools: A LLM API and a Vector database. It implemented a large
+                        vector database of words and used it together with the LLM alternating to create a varying
+                        chain. First, the LLM would yield a word followed by a related word set to a certain "distance"
+                        within the vector database. After that the LLM would yield a new word relating to the previous
+                        word. By alternating between these steps, the chain of words could be infinitely long.
+                    </p>
+                    <div class="project-code-logo-list">
+                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
                     </div>
-                    <div class="proficiencyBar" id="proficiencyFadeOutKotlin"></div>
-                </div>
-
-                <div class="proficiencyBlock proficiencyCs">
-                    <img src="imgs/coding/CsLogo.png" alt="C# Logo" class="codeLogo" title="C#">
-                    <div class="proficiencyBar proficiencyFadeIn" id="proficiencyFadeInCs"></div>
-                    <div class="proficiencyBar proficiencyBarRect" id="proficiencyBarCs">
-                        <p>C#</p>
-                    </div>
-                    <div class="proficiencyBar" id="proficiencyFadeOutCs"></div>
-                </div>
-
-                <div class="proficiencyBlock proficiencyHTML">
-                    <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML+CSS+JS Logo" class="codeLogo" title="HTML+CSS+JS">
-                    <div class="proficiencyBar proficiencyFadeIn" id="proficiencyFadeInHTML"></div>
-                    <div class="proficiencyBar proficiencyBarRect" id="proficiencyBarHTML">
-                        <p>HTML, CSS & JavaScript</p>
-                    </div>
-                    <div class="proficiencyBar" id="proficiencyFadeOutHTML"></div>
-                </div>
-
-                <div class="markers">
-                    <div class="skillMarker">
-                        <div class="skillLine"></div>
-                        <div class="flag">BEGINNER</div>
-                    </div>
-                    <div class="skillMarker">
-                        <div class="skillLine"></div>
-                        <div class="flag">INTERMEDIATE</div>
-                    </div>
-                    <div class="skillMarker">
-                        <div class="skillLine"></div>
-                        <div class="flag">ADVANCED</div>
-                    </div>
-                    <div class="skillMarker">
-                        <div class="skillLine"></div>
-                        <div class="flag">EXPERT</div>
+                    <div class="project-in-development-bubble">
+                        <h4 class="project-in-development-bubble-text">In Development</h4>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="seperator">
+        <div class="moving-background"></div>
+    </div>
 
-    <!--Contact Setion-->
-        <div class="section" id="contact">
-            <div class="sectionHeader">
-                <div class="sectionHeaderGuard" id="contactHeaderGuard"></div>
-                <h2 class="sectionHeaderText">Contact</h2>
-            </div>
-            <div id="contactPages">
+    <div id="contact-me">
+        <div class="page-object">
+            <div class="sidebar-banner contact-me-color"></div>
+            <div id="contact-pages">
+                <h3 id="contact-title">Contact Me</h3>
+                <a href="mailto:reimer.rigtering@gmail.com" target="_blank">
+                    <img src="imgs/contact/gmail_icon.webp" alt="Gmail Icon" class="contact-link-image" id="contact-gmail">
+                </a>
                 <a href="https://www.linkedin.com/in/reimer-rigtering/" target="_blank">
-                    <div class="contactLogo">
-                        <img src="imgs/contact/linkedin_icon.webp" alt="LinkedIn" title="LinkedIn"
-                             class="contactLogoImg" id="LinkedIn">
-                    </div>
+                <img src="imgs/contact/linkedin_icon.webp" alt="LinkedIn Icon" class="contact-link-image" id="contact-linkedin">
                 </a>
                 <a href="https://www.github.com/reimerrigtering" target="_blank">
-                    <div class="contactLogo">
-                        <img src="imgs/contact/github_icon.webp" alt="GitHub" title="GitHub"
-                             class="contactLogoImg" id="GitHub">
-                    </div>
-                </a>
-                <a href="mailto:reimer.rigtering@gmail.com">
-                    <div class="contactLogo">
-                        <img src="imgs/contact/gmail_icon.webp" alt="Email" title="Email"
-                             class="contactLogoImg" id="Gmail">
-                    </div>
+                    <picture>
+                        <source srcset="imgs/contact/github.webp" media="(prefers-color-scheme: light)">
+                        <source srcset="imgs/contact/github-dark.webp" media="(prefers-color-scheme: dark)">
+                        <img src="imgs/contact/github-dark.webp" alt="Github Icon" class="contact-link-image" id="contact-github">
+                    </picture>
                 </a>
             </div>
         </div>
