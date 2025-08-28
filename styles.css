@@ -309,6 +309,23 @@ p {
 .project-text {
 }
 
+.project-in-development-bubble {
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30dvw;
+    aspect-ratio: 6/1;
+    border-radius: 30dvw;
+    background-color: light-dark(var(--color-grey), var(--color-white));
+}
+
+.project-in-development-bubble-text {
+    font-size: 3dvw;
+    font-weight: bold;
+    color: light-dark(var(--color-white), var(--color-black));
+}
+
 /* About Me */
 #about-me {
 }
@@ -393,6 +410,7 @@ p {
 
 #coding .projects-menu #project-QE {
     filter: grayscale(100%);
+    object-position: bottom;
 }
 #coding .projects-menu #project-QE:hover:not(:target) {
     animation-name: color-in-image;
@@ -454,6 +472,28 @@ p {
 }
 #coding #project-poem-text {
     display: none;
+}
+
+#coding .code-logo-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2dvmax;
+}
+
+#coding .project-code-logo-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    column-gap: 2dvmax;
+    margin-top: 2dvmax;
+}
+
+#coding .code-logo-image {
+    width: 10%;
+    aspect-ratio: 1/1;
 }
 
 /* Contact Me */
