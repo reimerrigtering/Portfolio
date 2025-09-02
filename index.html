@@ -96,24 +96,44 @@
     </div>
 
     <div id="design">
-        <div class="projects-menu">
-            <a href="#project-bar" class="project-button" onclick=selectProject('project-bar','design')>
-                <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img"
-                     id="project-bar">
-            </a>
-            <a href="#project-fns" class="project-button" onclick=selectProject('project-fns','design')>
-                <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img"
-                     id="project-fns">
-            </a>
-            <a href="#project-rover" class="project-button" onclick=selectProject('project-rover','design')>
-                <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img"
-                     id="project-rover">
-            </a>
-            <a href="#project-mower" class="project-button" onclick=selectProject('project-mower','design')>
-                <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img"
-                     id="project-mower">
-            </a>
-        </div>
+        <ul class="projects-menu">
+            <li class="project-button">
+                <a href="#project-bar" class="project-button-link" onclick=selectProject('project-bar','design')>
+                    <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img"
+                         id="project-bar">
+<!--                    <div class="read-more-bubble">-->
+<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
+<!--                    </div>-->
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-fns" class="project-button-link" onclick=selectProject('project-fns','design')>
+                    <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img"
+                         id="project-fns">
+<!--                    <div class="read-more-bubble">-->
+<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
+<!--                    </div>-->
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-rover" class="project-button-link" onclick=selectProject('project-rover','design')>
+                    <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img"
+                         id="project-rover">
+<!--                    <div class="read-more-bubble">-->
+<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
+<!--                    </div>-->
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-mower" class="project-button-link" onclick=selectProject('project-mower','design')>
+                    <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img"
+                         id="project-mower">
+<!--                    <div class="read-more-bubble">-->
+<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
+<!--                    </div>-->
+                </a>
+            </li>
+        </ul>
         <div class="page-object">
             <div class="sidebar-banner design-color"></div>
             <div class="project-text-window">
@@ -215,24 +235,34 @@
     </div>
 
     <div id="coding">
-        <div class="projects-menu">
-            <a href="#project-QE" class="project-button" onclick=selectProject('project-QE','coding')>
-                <img src="imgs/coding/qp_gif_frame.png" alt="Coding Project Photo" class="project-window-img" id="project-QE"
-                onmouseover="this.src='imgs/coding/qp_gif.gif'" onmouseout="this.src='imgs/coding/qp_gif_frame.png'">
-            </a>
-            <a href="#project-pUI" class="project-button" onclick=selectProject('project-pUI','coding')>
-                <img src="imgs/coding/PythonLibTesting.png" alt="Coding Project Photo" class="project-window-img"
-                     id="project-pUI">
-            </a>
-            <a href="#project-game" class="project-button" onclick=selectProject('project-game','coding')>
-                <img src="imgs/coding/UnityGameBuidling.jpg" alt="Coding Project Photo" class="project-window-img"
-                     id="project-game">
-            </a>
-            <a href="#project-poem" class="project-button" onclick=selectProject('project-poem','coding')>
-                <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo" class="project-window-img"
-                     id="project-poem">
-            </a>
-        </div>
+        <ul class="projects-menu">
+            <li class="project-button">
+                <a href="#project-QE" class="project-button-link" onclick=selectProject('project-QE','coding')>
+                    <img src="imgs/coding/qp_gif_frame.png" alt="Coding Project Photo" class="project-window-img"
+                         id="project-QE"
+                         onmouseover="this.src='imgs/coding/qp_gif.gif'"
+                         onmouseout="this.src='imgs/coding/qp_gif_frame.png'">
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-pUI" class="project-button-link" onclick=selectProject('project-pUI','coding')>
+                    <img src="imgs/coding/PythonLibTesting.png" alt="Coding Project Photo" class="project-window-img"
+                         id="project-pUI">
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-game" class="project-button-link" onclick=selectProject('project-game','coding')>
+                    <img src="imgs/coding/UnityGameBuidling.jpg" alt="Coding Project Photo" class="project-window-img"
+                         id="project-game">
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-poem" class="project-button-link" onclick=selectProject('project-poem','coding')>
+                    <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo" class="project-window-img"
+                         id="project-poem">
+                </a>
+            </li>
+        </ul>
         <div class="page-object">
             <div class="sidebar-banner coding-color"></div>
             <div class="project-text-window">
@@ -249,13 +279,23 @@
                         pros and cons and use your knowledge from one to improve the other and be even
                         better for it.
                     </p>
-                    <div class="code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                        <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin" class="code-logo-image">
-                        <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
-                        <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML-CSS-JS Logo" title="HTML5 / CSS3 / JS"
+                    <ul class="code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python"
+                                 class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin"
+                                 class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML-CSS-JS Logo" title="HTML5 / CSS3 / JS"
                              class="code-logo-image">
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-QE-text" class="project-text-all">
                     <h3 class="project-text-header">Quantum English Art Project</h3>
@@ -277,10 +317,16 @@
                         possible, and although the communication between languages created its own challenges,
                         it all worked out amazingly.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                        <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python"
+                                 class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin"
+                                 class="code-logo-image">
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-pUI-text" class="project-text-all">
                     <h3 class="project-text-header">Pygame UI Library</h3>
@@ -297,9 +343,12 @@
                         this day. And creating games using the library has made my coding experience for these small
                         games infinitely more enjoyable.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python"
+                                 class="code-logo-image">
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-game-text" class="project-text-all">
                     <h3 class="project-text-header">Game Desing</h3>
@@ -315,9 +364,11 @@
                         group projects was a fully implemented inventory system. Including power-ups and tools for
                         the player to use, yielding different effects and uses.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-poem-text" class="project-text-all">
                     <h3 class="project-text-header">Infinite Poem Generation</h3>
@@ -331,9 +382,11 @@
                         within the vector database. After that the LLM would yield a new word relating to the previous
                         word. By alternating between these steps, the chain of words could be infinitely long.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
+                        </li>
+                    </ul>
                     <div class="project-in-development-bubble">
                         <h4 class="project-in-development-bubble-text">In Development</h4>
                     </div>

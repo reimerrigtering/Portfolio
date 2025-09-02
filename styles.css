@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6, p {
 p {
     font-size: 3dvmin;
 }
+ul,li {
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+}
 
 .about-me-color {
     background-color: var(--about-me-color);
@@ -76,16 +82,15 @@ p {
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0));
-    animation-name: banner-moving-background;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: banner-moving-background 60s infinite;
 }
 
 .seperator {
     width: 100%;
     height: var(--seperator-height);
     background-color: var(--color-aqua);
+    object-fit: cover;
+    overflow-x: hidden;
 }
 
 .page-object {
@@ -189,11 +194,7 @@ p {
 }
 
 #menu .button:hover {
-    animation-name: increase-button-size;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: increase-button-size 0.2s ease-in-out forwards;
 }
 
 #menu .button .read-text {
@@ -235,11 +236,7 @@ p {
 }
 
 #menu .button:hover .expand-arrow {
-    animation-name: animate-expand-arrow;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: animate-expand-arrow 0.5s ease-in-out forwards;
 }
 
 #menu .button .image-background {
@@ -268,17 +265,28 @@ p {
     height: 20dvw;
     padding: 0;
     display: flex;
+    position: relative;
 }
 
 .projects-menu .project-button {
     height: 100%;
     width: 25%;
-    object-fit: cover;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    align-items: end;
+}
+
+.projects-menu .project-button-link {
+    width: 100%;
+    height: 100%;
 }
 
 .projects-menu .project-window-img {
     height: 100%;
     width: 100%;
+    grid-column-start: 1;
+    grid-row-start: 1;
     object-fit: cover;
 }
 
@@ -326,6 +334,30 @@ p {
     color: light-dark(var(--color-white), var(--color-black));
 }
 
+@keyframes read-more-bubble-popup {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.read-more-bubble {
+    background-color: light-dark(var(--color-white), var(--color-grey));
+    height: 10%;
+    width: 80%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10dvw 10dvw 0 0;
+}
+
+.read-more-bubble .read-more-bubble-text {
+    color: light-dark(var(--color-black), var(--color-white));
+    font-size: 1dvw;
+    font-weight: bold;
+}
+
 /* About Me */
 #about-me {
 }
@@ -342,10 +374,10 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-bar:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
+}
+#design .projects-menu #project-bar:hover:not(:target) .read-more-bubble {
+    animation: read-more-bubble-popup 0.2s forwards;
 }
 #design .projects-menu #project-bar:target {
     filter: none;
@@ -354,10 +386,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-fns:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #design .projects-menu #project-fns:target {
     filter: none;
@@ -366,10 +395,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-rover:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #design .projects-menu #project-rover:target {
     filter: none;
@@ -378,10 +404,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-mower:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #design .projects-menu #project-mower:target {
     filter: none;
@@ -413,10 +436,7 @@ p {
     object-position: bottom;
 }
 #coding .projects-menu #project-QE:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #coding .projects-menu #project-QE:target {
     filter: none;
@@ -425,10 +445,7 @@ p {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-pUI:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #coding .projects-menu #project-pUI:target {
     filter: none;
@@ -437,10 +454,7 @@ p {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-game:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #coding .projects-menu #project-game:target {
     filter: none;
@@ -449,10 +463,7 @@ p {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-poem:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: color-in-image 0.2s forwards;
 }
 #coding .projects-menu #project-poem:target {
     filter: none;
@@ -491,9 +502,14 @@ p {
     margin-top: 2dvmax;
 }
 
-#coding .code-logo-image {
+#coding .code-logo-list-item {
     width: min(20%, 10dvmax);
     aspect-ratio: 1/1;
+}
+
+#coding .code-logo-image {
+    width: 100%;
+    height: 100%;
 }
 
 /* Contact Me */
@@ -532,11 +548,7 @@ p {
 }
 
 #contact-me #contact-pages .contact-link-image:hover {
-    animation-name: increase-contact-link-image-size;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: increase-contact-link-image-size 0.2s ease-in-out forwards;
 }
 
 #contact-me #contact-pages #contact-gmail {
