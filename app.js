@@ -1,6 +1,7 @@
 let designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
 let codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
 
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 function resetDesignText() {
     let generalDesignText = document.getElementById("general-design-text");
@@ -45,6 +46,16 @@ function selectProject(project, section) {
 
     let projectText = document.getElementById(`${project}-text`);
     projectText.style.display = "flex";
+}
+
+function popupBubble(id) {
+    let bubble = document.getElementById(id);
+    bubble.style.animation = "read-more-bubble-popup 0.8s forwards";
+}
+
+function removePopupBubble(id) {
+    let bubble = document.getElementById(id);
+    bubble.style.animation = null;
 }
 
 window.onhashchange = function () {

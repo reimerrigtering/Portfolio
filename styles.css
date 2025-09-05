@@ -280,6 +280,11 @@ ul,li {
 .projects-menu .project-button-link {
     width: 100%;
     height: 100%;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 .projects-menu .project-window-img {
@@ -335,27 +340,45 @@ ul,li {
 }
 
 @keyframes read-more-bubble-popup {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+        aspect-ratio: 1/1;
+        color: light-dark(#00000000, #ffffff00);}
+    10% {
+        opacity: 1;
+        aspect-ratio: 1/1;
+        color: light-dark(#00000000, #ffffff00);}
+    70% {
+        opacity: 1;
+        aspect-ratio: 9/1;
+        color: light-dark(#00000000, #ffffff00);
+    }
+    100% {
+        opacity: 1;
+        aspect-ratio: 9/1;
+        color: light-dark(#000000ff, #ffffffff);
+    }
 }
 
 .read-more-bubble {
+    position: absolute;
     background-color: light-dark(var(--color-white), var(--color-grey));
     height: 10%;
-    width: 80%;
+    max-width: 80%;
     grid-column-start: 1;
     grid-row-start: 1;
     z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10dvw 10dvw 0 0;
+    border-radius: 10dvw;
+    opacity: 0;
+    margin-bottom: 5%;
 }
 
 .read-more-bubble .read-more-bubble-text {
-    color: light-dark(var(--color-black), var(--color-white));
+    color: inherit;
     font-size: 1dvw;
-    font-weight: bold;
 }
 
 /* About Me */

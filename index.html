@@ -98,39 +98,43 @@
     <div id="design">
         <ul class="projects-menu">
             <li class="project-button">
-                <a href="#project-bar" class="project-button-link" onclick=selectProject('project-bar','design')>
+                <a href="#project-bar" class="project-button-link" onclick=selectProject('project-bar','design')
+                onmouseover=popupBubble('project-bar-bubble') onmouseout=removePopupBubble('project-bar-bubble')>
                     <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img"
                          id="project-bar">
-<!--                    <div class="read-more-bubble">-->
-<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
-<!--                    </div>-->
+                    <div class="read-more-bubble" id="project-bar-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
             <li class="project-button">
-                <a href="#project-fns" class="project-button-link" onclick=selectProject('project-fns','design')>
+                <a href="#project-fns" class="project-button-link" onclick=selectProject('project-fns','design')
+                onmouseover=popupBubble('project-fns-bubble') onmouseout=removePopupBubble('project-fns-bubble')>
                     <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img"
                          id="project-fns">
-<!--                    <div class="read-more-bubble">-->
-<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
-<!--                    </div>-->
+                    <div class="read-more-bubble" id="project-fns-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
             <li class="project-button">
-                <a href="#project-rover" class="project-button-link" onclick=selectProject('project-rover','design')>
+                <a href="#project-rover" class="project-button-link" onclick=selectProject('project-rover','design')
+                onmouseover=popupBubble('project-rover-bubble') onmouseout=removePopupBubble('project-rover-bubble')>
                     <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img"
                          id="project-rover">
-<!--                    <div class="read-more-bubble">-->
-<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
-<!--                    </div>-->
+                    <div class="read-more-bubble" id="project-rover-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
             <li class="project-button">
-                <a href="#project-mower" class="project-button-link" onclick=selectProject('project-mower','design')>
+                <a href="#project-mower" class="project-button-link" onclick=selectProject('project-mower','design')
+                onmouseover=popupBubble('project-mower-bubble') onmouseout=removePopupBubble('project-mower-bubble')>
                     <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img"
                          id="project-mower">
-<!--                    <div class="read-more-bubble">-->
-<!--                        <p class="read-more-bubble-text">Click to see about this project</p>-->
-<!--                    </div>-->
+                    <div class="read-more-bubble" id="project-mower-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
         </ul>
@@ -237,29 +241,45 @@
     <div id="coding">
         <ul class="projects-menu">
             <li class="project-button">
-                <a href="#project-QE" class="project-button-link" onclick=selectProject('project-QE','coding')>
+                <a href="#project-QE" class="project-button-link" onclick=selectProject('project-QE','coding')
+                onmouseover=popupBubble('project-QE-bubble') onmouseout=removePopupBubble('project-QE-bubble')>
                     <img src="imgs/coding/qp_gif_frame.png" alt="Coding Project Photo" class="project-window-img"
                          id="project-QE"
                          onmouseover="this.src='imgs/coding/qp_gif.gif'"
                          onmouseout="this.src='imgs/coding/qp_gif_frame.png'">
+                    <div class="read-more-bubble" id="project-QE-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
             <li class="project-button">
-                <a href="#project-pUI" class="project-button-link" onclick=selectProject('project-pUI','coding')>
+                <a href="#project-pUI" class="project-button-link" onclick=selectProject('project-pUI','coding')
+                onmouseover=popupBubble('project-pUI-bubble') onmouseout=removePopupBubble('project-pUI-bubble')>
                     <img src="imgs/coding/PythonLibTesting.png" alt="Coding Project Photo" class="project-window-img"
                          id="project-pUI">
+                    <div class="read-more-bubble" id="project-pUI-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
             <li class="project-button">
-                <a href="#project-game" class="project-button-link" onclick=selectProject('project-game','coding')>
+                <a href="#project-game" class="project-button-link" onclick=selectProject('project-game','coding')
+                onmouseover=popupBubble('project-game-bubble') onmouseout=removePopupBubble('project-game-bubble')>
                     <img src="imgs/coding/UnityGameBuidling.jpg" alt="Coding Project Photo" class="project-window-img"
                          id="project-game">
+                    <div class="read-more-bubble" id="project-game-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
             <li class="project-button">
-                <a href="#project-poem" class="project-button-link" onclick=selectProject('project-poem','coding')>
-                    <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo" class="project-window-img"
-                         id="project-poem">
+                <a href="#project-poem" class="project-button-link" onclick=selectProject('project-poem','coding')
+                onmouseover=popupBubble('project-poem-bubble') onmouseout=removePopupBubble('project-poem-bubble')>
+                    <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo"
+                         class="project-window-img" id="project-poem">
+                    <div class="read-more-bubble" id="project-poem-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
                 </a>
             </li>
         </ul>
