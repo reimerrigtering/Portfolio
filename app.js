@@ -1,7 +1,5 @@
-let designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
-let codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
-
-const delay = ms => new Promise(res => setTimeout(res, ms));
+const designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
+const codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
 
 function resetDesignText() {
     let generalDesignText = document.getElementById("general-design-text");
@@ -41,14 +39,18 @@ function selectProject(project, section) {
     let generalText = document.getElementById(`general-${section}-text`);
     generalText.style.display = "none";
 
-    deselectDesignProjects(section !== 'design')
-    deselectCodingProjects(section !== 'coding')
+    deselectDesignProjects(section !== 'design');
+    deselectCodingProjects(section !== 'coding');
 
     let projectText = document.getElementById(`${project}-text`);
     projectText.style.display = "flex";
 }
 
 function popupBubble(id) {
+    if (id.includes(window.location.hash.substring(1)) &&
+    window.location.hash.substring(1) !== "") {
+        return;
+    }
     let bubble = document.getElementById(id);
     bubble.style.animation = "read-more-bubble-popup 0.8s forwards";
 }
@@ -60,9 +62,9 @@ function removePopupBubble(id) {
 
 window.onhashchange = function () {
     if (!designProjectNames.includes(window.location.hash.substring(1))) {
-        deselectDesignProjects()
+        deselectDesignProjects();
     }
     if (!codingProjectNames.includes(window.location.hash.substring(1))) {
-        deselectCodingProjects()
+        deselectCodingProjects();
     }
 }

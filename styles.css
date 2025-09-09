@@ -26,9 +26,12 @@ body {
     --coding-color: var(--color-lapis);
     --contact-me-color: var(--color-orange);
 
-    /* Element heights */
+    /* Element distances */
     --seperator-height: 1.5dvmin;
     --element-corner-radius: 2dvmin;
+
+    /* Animations */
+    --color-fade-in-animation: color-in-image 0.5s forwards;
 
     font-family: Helvetica, sans-serif;
     font-weight: normal;
@@ -271,8 +274,7 @@ ul,li {
 .projects-menu .project-button {
     height: 100%;
     width: 25%;
-    display: grid;
-    grid-template-columns: 100%;
+    display: flex;
     justify-items: center;
     align-items: end;
 }
@@ -290,9 +292,13 @@ ul,li {
 .projects-menu .project-window-img {
     height: 100%;
     width: 100%;
-    grid-column-start: 1;
-    grid-row-start: 1;
     object-fit: cover;
+    filter: inherit;
+    animation: inherit;
+}
+
+.projects-menu #project-QE-img {
+    object-position: bottom;
 }
 
 @keyframes color-in-image {
@@ -397,10 +403,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-bar:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
-}
-#design .projects-menu #project-bar:hover:not(:target) .read-more-bubble {
-    animation: read-more-bubble-popup 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-bar:target {
     filter: none;
@@ -409,7 +412,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-fns:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-fns:target {
     filter: none;
@@ -418,7 +421,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-rover:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-rover:target {
     filter: none;
@@ -427,7 +430,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-mower:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-mower:target {
     filter: none;
@@ -456,10 +459,9 @@ ul,li {
 
 #coding .projects-menu #project-QE {
     filter: grayscale(100%);
-    object-position: bottom;
 }
 #coding .projects-menu #project-QE:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-QE:target {
     filter: none;
@@ -468,7 +470,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-pUI:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-pUI:target {
     filter: none;
@@ -477,7 +479,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-game:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-game:target {
     filter: none;
@@ -486,7 +488,7 @@ ul,li {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-poem:hover:not(:target) {
-    animation: color-in-image 0.2s forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-poem:target {
     filter: none;
