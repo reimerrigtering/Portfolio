@@ -96,24 +96,48 @@
     </div>
 
     <div id="design">
-        <div class="projects-menu">
-            <a href="#project-bar" class="project-button" onclick=selectProject('project-bar','design')>
-                <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img"
-                     id="project-bar">
-            </a>
-            <a href="#project-fns" class="project-button" onclick=selectProject('project-fns','design')>
-                <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img"
-                     id="project-fns">
-            </a>
-            <a href="#project-rover" class="project-button" onclick=selectProject('project-rover','design')>
-                <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img"
-                     id="project-rover">
-            </a>
-            <a href="#project-mower" class="project-button" onclick=selectProject('project-mower','design')>
-                <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img"
-                     id="project-mower">
-            </a>
-        </div>
+        <ul class="projects-menu">
+            <li class="project-button">
+                <a href="#project-bar" class="project-button-link" onclick=selectProject('project-bar','design')
+                   onmouseover=popupBubble('project-bar-bubble') onmouseout=removePopupBubble('project-bar-bubble')
+                   id="project-bar">
+                    <img src="imgs/design/DKFinished.jpg" alt="Design Project Photo" class="project-window-img">
+                    <div class="read-more-bubble" id="project-bar-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-fns" class="project-button-link" onclick=selectProject('project-fns','design')
+                   onmouseover=popupBubble('project-fns-bubble') onmouseout=removePopupBubble('project-fns-bubble')
+                   id="project-fns">
+                    <img src="imgs/design/FnSProject.jpg" alt="Design Project Photo" class="project-window-img">
+                    <div class="read-more-bubble" id="project-fns-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-rover" class="project-button-link" onclick=selectProject('project-rover','design')
+                   onmouseover=popupBubble('project-rover-bubble') onmouseout=removePopupBubble('project-rover-bubble')
+                   id="project-rover">
+                    <img src="imgs/design/RoverTop.png" alt="Design Project Photo" class="project-window-img">
+                    <div class="read-more-bubble" id="project-rover-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-mower" class="project-button-link" onclick=selectProject('project-mower','design')
+                   onmouseover=popupBubble('project-mower-bubble') onmouseout=removePopupBubble('project-mower-bubble')
+                   id="project-mower">
+                    <img src="imgs/design/Mower.png" alt="Design Project Photo" class="project-window-img">
+                    <div class="read-more-bubble" id="project-mower-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
         <div class="page-object">
             <div class="sidebar-banner design-color"></div>
             <div class="project-text-window">
@@ -154,9 +178,19 @@
                         Over a period of about 3 months, I designed and built, with the help of some friends, the
                         entire space. First sketching, then over to 3D-moddeling for the bar itself. Creating plans
                         for different possible layouts and talking with many different people about budget,
-                        possibilities and how the space could be used outside the youth group as well. And ultimately
+                        possibilities, and how the space could be used outside the youth group as well. And ultimately
                         building everything to realize all the plans.
                     </p>
+                    <div class="project-images-container" id="project-bar-gallery">
+                        <button onclick=showImages('project-bar') class="project-images-button-open">
+                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
+                        </button>
+                        <div class="project-images-gallery">
+                            <img src="imgs/design/DKDesignSketch.png" alt="Sketch 1" class="gallery-image-large">
+                            <img src="imgs/design/DKBarModel.png" alt="3D-Model 1" class="gallery-image-large">
+                            <img src="imgs/design/DKBarOpening.jpg" alt="Project Photo 1" class="gallery-image-large">
+                        </div>
+                    </div>
                 </div>
                 <div id="project-fns-text" class="project-text-all">
                     <h3 class="project-text-header">Form and Senses Art Project</h3>
@@ -176,6 +210,19 @@
                         Next to that, you could even combine sounds and lights by playing multiple strings
                         simultaneously.
                     </p>
+                    <div class="project-images-container" id="project-fns-gallery">
+                        <button onclick=showImages('project-fns') class="project-images-button-open">
+                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
+                        </button>
+                        <div class="project-images-gallery">
+                            <img src="imgs/design/FnSFront.jpg" alt="Project Photo 1" class="gallery-image-large">
+                            <img src="imgs/design/FnSProject.jpg" alt="Project Photo 2" class="gallery-image-large">
+                            <img src="imgs/design/FnSVideoFramePlay.png" alt="Project Video 1" class="gallery-image-large"
+                                 onmouseover="this.src='imgs/design/FnSVideo.gif'"
+                                 onclick="this.src='imgs/design/FnSVideo.gif'"
+                                 onmouseout="this.src='imgs/design/FnsVideoFramePlay.png'">
+                        </div>
+                    </div>
                 </div>
                 <div id="project-rover-text" class="project-text-all">
                     <h3 class="project-text-header">Rover Design and 3D-modeling </h3>
@@ -190,6 +237,19 @@
                         for multi-day missions in the future. Finally, the rover was rendered in Blender to produce
                         high-quality visuals and present the concept in its final form.
                     </p>
+                    <div class="project-images-container" id="project-rover-gallery">
+                        <button onclick=showImages('project-rover') class="project-images-button-open">
+                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
+                        </button>
+                        <div class="project-images-gallery">
+                            <img src="imgs/design/RoverSetupSketch.png" alt="VR-sketch 1" class="gallery-image-small">
+                            <img src="imgs/design/RoverBuildup.png" alt="VR-sketch 2" class="gallery-image-small">
+                            <img src="imgs/design/RoverInside.png" alt="VR-render 1" class="gallery-image-small">
+                            <img src="imgs/design/RoverAirlockWheels.png" alt="VR-render 2" class="gallery-image-small">
+                            <img src="imgs/design/RoverAirlockHall.png" alt="VR-render 3" class="gallery-image-small">
+                            <img src="imgs/design/RoverTop.png" alt="VR-render 4" class="gallery-image-small">
+                        </div>
+                    </div>
                 </div>
                 <div id="project-mower-text" class="project-text-all">
                     <h3 class="project-text-header">Sketching, Drawing and Editing</h3>
@@ -206,6 +266,19 @@
                         step in finalizing your drawings. Often being needed to best transition your design into digital
                         images for production posters and websites.
                     </p>
+                    <div class="project-images-container" id="project-mower-gallery">
+                        <button onclick=showImages('project-mower') class="project-images-button-open">
+                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
+                        </button>
+                        <div class="project-images-gallery">
+                            <img src="imgs/design/Chair.png" alt="Sketch 1" class="gallery-image-small">
+                            <img src="imgs/design/FohnSketches.png" alt="Sketch 2" class="gallery-image-small">
+                            <img src="imgs/design/Shoe.png" alt="Sketch 3" class="gallery-image-small">
+                            <img src="imgs/design/GearboxModel.png" alt="3D-model 1" class="gallery-image-small">
+                            <img src="imgs/design/RookModel.png" alt="3D-model 2" class="gallery-image-small">
+                            <img src="imgs/design/ClockModel.png" alt="3D-model 3" class="gallery-image-small">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,24 +288,51 @@
     </div>
 
     <div id="coding">
-        <div class="projects-menu">
-            <a href="#project-QE" class="project-button" onclick=selectProject('project-QE','coding')>
-                <img src="imgs/coding/qp_gif_frame.png" alt="Coding Project Photo" class="project-window-img" id="project-QE"
-                onmouseover="this.src='imgs/coding/qp_gif.gif'" onmouseout="this.src='imgs/coding/qp_gif_frame.png'">
-            </a>
-            <a href="#project-pUI" class="project-button" onclick=selectProject('project-pUI','coding')>
-                <img src="imgs/coding/PythonLibTesting.png" alt="Coding Project Photo" class="project-window-img"
-                     id="project-pUI">
-            </a>
-            <a href="#project-game" class="project-button" onclick=selectProject('project-game','coding')>
-                <img src="imgs/coding/UnityGameBuidling.jpg" alt="Coding Project Photo" class="project-window-img"
-                     id="project-game">
-            </a>
-            <a href="#project-poem" class="project-button" onclick=selectProject('project-poem','coding')>
-                <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo" class="project-window-img"
-                     id="project-poem">
-            </a>
-        </div>
+        <ul class="projects-menu">
+            <li class="project-button">
+                <a href="#project-QE" class="project-button-link" onclick=selectProject('project-QE','coding')
+                   onmouseover=popupBubble('project-QE-bubble') onmouseout=removePopupBubble('project-QE-bubble')
+                   id="project-QE">
+                    <img src="imgs/coding/qp_gif_frame.png" alt="Coding Project Photo" class="project-window-img"
+                         onmouseover="this.src='imgs/coding/qp_gif.gif'"
+                         onmouseout="this.src='imgs/coding/qp_gif_frame.png'" id="project-QE-img">
+                    <div class="read-more-bubble" id="project-QE-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-pUI" class="project-button-link" onclick=selectProject('project-pUI','coding')
+                   onmouseover=popupBubble('project-pUI-bubble') onmouseout=removePopupBubble('project-pUI-bubble')
+                   id="project-pUI">
+                    <img src="imgs/coding/PythonLibTesting.png" alt="Coding Project Photo" class="project-window-img">
+                    <div class="read-more-bubble" id="project-pUI-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-game" class="project-button-link" onclick=selectProject('project-game','coding')
+                   onmouseover=popupBubble('project-game-bubble') onmouseout=removePopupBubble('project-game-bubble')
+                   id="project-game">
+                    <img src="imgs/coding/UnityGameBuidling.jpg" alt="Coding Project Photo" class="project-window-img">
+                    <div class="read-more-bubble" id="project-game-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+            <li class="project-button">
+                <a href="#project-poem" class="project-button-link" onclick=selectProject('project-poem','coding')
+                   onmouseover=popupBubble('project-poem-bubble') onmouseout=removePopupBubble('project-poem-bubble')
+                   id="project-poem">
+                    <img src="imgs/coding/InfinitePoemGeneration.png" alt="Coding Project Photo"
+                         class="project-window-img">
+                    <div class="read-more-bubble" id="project-poem-bubble">
+                        <p class="read-more-bubble-text">Click to see about this project</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
         <div class="page-object">
             <div class="sidebar-banner coding-color"></div>
             <div class="project-text-window">
@@ -249,13 +349,23 @@
                         pros and cons and use your knowledge from one to improve the other and be even
                         better for it.
                     </p>
-                    <div class="code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                        <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin" class="code-logo-image">
-                        <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
-                        <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML-CSS-JS Logo" title="HTML5 / CSS3 / JS"
+                    <ul class="code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python"
+                                 class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin"
+                                 class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/HTML-CSS-JS-Logo.png" alt="HTML-CSS-JS Logo" title="HTML5 / CSS3 / JS"
                              class="code-logo-image">
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-QE-text" class="project-text-all">
                     <h3 class="project-text-header">Quantum English Art Project</h3>
@@ -277,10 +387,16 @@
                         possible, and although the communication between languages created its own challenges,
                         it all worked out amazingly.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                        <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python"
+                                 class="code-logo-image">
+                        </li>
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/KotlinLogo.png" alt="Kotlin Logo" title="Kotlin"
+                                 class="code-logo-image">
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-pUI-text" class="project-text-all">
                     <h3 class="project-text-header">Pygame UI Library</h3>
@@ -297,9 +413,12 @@
                         this day. And creating games using the library has made my coding experience for these small
                         games infinitely more enjoyable.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python"
+                                 class="code-logo-image">
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-game-text" class="project-text-all">
                     <h3 class="project-text-header">Game Desing</h3>
@@ -315,9 +434,11 @@
                         group projects was a fully implemented inventory system. Including power-ups and tools for
                         the player to use, yielding different effects and uses.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
+                        </li>
+                    </ul>
                 </div>
                 <div id="project-poem-text" class="project-text-all">
                     <h3 class="project-text-header">Infinite Poem Generation</h3>
@@ -331,9 +452,11 @@
                         within the vector database. After that the LLM would yield a new word relating to the previous
                         word. By alternating between these steps, the chain of words could be infinitely long.
                     </p>
-                    <div class="project-code-logo-list">
-                        <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
-                    </div>
+                    <ul class="project-code-logo-list">
+                        <li class="code-logo-list-item">
+                            <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
+                        </li>
+                    </ul>
                     <div class="project-in-development-bubble">
                         <h4 class="project-in-development-bubble-text">In Development</h4>
                     </div>
@@ -354,7 +477,7 @@
                     <img src="imgs/contact/gmail_icon.webp" alt="Gmail Icon" class="contact-link-image" id="contact-gmail">
                 </a>
                 <a href="https://www.linkedin.com/in/reimer-rigtering/" target="_blank">
-                <img src="imgs/contact/linkedin_icon.webp" alt="LinkedIn Icon" class="contact-link-image" id="contact-linkedin">
+                    <img src="imgs/contact/linkedin_icon.webp" alt="LinkedIn Icon" class="contact-link-image" id="contact-linkedin">
                 </a>
                 <a href="https://www.github.com/reimerrigtering" target="_blank">
                     <picture>

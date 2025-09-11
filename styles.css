@@ -26,9 +26,12 @@ body {
     --coding-color: var(--color-lapis);
     --contact-me-color: var(--color-orange);
 
-    /* Element heights */
+    /* Element distances */
     --seperator-height: 1.5dvmin;
     --element-corner-radius: 2dvmin;
+
+    /* Animations */
+    --color-fade-in-animation: color-in-image 0.5s forwards;
 
     font-family: Helvetica, sans-serif;
     font-weight: normal;
@@ -44,6 +47,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 p {
     font-size: 3dvmin;
+}
+ul,li {
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
 }
 
 .about-me-color {
@@ -76,16 +85,16 @@ p {
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0));
-    animation-name: banner-moving-background;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    background-size: contain;
+    animation: banner-moving-background 60s infinite;
 }
 
 .seperator {
     width: 100%;
     height: var(--seperator-height);
     background-color: var(--color-aqua);
+    object-fit: cover;
+    overflow-x: hidden;
 }
 
 .page-object {
@@ -189,11 +198,7 @@ p {
 }
 
 #menu .button:hover {
-    animation-name: increase-button-size;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: increase-button-size 0.2s ease-in-out forwards;
 }
 
 #menu .button .read-text {
@@ -235,11 +240,7 @@ p {
 }
 
 #menu .button:hover .expand-arrow {
-    animation-name: animate-expand-arrow;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: animate-expand-arrow 0.5s ease-in-out forwards;
 }
 
 #menu .button .image-background {
@@ -268,18 +269,37 @@ p {
     height: 20dvw;
     padding: 0;
     display: flex;
+    position: relative;
 }
 
 .projects-menu .project-button {
     height: 100%;
     width: 25%;
-    object-fit: cover;
+    display: flex;
+    justify-items: center;
+    align-items: end;
+}
+
+.projects-menu .project-button-link {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 .projects-menu .project-window-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    filter: inherit;
+    animation: inherit;
+}
+
+.projects-menu #project-QE-img {
+    object-position: bottom;
 }
 
 @keyframes color-in-image {
@@ -309,6 +329,103 @@ p {
 .project-text {
 }
 
+.project-images-container {
+    background-color: light-dark(var(--color-grey), var(--color-white));
+    border-radius: var(--element-corner-radius);
+    margin-top: 1em;
+    overflow: hidden;
+}
+
+.project-images-container .project-images-button-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5dvmin;
+    width: 100%;
+    background-color: light-dark(var(--color-grey), var(--color-white));
+    border: none;
+    border-radius: var(--element-corner-radius);
+}
+
+.project-images-container .project-images-button-open .open-up-arrow {
+    width: 2%;
+    max-height: 80%;
+    object-fit: scale-down;
+    rotate: 90deg;
+    @media (prefers-color-scheme: light) {
+        filter: invert(0);
+    }
+    @media (prefers-color-scheme: dark) {
+        filter: invert(1);
+    }
+}
+
+@keyframes open-project-gallery-landscape {
+    0% {height: 5dvmin;}
+    80% {height: 43dvmin;}
+    100% {height: fit-content;}
+}
+
+@keyframes open-project-gallery-landscape-large {
+    0% {height: 5dvmin;}
+    80% {height: 80dvmin;}
+    100% {height: fit-content;}
+}
+
+@keyframes open-project-gallery-portrait {
+    0% {height: 5dvmin;}
+    80% {height: 100dvmin;}
+    100% {height: fit-content;}
+}
+
+@keyframes close-project-gallery {
+    0% {height: 45dvmin;}
+    100% {height: 5dvmin;}
+}
+
+.project-images-container .project-images-gallery {
+    width: 100%;
+    display: none;
+    height: fit-content;
+    flex-direction: row;
+    @media (orientation: portrait) {
+        justify-content: center;
+    }
+    @media (orientation: landscape) {
+        align-items: center;
+    }
+    padding: 1em;
+    box-sizing: border-box;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.project-images-container .project-images-gallery .gallery-image-large,
+.project-images-container .project-images-gallery .gallery-image-small {
+    border-radius: var(--element-corner-radius);
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: var(--color-grey);
+}
+
+.project-images-container .project-images-gallery .gallery-image-large {
+    @media (orientation: portrait) {
+        width: 100%;
+    }
+    @media (orientation: landscape) {
+        height: 35dvmin;
+    }
+}
+
+.project-images-container .project-images-gallery .gallery-image-small {
+    @media (orientation: portrait) {
+        width: 45%;
+    }
+    @media (orientation: landscape) {
+        height: 35dvmin;
+    }
+}
+
 .project-in-development-bubble {
     align-self: end;
     display: flex;
@@ -324,6 +441,48 @@ p {
     font-size: 3dvw;
     font-weight: bold;
     color: light-dark(var(--color-white), var(--color-black));
+}
+
+@keyframes read-more-bubble-popup {
+    0% {
+        opacity: 0;
+        aspect-ratio: 1/1;
+        color: light-dark(#00000000, #ffffff00);}
+    10% {
+        opacity: 1;
+        aspect-ratio: 1/1;
+        color: light-dark(#00000000, #ffffff00);}
+    70% {
+        opacity: 1;
+        aspect-ratio: 9/1;
+        color: light-dark(#00000000, #ffffff00);
+    }
+    100% {
+        opacity: 1;
+        aspect-ratio: 9/1;
+        color: light-dark(#000000ff, #ffffffff);
+    }
+}
+
+.read-more-bubble {
+    position: absolute;
+    background-color: light-dark(var(--color-white), var(--color-grey));
+    height: 10%;
+    max-width: 80%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10dvw;
+    opacity: 0;
+    margin-bottom: 5%;
+}
+
+.read-more-bubble .read-more-bubble-text {
+    color: inherit;
+    font-size: 1dvw;
 }
 
 /* About Me */
@@ -342,10 +501,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-bar:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-bar:target {
     filter: none;
@@ -354,10 +510,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-fns:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-fns:target {
     filter: none;
@@ -366,10 +519,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-rover:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-rover:target {
     filter: none;
@@ -378,10 +528,7 @@ p {
     filter: grayscale(100%);
 }
 #design .projects-menu #project-mower:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #design .projects-menu #project-mower:target {
     filter: none;
@@ -410,13 +557,9 @@ p {
 
 #coding .projects-menu #project-QE {
     filter: grayscale(100%);
-    object-position: bottom;
 }
 #coding .projects-menu #project-QE:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-QE:target {
     filter: none;
@@ -425,10 +568,7 @@ p {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-pUI:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-pUI:target {
     filter: none;
@@ -437,10 +577,7 @@ p {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-game:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-game:target {
     filter: none;
@@ -449,10 +586,7 @@ p {
     filter: grayscale(100%);
 }
 #coding .projects-menu #project-poem:hover:not(:target) {
-    animation-name: color-in-image;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation: var(--color-fade-in-animation);
 }
 #coding .projects-menu #project-poem:target {
     filter: none;
@@ -491,9 +625,14 @@ p {
     margin-top: 2dvmax;
 }
 
-#coding .code-logo-image {
+#coding .code-logo-list-item {
     width: min(20%, 10dvmax);
     aspect-ratio: 1/1;
+}
+
+#coding .code-logo-image {
+    width: 100%;
+    height: 100%;
 }
 
 /* Contact Me */
@@ -532,11 +671,7 @@ p {
 }
 
 #contact-me #contact-pages .contact-link-image:hover {
-    animation-name: increase-contact-link-image-size;
-    animation-duration: 0.2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: increase-contact-link-image-size 0.2s ease-in-out forwards;
 }
 
 #contact-me #contact-pages #contact-gmail {
