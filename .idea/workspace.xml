@@ -7,7 +7,17 @@
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/3DmodelRook.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/RookModel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/DK_Bar_Model.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/DKBarModel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/DK_Project_End.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/DKFinished.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/DK_Space_DesignSketch.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/DKDesignSketch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/FnS_Project.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/FnSProject.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/chair.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/Chair.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgs/design/shoe.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/design/Shoe.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-portfolio.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/old-styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -49,48 +59,52 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2uXKNG5Zis74TRVUAXfMsIdbmfz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.Portfolio.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;project-images&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/reime/WebstormProjects/Portfolio/imgs/design/gallery&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/reime/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.Portfolio.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "project-images",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/WebstormProjects/Portfolio/imgs/design",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/reime/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/22.14.0/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\Portfolio\imgs\design" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\Portfolio\old-portfolio" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\coding" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\contact" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design\gallery" />
       <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\design" />
-      <recent name="C:\Users\reime\WebstormProjects\Portfolio\imgs\general" />
     </key>
   </component>
   <component name="RunManager">
@@ -141,7 +155,7 @@
       <workItem from="1757071782882" duration="7030000" />
       <workItem from="1757340014591" duration="2074000" />
       <workItem from="1757411253159" duration="13057000" />
-      <workItem from="1757573486164" duration="8197000" />
+      <workItem from="1757573486164" duration="17639000" />
     </task>
     <servers />
   </component>

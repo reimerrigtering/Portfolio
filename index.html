@@ -101,7 +101,7 @@
                 <a href="#project-bar" class="project-button-link" onclick=selectProject('project-bar','design')
                    onmouseover=popupBubble('project-bar-bubble') onmouseout=removePopupBubble('project-bar-bubble')
                    id="project-bar">
-                    <img src="imgs/design/DK_Project_End.jpg" alt="Design Project Photo" class="project-window-img">
+                    <img src="imgs/design/DKFinished.jpg" alt="Design Project Photo" class="project-window-img">
                     <div class="read-more-bubble" id="project-bar-bubble">
                         <p class="read-more-bubble-text">Click to see about this project</p>
                     </div>
@@ -111,7 +111,7 @@
                 <a href="#project-fns" class="project-button-link" onclick=selectProject('project-fns','design')
                    onmouseover=popupBubble('project-fns-bubble') onmouseout=removePopupBubble('project-fns-bubble')
                    id="project-fns">
-                    <img src="imgs/design/FnS_Project.jpg" alt="Design Project Photo" class="project-window-img">
+                    <img src="imgs/design/FnSProject.jpg" alt="Design Project Photo" class="project-window-img">
                     <div class="read-more-bubble" id="project-fns-bubble">
                         <p class="read-more-bubble-text">Click to see about this project</p>
                     </div>
@@ -186,8 +186,9 @@
                             <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
                         </button>
                         <div class="project-images-gallery">
-                            <img src="imgs/design/DK_Space_DesignSketch.png" alt="Design Sketch" class="gallery-image">
-                            <img src="imgs/design/DK_Bar_Model.png" alt="Design Model" class="gallery-image">
+                            <img src="imgs/design/DKDesignSketch.png" alt="Sketch 1" class="gallery-image-large">
+                            <img src="imgs/design/DKBarModel.png" alt="3D-Model 1" class="gallery-image-large">
+                            <img src="imgs/design/DKBarOpening.jpg" alt="Project Photo 1" class="gallery-image-large">
                         </div>
                     </div>
                 </div>
@@ -214,7 +215,12 @@
                             <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
                         </button>
                         <div class="project-images-gallery">
-
+                            <img src="imgs/design/FnSFront.jpg" alt="Project Photo 1" class="gallery-image-large">
+                            <img src="imgs/design/FnSProject.jpg" alt="Project Photo 2" class="gallery-image-large">
+                            <img src="imgs/design/FnSVideoFramePlay.png" alt="Project Video 1" class="gallery-image-large"
+                                 onmouseover="this.src='imgs/design/FnSVideo.gif'"
+                                 onclick="this.src='imgs/design/FnSVideo.gif'"
+                                 onmouseout="this.src='imgs/design/FnsVideoFramePlay.png'">
                         </div>
                     </div>
                 </div>
@@ -236,7 +242,12 @@
                             <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
                         </button>
                         <div class="project-images-gallery">
-
+                            <img src="imgs/design/RoverSetupSketch.png" alt="VR-sketch 1" class="gallery-image-small">
+                            <img src="imgs/design/RoverBuildup.png" alt="VR-sketch 2" class="gallery-image-small">
+                            <img src="imgs/design/RoverInside.png" alt="VR-render 1" class="gallery-image-small">
+                            <img src="imgs/design/RoverAirlockWheels.png" alt="VR-render 2" class="gallery-image-small">
+                            <img src="imgs/design/RoverAirlockHall.png" alt="VR-render 3" class="gallery-image-small">
+                            <img src="imgs/design/RoverTop.png" alt="VR-render 4" class="gallery-image-small">
                         </div>
                     </div>
                 </div>
@@ -260,7 +271,12 @@
                             <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
                         </button>
                         <div class="project-images-gallery">
-
+                            <img src="imgs/design/Chair.png" alt="Sketch 1" class="gallery-image-small">
+                            <img src="imgs/design/FohnSketches.png" alt="Sketch 2" class="gallery-image-small">
+                            <img src="imgs/design/Shoe.png" alt="Sketch 3" class="gallery-image-small">
+                            <img src="imgs/design/GearboxModel.png" alt="3D-model 1" class="gallery-image-small">
+                            <img src="imgs/design/RookModel.png" alt="3D-model 2" class="gallery-image-small">
+                            <img src="imgs/design/ClockModel.png" alt="3D-model 3" class="gallery-image-small">
                         </div>
                     </div>
                 </div>
@@ -381,14 +397,6 @@
                                  class="code-logo-image">
                         </li>
                     </ul>
-                    <div class="project-images-container" id="project-QE-gallery">
-                        <button onclick=showImages('project-QE') class="project-images-button-open">
-                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
-                        </button>
-                        <div class="project-images-gallery">
-
-                        </div>
-                    </div>
                 </div>
                 <div id="project-pUI-text" class="project-text-all">
                     <h3 class="project-text-header">Pygame UI Library</h3>
@@ -411,14 +419,6 @@
                                  class="code-logo-image">
                         </li>
                     </ul>
-                    <div class="project-images-container" id="project-pUI-gallery">
-                        <button onclick=showImages('project-pUI') class="project-images-button-open">
-                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
-                        </button>
-                        <div class="project-images-gallery">
-
-                        </div>
-                    </div>
                 </div>
                 <div id="project-game-text" class="project-text-all">
                     <h3 class="project-text-header">Game Desing</h3>
@@ -439,14 +439,6 @@
                             <img src="imgs/coding/CsLogo.png" alt="C# Logo" title="C#" class="code-logo-image">
                         </li>
                     </ul>
-                    <div class="project-images-container" id="project-game-gallery">
-                        <button onclick=showImages('project-game') class="project-images-button-open">
-                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
-                        </button>
-                        <div class="project-images-gallery">
-
-                        </div>
-                    </div>
                 </div>
                 <div id="project-poem-text" class="project-text-all">
                     <h3 class="project-text-header">Infinite Poem Generation</h3>
@@ -465,14 +457,6 @@
                             <img src="imgs/coding/PythonLogo.png" alt="Python Logo" title="Python" class="code-logo-image">
                         </li>
                     </ul>
-                    <div class="project-images-container" id="project-poem-gallery">
-                        <button onclick=showImages('project-poem') class="project-images-button-open">
-                            <img src="imgs/general/expand.png" alt="Expand" class="open-up-arrow">
-                        </button>
-                        <div class="project-images-gallery">
-
-                        </div>
-                    </div>
                     <div class="project-in-development-bubble">
                         <h4 class="project-in-development-bubble-text">In Development</h4>
                     </div>

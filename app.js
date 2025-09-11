@@ -4,6 +4,7 @@ const codingProjectNames = ["project-QE", "project-pUI", "project-game", "projec
 function showImages(project) {
     let imageContainer = document.getElementById(`${project}-gallery`);
     let imageGallery = imageContainer.lastElementChild;
+    let imageGalleryAmount = imageGallery.children.length
     let openButtonImage = imageContainer.firstElementChild.firstElementChild;
 
     const screenOrientationLandscape = window.matchMedia("(orientation: landscape)").matches;
@@ -18,10 +19,10 @@ function showImages(project) {
         imageGallery.style.display = "none";
 
         if (screenOrientationLandscape) {
-            imageContainer.style.animation = "open-project-gallery-landscape 0.5s forwards reverse"
+            imageContainer.style.animation = "close-project-gallery 0.5s forwards"
         }
         else {
-            imageContainer.style.animation = "open-project-gallery-portrait 0.5s forwards reverse"
+            imageContainer.style.animation = "close-project-gallery 0.5s forwards"
         }
     }
     // Opening
@@ -30,7 +31,12 @@ function showImages(project) {
         imageGallery.style.display = "flex";
 
         if (screenOrientationLandscape) {
-            imageContainer.style.animation = "open-project-gallery-landscape 0.5s forwards"
+            if (imageGalleryAmount <= 3) {
+                imageContainer.style.animation = "open-project-gallery-landscape 0.5s forwards"
+            }
+            else {
+                imageContainer.style.animation = "open-project-gallery-landscape-large 0.5s forwards"
+            }
         }
         else {
             imageContainer.style.animation = "open-project-gallery-portrait 0.5s forwards"
