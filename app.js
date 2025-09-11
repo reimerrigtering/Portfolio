@@ -1,6 +1,43 @@
 const designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
 const codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
 
+function showImages(project) {
+    let imageContainer = document.getElementById(`${project}-gallery`);
+    let imageGallery = imageContainer.lastElementChild;
+    let openButtonImage = imageContainer.firstElementChild.firstElementChild;
+
+    const screenOrientationLandscape = window.matchMedia("(orientation: landscape)").matches;
+
+    // Resetting animation
+    imageContainer.style.animation = 'none';
+    imageContainer.offsetHeight;
+
+    // Closing
+    if (openButtonImage.style.transform === "rotate(180deg)") {
+        openButtonImage.style.transform = "rotate(0deg)";
+        imageGallery.style.display = "none";
+
+        if (screenOrientationLandscape) {
+            imageContainer.style.animation = "open-project-gallery-landscape 0.5s forwards reverse"
+        }
+        else {
+            imageContainer.style.animation = "open-project-gallery-portrait 0.5s forwards reverse"
+        }
+    }
+    // Opening
+    else {
+        openButtonImage.style.transform = "rotate(180deg)";
+        imageGallery.style.display = "flex";
+
+        if (screenOrientationLandscape) {
+            imageContainer.style.animation = "open-project-gallery-landscape 0.5s forwards"
+        }
+        else {
+            imageContainer.style.animation = "open-project-gallery-portrait 0.5s forwards"
+        }
+    }
+}
+
 function resetDesignText() {
     let generalDesignText = document.getElementById("general-design-text");
     generalDesignText.style.display = "flex";
