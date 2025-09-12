@@ -39,6 +39,7 @@ body {
     background-color: light-dark(var(--color-white), var(--color-grey));
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -85,7 +86,7 @@ ul,li {
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0));
-    background-size: contain;
+    background-size: cover;
     animation: banner-moving-background 60s infinite;
 }
 
