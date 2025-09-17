@@ -36,16 +36,25 @@ body {
     font-family: Helvetica, sans-serif;
     font-weight: normal;
     margin: 0;
-    background-color: light-dark(var(--color-white), var(--color-grey));
+    background-color: var(--color-white);
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
 }
 
+body {
+    background-color: light-dark(var(--color-white), var(--color-grey));
+}
+
 h1, h2, h3, h4, h5, h6, p {
-    color: light-dark(var(--color-black), var(--color-white));
+    color: var(--color-black);
     margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    color: light-dark(var(--color-black), var(--color-white));
+}
+
 p {
     font-size: 3dvmin;
 }
@@ -73,8 +82,8 @@ ul,li {
 }
 
 @keyframes banner-moving-background {
-    0% {left: 100%}
-    100% {left: -200%}
+    0% {transform: translateX(100%)}
+    100% {transform: translateX(-200%)}
 }
 
 .moving-background {
@@ -95,7 +104,7 @@ ul,li {
     height: var(--seperator-height);
     background-color: var(--color-aqua);
     object-fit: cover;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .page-object {
@@ -155,6 +164,8 @@ ul,li {
     background-color: var(--color-aqua);
     color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Menu */
