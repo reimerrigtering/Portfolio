@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca94ccff-6de7-488d-bc3a-bf8d08e2449c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix-seperators",
+    "git-widget-placeholder": "mobile-improvements",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "D:/WebstormProjects/Portfolio/imgs/design",
     "list.type.of.created.stylesheet": "CSS",
