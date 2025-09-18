@@ -81,30 +81,21 @@ ul,li {
     background-color: var(--contact-me-color);
 }
 
-@keyframes banner-moving-background {
-    0% {transform: translateX(100%)}
-    100% {transform: translateX(-200%)}
-}
-
-.moving-background {
-    position: absolute;
-    width: 200%;
-    height: inherit;
-    background-image: linear-gradient(90deg,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0));
-    background-size: cover;
-    animation: banner-moving-background 60s infinite;
+@keyframes moving-background {
+    0% {background-position: 100% 0;}
+    100% {background-position: -100% 0;}
 }
 
 .seperator {
     width: 100%;
     height: var(--seperator-height);
-    background-color: var(--color-aqua);
-    object-fit: cover;
-    overflow: hidden;
+    background-image: repeating-linear-gradient(90deg,
+    var(--color-aqua),
+    var(--color-turquoise),
+    var(--color-aqua));
+    background-position: 0 0;
+    background-size: 200% 100%;
+    animation: moving-background 60s infinite;
 }
 
 .page-object {
@@ -130,7 +121,13 @@ ul,li {
     height: calc(1em + 4 * var(--seperator-height));
     display: flex;
     align-items: center;
-    background-color: var(--color-aqua);
+    background-image: repeating-linear-gradient(90deg,
+    var(--color-aqua),
+    var(--color-turquoise),
+    var(--color-aqua));
+    background-position: 0 0;
+    background-size: 200% 100%;
+    animation: moving-background 60s infinite;
 }
 
 .pageHeader {
