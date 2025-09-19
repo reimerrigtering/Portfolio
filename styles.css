@@ -27,8 +27,8 @@ body {
     --contact-me-color: var(--color-orange);
 
     /* Element distances */
-    --seperator-height: 1.5dvmin;
-    --element-corner-radius: 2dvmin;
+    --seperator-height: 1.5lvmin;
+    --element-corner-radius: 2lvmin;
 
     /* Animations */
     --color-fade-in-animation: color-in-image 0.5s forwards;
@@ -57,10 +57,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 p {
     @media (orientation: portrait) {
-        font-size: 5dvmin;
+        font-size: 5lvmin;
     }
     @media (orientation: landscape) {
-        font-size: 3dvmin;
+        font-size: 3lvmin;
     }
 }
 ul,li {
@@ -105,23 +105,23 @@ ul,li {
 
 .page-object {
     box-sizing: border-box;
-    padding: 2dvw 2dvw 2dvw 0;
+    padding: 2lvw 2lvw 2lvw 0;
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 2dvw;
+    column-gap: 2lvw;
     align-items: start;
     justify-content: left;
     width: 100%;
 }
 
 .sidebar-banner {
-    width: 1dvw;
+    width: 1lvw;
     height: 100%;
 }
 
 /* Top banner */
 #banner {
-    font-size: 5dvmin;
+    font-size: 5lvmin;
     width: 100%;
     height: calc(1em + 4 * var(--seperator-height));
     display: flex;
@@ -145,7 +145,7 @@ ul,li {
 /* Introduction */
 #introduction {
     box-sizing: border-box;
-    padding: 2dvw;
+    padding: 2lvw;
     display: flex;
     flex-direction: column;: ;
     min-height: min-content;
@@ -154,10 +154,10 @@ ul,li {
 
 #introduction #header {
     @media (orientation: portrait) {
-        font-size: 20dvmax;
+        font-size: 20lvmax;
     }
     @media (orientation: landscape) {
-        font-size: 10dvmax;
+        font-size: 10lvmax;
     }
     margin: 0;
 }
@@ -187,27 +187,27 @@ ul,li {
         align-items: center;
     }
     @media (orientation: landscape) {
-        height: 20dvw;
+        height: 20lvw;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    padding: 6dvw 2dvw 6dvw 2dvw;
-    row-gap: 6dvw;
+    padding: 6lvw 2lvw 6lvw 2lvw;
+    row-gap: 6lvw;
 }
 
 #menu .button {
     @media (orientation: portrait) {
-        width: 40dvw;
+        width: 40lvw;
     }
     @media (orientation: landscape) {
-        width: 14dvw
+        width: 14lvw
     }
     aspect-ratio: 1/1;
     border-radius: var(--element-corner-radius);
-    margin: 0 2dvmax 0 2dvmax;
+    margin: 0 2lvmax 0 2lvmax;
     box-sizing: border-box;
-    padding: 0.5dvmax;
+    padding: 0.5lvmax;
     display: grid;
     grid-template-areas:
         'title title title'
@@ -224,13 +224,13 @@ ul,li {
 }
 
 @keyframes increase-button-size {
-    0% {width: 14dvw;
-        height: 14dvw;
-        margin: 0 2dvw 0 2dvw;}
+    0% {width: 14lvw;
+        height: 14lvw;
+        margin: 0 2lvw 0 2lvw;}
 
-    100% {width: 16dvw;
-        height: 16dvw;
-        margin: 0 1dvw 0 1dvw;}
+    100% {width: 16lvw;
+        height: 16lvw;
+        margin: 0 1lvw 0 1lvw;}
 }
 
 @media (orientation: landscape) and (pointer: fine) {
@@ -242,10 +242,10 @@ ul,li {
 #menu .button .read-text {
     grid-area: txt;
     @media (orientation: portrait) {
-        font-size: min(2dvmax, 4dvmin);
+        font-size: min(2lvmax, 4lvmin);
     }
     @media (orientation: landscape) {
-        font-size: 1dvmax;
+        font-size: 1lvmax;
     }
     font-weight: bold;
     color: var(--color-white);
@@ -255,10 +255,10 @@ ul,li {
 #menu .button .title-text {
     grid-area: title;
     @media (orientation: portrait) {
-        font-size: min(4dvmax, 6dvmin);
+        font-size: min(4lvmax, 6lvmin);
     }
     @media (orientation: landscape) {
-        font-size: 2dvmax;
+        font-size: 2lvmax;
     }
     font-weight: bold;
     color: var(--color-white);
@@ -268,10 +268,10 @@ ul,li {
 #menu .button .expand-arrow-circle {
     grid-area: arrow;
     @media (orientation: portrait) {
-        width: max(3dvmax, 8dvmin);
+        width: max(3lvmax, 8lvmin);
     }
     @media (orientation: landscape) {
-        width: 3dvmax;
+        width: 3lvmax;
     }
     aspect-ratio: 1/1;
     clip-path: circle(50%);
@@ -283,10 +283,10 @@ ul,li {
     position: relative;
     grid-area: arrow;
     @media (orientation: portrait) {
-        max-height: max(2dvmax, 5.2dvmin);
+        max-height: max(2lvmax, 5.2lvmin);
     }
     @media (orientation: landscape) {
-        max-height: 2dvmax;
+        max-height: 2lvmax;
     }
     justify-self: center;
 }
@@ -326,7 +326,7 @@ ul,li {
 
 .projects-menu {
     width: 100%;
-    height: 20dvw;
+    height: 20lvw;
     padding: 0;
     display: flex;
     position: relative;
@@ -368,7 +368,7 @@ ul,li {
 }
 
 .project-text-window {
-    min-height: 15dvmax;
+    min-height: 15lvmax;
     max-height: 110em;
     overflow-y: auto;
     background-color: light-dark(var(--color-white), var(--color-grey));
@@ -383,10 +383,10 @@ ul,li {
 
 .section-text-header {
     @media (orientation: portrait) {
-        font-size: 7dvmax;
+        font-size: 7lvmax;
     }
     @media (orientation: landscape) {
-        font-size: 5dvmax;
+        font-size: 5lvmax;
     }
     font-weight: bold;
 }
@@ -402,7 +402,7 @@ ul,li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5dvmin;
+    height: 5lvmin;
     width: 100%;
     background-color: light-dark(var(--color-grey), var(--color-white));
     border: none;
@@ -423,26 +423,26 @@ ul,li {
 }
 
 @keyframes open-project-gallery-landscape {
-    0% {height: 5dvmin;}
-    80% {height: 43dvmin;}
+    0% {height: 5lvmin;}
+    80% {height: 43lvmin;}
     100% {height: fit-content;}
 }
 
 @keyframes open-project-gallery-landscape-large {
-    0% {height: 5dvmin;}
-    80% {height: 80dvmin;}
+    0% {height: 5lvmin;}
+    80% {height: 80lvmin;}
     100% {height: fit-content;}
 }
 
 @keyframes open-project-gallery-portrait {
-    0% {height: 5dvmin;}
-    80% {height: 100dvmin;}
+    0% {height: 5lvmin;}
+    80% {height: 100lvmin;}
     100% {height: fit-content;}
 }
 
 @keyframes close-project-gallery {
-    0% {height: 45dvmin;}
-    100% {height: 5dvmin;}
+    0% {height: 45lvmin;}
+    100% {height: 5lvmin;}
 }
 
 .project-images-container .project-images-gallery {
@@ -475,7 +475,7 @@ ul,li {
         width: 100%;
     }
     @media (orientation: landscape) {
-        height: 35dvmin;
+        height: 35lvmin;
     }
 }
 
@@ -484,7 +484,7 @@ ul,li {
         width: 45%;
     }
     @media (orientation: landscape) {
-        height: 35dvmin;
+        height: 35lvmin;
     }
 }
 
@@ -493,14 +493,14 @@ ul,li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30dvw;
+    width: 30lvw;
     aspect-ratio: 6/1;
-    border-radius: 30dvw;
+    border-radius: 30lvw;
     background-color: light-dark(var(--color-grey), var(--color-white));
 }
 
 .project-in-development-bubble-text {
-    font-size: 3dvw;
+    font-size: 3lvw;
     font-weight: bold;
     color: light-dark(var(--color-white), var(--color-black));
 }
@@ -537,14 +537,14 @@ ul,li {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10dvw;
+    border-radius: 10lvw;
     opacity: 0;
     margin-bottom: 5%;
 }
 
 .read-more-bubble .read-more-bubble-text {
     color: inherit;
-    font-size: 1dvw;
+    font-size: 1lvw;
 }
 
 /* About Me */
@@ -675,7 +675,7 @@ ul,li {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2dvmax;
+    margin-top: 2lvmax;
 }
 
 #coding .project-code-logo-list {
@@ -683,12 +683,12 @@ ul,li {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    column-gap: 2dvmax;
-    margin-top: 2dvmax;
+    column-gap: 2lvmax;
+    margin-top: 2lvmax;
 }
 
 #coding .code-logo-list-item {
-    width: min(20%, 10dvmax);
+    width: min(20%, 10lvmax);
     aspect-ratio: 1/1;
 }
 
@@ -709,15 +709,15 @@ ul,li {
             'gmail linkedin'
             'github _';
     gap: 1em;
-    grid-template-rows: auto 25dvmin 25dvmin;
-    grid-template-columns: 25dvmin 25dvmin;
+    grid-template-rows: auto 25lvmin 25lvmin;
+    grid-template-columns: 25lvmin 25lvmin;
     align-items: center;
     justify-items: center;
 }
 
 #contact-me #contact-title {
     grid-area: title;
-    font-size: 7dvmin;
+    font-size: 7lvmin;
     font-weight: bold;
     justify-self: start;
 }
@@ -725,11 +725,11 @@ ul,li {
 #contact-me #contact-pages .contact-link-image {
     aspect-ratio: 1/1;
     border-radius: 10%;
-    height: 20dvmin;
+    height: 20lvmin;
 }
 
 @keyframes increase-contact-link-image-size {
-    100% {height: 24dvmin}
+    100% {height: 24lvmin}
 }
 
 #contact-me #contact-pages .contact-link-image:hover {
