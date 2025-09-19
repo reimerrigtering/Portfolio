@@ -56,7 +56,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-    font-size: 3dvmin;
+    @media (orientation: portrait) {
+        font-size: 5dvmin;
+    }
+    @media (orientation: landscape) {
+        font-size: 3dvmin;
+    }
 }
 ul,li {
     list-style-type: none;
@@ -148,7 +153,12 @@ ul,li {
 }
 
 #introduction #header {
-    font-size: 10dvw;
+    @media (orientation: portrait) {
+        font-size: 20dvmax;
+    }
+    @media (orientation: landscape) {
+        font-size: 10dvmax;
+    }
     margin: 0;
 }
 
@@ -354,19 +364,21 @@ ul,li {
     background-color: light-dark(var(--color-white), var(--color-grey));
 }
 
-.project-text-all {
+.section-text-all {
     display: flex;
     flex-direction: column;
     row-gap: 1em;
     color: light-dark(var(--color-black), var(--color-white));
 }
 
-.project-text-header {
-    font-size: 7dvmin;
+.section-text-header {
+    @media (orientation: portrait) {
+        font-size: 7dvmax;
+    }
+    @media (orientation: landscape) {
+        font-size: 5dvmax;
+    }
     font-weight: bold;
-}
-
-.project-text {
 }
 
 .project-images-container {
