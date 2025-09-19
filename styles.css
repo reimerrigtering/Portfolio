@@ -231,7 +231,12 @@ ul,li {
 
 #menu .button .read-text {
     grid-area: txt;
-    font-size: 1dvmax;
+    @media (orientation: portrait) {
+        font-size: min(1.5dvmax, 2dvmin);
+    }
+    @media (orientation: landscape) {
+        font-size: 1dvmax;
+    }
     font-weight: bold;
     color: var(--color-white);
     justify-self: flex-end;
@@ -239,7 +244,12 @@ ul,li {
 
 #menu .button .title-text {
     grid-area: title;
-    font-size: 2dvmax;
+    @media (orientation: portrait) {
+        font-size: min(3dvmax, 4dvmin);
+    }
+    @media (orientation: landscape) {
+        font-size: 2dvmax;
+    }
     font-weight: bold;
     color: var(--color-white);
     justify-self: center;
