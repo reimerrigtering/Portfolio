@@ -12,11 +12,11 @@
 </head>
 <script src="/app.js"></script>
 <body>
-    <div id="banner">
+    <header id="banner">
         <h2 class="pageHeader">Reimer Rigtering</h2>
-    </div>
+    </header>
 
-    <div id="introduction">
+    <section id="introduction">
         <h2 id="header">Hi!</h2>
         <p id="intro-text">
             I'm a <span class="keyword">Designer</span>
@@ -25,10 +25,10 @@
             I study Industrial Design Engineering and work as Student Coding
             and Media Support for the TU Delft Library.
         </p>
-    </div>
+    </section>
     <div class="seperator"></div>
 
-    <div id="menu" class="page-object">
+    <section id="menu" class="page-object">
         <a href="#about-me" class="button-link">
             <div class="button about-me-color">
                 <h2 class="title-text">About Me</h2>
@@ -69,26 +69,29 @@
                 <img src="/imgs/general/expand.png" alt=">" class="expand-arrow">
             </div>
         </a>
-    </div>
+    </section>
     <div class="seperator"></div>
 
-    <div id="about-me" class="page-object">
+    <section id="about-me" class="page-object">
         <div class="sidebar-banner about-me-color"></div>
-        <p id="about-text">
-            Creation is the most fun of all things. Creating an idea and shaping it into something that works is what
-            I love to do. Starting out with bricks when I was young, I started building my ideas and putting them into
-            the world. Later on, I discovered coding. Building things with an unlimited number of bricks and tools to
-            work with to show my ideas to others.
-            <br><br>
-            Designing is the process of creating, building something together. It is this process, this challenge,
-            which I think is the most interesting part. Finding the best way to combine strengths, cover each other's
-            weaknesses to create the absolute best things possible. This is why I will always be excited to design
-            and develop with others.
-        </p>
-    </div>
+        <div class="section-text-all">
+            <h3 class="section-text-header">About Me</h3>
+            <p id="about-text">
+                Creation is the most fun of all things. Creating an idea and shaping it into something that works is what
+                I love to do. Starting out with bricks when I was young, I started building my ideas and putting them into
+                the world. Later on, I discovered coding. Building things with an unlimited number of bricks and tools to
+                work with to show my ideas to others.
+                <br><br>
+                Designing is the process of creating, building something together. It is this process, this challenge,
+                which I think is the most interesting part. Finding the best way to combine strengths, cover each other's
+                weaknesses to create the absolute best things possible. This is why I will always be excited to design
+                and develop with others.
+            </p>
+        </div>
+    </section>
     <div class="seperator"></div>
 
-    <div id="design">
+    <section id="design">
         <ul class="projects-menu">
             <li class="project-button">
                 <a href="#project-bar" class="project-button-link" onclick=selectProject('project-bar','design')
@@ -134,8 +137,8 @@
         <div class="page-object">
             <div class="sidebar-banner design-color"></div>
             <div class="project-text-window">
-                <div id="general-design-text" class="project-text-all">
-                    <h3 class="project-text-header">Design</h3>
+                <div id="general-design-text" class="section-text-all">
+                    <h3 class="section-text-header">Design</h3>
                     <p class="project-text">
                         Designing is easy, everyone can do it. But designing something well is hard, really hard,
                         actually. This is for me the most important lesson I learned as a designer.
@@ -154,8 +157,8 @@
                         something together.
                     </p>
                 </div>
-                <div id="project-bar-text" class="project-text-all">
-                    <h3 class="project-text-header">Church Youth Group Space Design</h3>
+                <div id="project-bar-text" class="section-text-all">
+                    <h3 class="section-text-header">Church Youth Group Space Design</h3>
                     <p class="project-text">
                         To create opportunities to connect and stay connected, I wanted to create a new social
                         gathering space by transforming a room in a church located in the Heemskerk city center.
@@ -185,8 +188,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-fns-text" class="project-text-all">
-                    <h3 class="project-text-header">Form and Senses Art Project</h3>
+                <div id="project-fns-text" class="section-text-all">
+                    <h3 class="section-text-header">Form and Senses Art Project</h3>
                     <p class="project-text">
                         To stimulate different senses in new ways, my team and I wanted to approach the senses in new
                         and creative ways. We wanted to do this by creating an artwork which targeted the senses
@@ -216,8 +219,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-rover-text" class="project-text-all">
-                    <h3 class="project-text-header">Rover Design and 3D-modeling </h3>
+                <div id="project-rover-text" class="section-text-all">
+                    <h3 class="section-text-header">Rover Design and 3D-modeling </h3>
                     <p class="project-text">
                         To learn VR-sketching, my team wanted to make a finalized project by creating a
                         hypothetical Mars rover and render our model using Blender.
@@ -243,8 +246,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-mower-text" class="project-text-all">
-                    <h3 class="project-text-header">Sketching, Drawing and Editing</h3>
+                <div id="project-mower-text" class="section-text-all">
+                    <h3 class="section-text-header">Sketching, Drawing and Editing</h3>
                     <p class="project-text">
                         Sketching, drawing, and editing are all import skills while designing. They are essential
                         to create a good design and to communicate with others.
@@ -274,10 +277,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="seperator"></div>
 
-    <div id="coding">
+    <section id="coding">
         <ul class="projects-menu">
             <li class="project-button">
                 <a href="#project-QE" class="project-button-link" onclick=selectProject('project-QE','coding')
@@ -326,8 +329,8 @@
         <div class="page-object">
             <div class="sidebar-banner coding-color"></div>
             <div class="project-text-window">
-                <div id="general-coding-text" class="project-text-all">
-                    <h3 class="project-text-header">Coding</h3>
+                <div id="general-coding-text" class="section-text-all">
+                    <h3 class="section-text-header">Coding</h3>
                     <p class="project-text">
                         Making things is amazing. Well, coding is like building something, but with an infinite number
                         of building blocks and opportunities right at your fingertips. So many people who
@@ -357,8 +360,8 @@
                         </li>
                     </ul>
                 </div>
-                <div id="project-QE-text" class="project-text-all">
-                    <h3 class="project-text-header">Quantum English Art Project</h3>
+                <div id="project-QE-text" class="section-text-all">
+                    <h3 class="section-text-header">Quantum English Art Project</h3>
                     <p class="project-text">
                         The Quantum Poiesis project is a piece where I did the coding for
                         an artist. It is the first step towards a quantum computer speaking Old English.
@@ -388,8 +391,8 @@
                         </li>
                     </ul>
                 </div>
-                <div id="project-pUI-text" class="project-text-all">
-                    <h3 class="project-text-header">Pygame UI Library</h3>
+                <div id="project-pUI-text" class="section-text-all">
+                    <h3 class="section-text-header">Pygame UI Library</h3>
                     <p class="project-text">
                         I do a lot of coding just for fun for years now. And my go-to small project has always been
                         small games. I used <a href="https://www.pygame.org/news" target="_blank">pygame</a> for most
@@ -410,8 +413,8 @@
                         </li>
                     </ul>
                 </div>
-                <div id="project-game-text" class="project-text-all">
-                    <h3 class="project-text-header">Game Desing</h3>
+                <div id="project-game-text" class="section-text-all">
+                    <h3 class="section-text-header">Game Desing</h3>
                     <p class="project-text">
                         Designing games is fun, I have made countless quick playable games or translated existing
                         games to the computer screen. I've also built larger games twice, using
@@ -430,8 +433,8 @@
                         </li>
                     </ul>
                 </div>
-                <div id="project-poem-text" class="project-text-all">
-                    <h3 class="project-text-header">Infinite Poem Generation</h3>
+                <div id="project-poem-text" class="section-text-all">
+                    <h3 class="section-text-header">Infinite Poem Generation</h3>
                     <p class="project-text">
                         This project was aimed at infinite generatable poem generation within its simpelest form. Using
                         related words to create an infinitly varying chain of related words.
@@ -453,10 +456,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="seperator"></div>
 
-    <div id="contact-me">
+    <section id="contact-me">
         <div class="page-object">
             <div class="sidebar-banner contact-me-color"></div>
             <div id="contact-pages">
@@ -476,6 +479,6 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>

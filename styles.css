@@ -56,7 +56,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-    font-size: 3dvmin;
+    @media (orientation: portrait) {
+        font-size: 5dvmin;
+    }
+    @media (orientation: landscape) {
+        font-size: 3dvmin;
+    }
 }
 ul,li {
     list-style-type: none;
@@ -148,7 +153,12 @@ ul,li {
 }
 
 #introduction #header {
-    font-size: 10dvw;
+    @media (orientation: portrait) {
+        font-size: 20dvmax;
+    }
+    @media (orientation: landscape) {
+        font-size: 10dvmax;
+    }
     margin: 0;
 }
 
@@ -168,19 +178,36 @@ ul,li {
 /* Menu */
 #menu {
     width: 100%;
-    height: 20dvw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @media (orientation: portrait) {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (orientation: landscape) {
+        height: 20dvw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    padding: 6dvw 2dvw 6dvw 2dvw;
+    row-gap: 6dvw;
 }
 
 #menu .button {
-    width: 14dvw;
-    height: 14dvw;
+    @media (orientation: portrait) {
+        width: 40dvw;
+    }
+    @media (orientation: landscape) {
+        width: 14dvw
+    }
+    aspect-ratio: 1/1;
     border-radius: var(--element-corner-radius);
-    margin: 0 2dvw 0 2dvw;
+    margin: 0 2dvmax 0 2dvmax;
     box-sizing: border-box;
-    padding: 0.5dvw;
+    padding: 0.5dvmax;
     display: grid;
     grid-template-areas:
         'title title title'
@@ -206,13 +233,20 @@ ul,li {
         margin: 0 1dvw 0 1dvw;}
 }
 
-#menu .button:hover {
-    animation: increase-button-size 0.2s ease-in-out forwards;
+@media (orientation: landscape) and (pointer: fine) {
+    #menu .button:hover {
+        animation: increase-button-size 0.2s ease-in-out forwards;
+    }
 }
 
 #menu .button .read-text {
     grid-area: txt;
-    font-size: 1dvw;
+    @media (orientation: portrait) {
+        font-size: min(2dvmax, 4dvmin);
+    }
+    @media (orientation: landscape) {
+        font-size: 1dvmax;
+    }
     font-weight: bold;
     color: var(--color-white);
     justify-self: flex-end;
@@ -220,7 +254,12 @@ ul,li {
 
 #menu .button .title-text {
     grid-area: title;
-    font-size: 2dvw;
+    @media (orientation: portrait) {
+        font-size: min(4dvmax, 6dvmin);
+    }
+    @media (orientation: landscape) {
+        font-size: 2dvmax;
+    }
     font-weight: bold;
     color: var(--color-white);
     justify-self: center;
@@ -228,7 +267,12 @@ ul,li {
 
 #menu .button .expand-arrow-circle {
     grid-area: arrow;
-    width: 3dvw;
+    @media (orientation: portrait) {
+        width: max(3dvmax, 8dvmin);
+    }
+    @media (orientation: landscape) {
+        width: 3dvmax;
+    }
     aspect-ratio: 1/1;
     clip-path: circle(50%);
     background-color: rgba(255, 255, 255, 0.5);
@@ -238,7 +282,12 @@ ul,li {
 #menu .button .expand-arrow {
     position: relative;
     grid-area: arrow;
-    max-height: 2dvw;
+    @media (orientation: portrait) {
+        max-height: max(2dvmax, 5.2dvmin);
+    }
+    @media (orientation: landscape) {
+        max-height: 2dvmax;
+    }
     justify-self: center;
 }
 
@@ -248,8 +297,10 @@ ul,li {
     100% {left: 10%}
 }
 
-#menu .button:hover .expand-arrow {
-    animation: animate-expand-arrow 0.5s ease-in-out forwards;
+@media (orientation: landscape) and (pointer: fine) {
+    #menu .button:hover .expand-arrow {
+        animation: animate-expand-arrow 0.5s ease-in-out forwards;
+    }
 }
 
 #menu .button .image-background {
@@ -318,24 +369,26 @@ ul,li {
 
 .project-text-window {
     min-height: 15dvmax;
-    max-height: 100em;
+    max-height: 110em;
     overflow-y: auto;
     background-color: light-dark(var(--color-white), var(--color-grey));
 }
 
-.project-text-all {
+.section-text-all {
     display: flex;
     flex-direction: column;
     row-gap: 1em;
     color: light-dark(var(--color-black), var(--color-white));
 }
 
-.project-text-header {
-    font-size: 7dvmin;
+.section-text-header {
+    @media (orientation: portrait) {
+        font-size: 7dvmax;
+    }
+    @media (orientation: landscape) {
+        font-size: 5dvmax;
+    }
     font-weight: bold;
-}
-
-.project-text {
 }
 
 .project-images-container {

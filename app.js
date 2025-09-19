@@ -1,5 +1,6 @@
 const designProjectNames = ["project-bar", "project-fns", "project-rover", "project-mower"];
 const codingProjectNames = ["project-QE", "project-pUI", "project-game", "project-poem"];
+const finePointer = window.matchMedia("(pointer: fine)").matches;
 
 function showImages(project) {
     let imageContainer = document.getElementById(`${project}-gallery`);
@@ -90,10 +91,16 @@ function selectProject(project, section) {
 }
 
 function popupBubble(id) {
+    // Preventing popups on mobile devices
+    if (!finePointer) {
+        return;
+    }
+    // Preventing popups when a project is selected
     if (id.includes(window.location.hash.substring(1)) &&
     window.location.hash.substring(1) !== "") {
         return;
     }
+
     let bubble = document.getElementById(id);
     bubble.style.animation = "read-more-bubble-popup 0.8s forwards";
 }
