@@ -205,9 +205,9 @@ ul,li {
     }
     aspect-ratio: 1/1;
     border-radius: var(--element-corner-radius);
-    margin: 0 2dvw 0 2dvw;
+    margin: 0 2dvmax 0 2dvmax;
     box-sizing: border-box;
-    padding: 0.5dvw;
+    padding: 0.5dvmax;
     display: grid;
     grid-template-areas:
         'title title title'
@@ -242,7 +242,7 @@ ul,li {
 #menu .button .read-text {
     grid-area: txt;
     @media (orientation: portrait) {
-        font-size: min(1.5dvmax, 2dvmin);
+        font-size: min(2dvmax, 4dvmin);
     }
     @media (orientation: landscape) {
         font-size: 1dvmax;
@@ -255,7 +255,7 @@ ul,li {
 #menu .button .title-text {
     grid-area: title;
     @media (orientation: portrait) {
-        font-size: min(3dvmax, 4dvmin);
+        font-size: min(4dvmax, 6dvmin);
     }
     @media (orientation: landscape) {
         font-size: 2dvmax;
@@ -267,7 +267,12 @@ ul,li {
 
 #menu .button .expand-arrow-circle {
     grid-area: arrow;
-    width: 3dvmax;
+    @media (orientation: portrait) {
+        width: max(3dvmax, 8dvmin);
+    }
+    @media (orientation: landscape) {
+        width: 3dvmax;
+    }
     aspect-ratio: 1/1;
     clip-path: circle(50%);
     background-color: rgba(255, 255, 255, 0.5);
@@ -277,7 +282,12 @@ ul,li {
 #menu .button .expand-arrow {
     position: relative;
     grid-area: arrow;
-    max-height: 2dvmax;
+    @media (orientation: portrait) {
+        max-height: max(2dvmax, 5.2dvmin);
+    }
+    @media (orientation: landscape) {
+        max-height: 2dvmax;
+    }
     justify-self: center;
 }
 
