@@ -154,10 +154,10 @@ ul,li {
 
 #introduction #header {
     @media (orientation: portrait) or (max-width: 1000px) {
-        font-size: 20vmax;
+        font-size: 50vmin;
     }
     @media (orientation: landscape) {
-        font-size: 10vmax;
+        font-size: 30vmin;
     }
     margin: 0;
 }
@@ -241,11 +241,11 @@ ul,li {
 
 #menu .button .read-text {
     grid-area: txt;
-    @media (orientation: portrait) {
-        font-size: min(2vmax, 4vmin);
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 4vmin;
     }
     @media (orientation: landscape) {
-        font-size: 1vmax;
+        font-size: min(2vmin, calc(4vw/3));
     }
     font-weight: bold;
     color: var(--color-white);
@@ -254,11 +254,11 @@ ul,li {
 
 #menu .button .title-text {
     grid-area: title;
-    @media (orientation: portrait) {
-        font-size: min(4vmax, 6vmin);
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 5vmin;
     }
     @media (orientation: landscape) {
-        font-size: 2vmax;
+        font-size: min(3vmin, 2vw);
     }
     font-weight: bold;
     color: var(--color-white);
@@ -268,10 +268,10 @@ ul,li {
 #menu .button .expand-arrow-circle {
     grid-area: arrow;
     @media (orientation: portrait) {
-        width: max(3vmax, 8vmin);
+        width: 8vmin;
     }
     @media (orientation: landscape) {
-        width: 3vmax;
+        width: min(5vmin, calc(10vw/3));
     }
     aspect-ratio: 1/1;
     clip-path: circle(50%);
@@ -283,10 +283,10 @@ ul,li {
     position: relative;
     grid-area: arrow;
     @media (orientation: portrait) {
-        max-height: max(2vmax, 5.2vmin);
+        max-height: 5.2vmin;
     }
     @media (orientation: landscape) {
-        max-height: 2vmax;
+        max-height: min(3vmin, 2vw);
     }
     justify-self: center;
 }
@@ -328,13 +328,13 @@ ul,li {
     width: 100%;
     padding: 0;
     @media (orientation: portrait) {
-        height: 40vmax;
+        aspect-ratio: 5/2;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
     }
     @media (orientation: landscape) {
-        height: 20vmax;
+        aspect-ratio: 5/1;
         display: flex;
     }
     position: relative;
@@ -394,11 +394,11 @@ ul,li {
 }
 
 .section-text-header {
-    @media (orientation: portrait) {
-        font-size: 7vmax;
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 14vmin;
     }
     @media (orientation: landscape) {
-        font-size: 5vmax;
+        font-size: 10vmin;
     }
     font-weight: bold;
 }
