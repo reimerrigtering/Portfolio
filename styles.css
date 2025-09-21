@@ -27,13 +27,13 @@ body {
     --contact-me-color: var(--color-orange);
 
     /* Element distances */
-    --seperator-height: 1.5lvmin;
-    --element-corner-radius: 2lvmin;
+    --seperator-height: 1.5vmin;
+    --element-corner-radius: 2vmin;
 
     /* Animations */
     --color-fade-in-animation: color-in-image 0.5s forwards;
 
-    font-family: Helvetica, sans-serif;
+    font-family: Hevetica, sans-serif;
     font-weight: normal;
     margin: 0;
     background-color: var(--color-white);
@@ -57,10 +57,15 @@ h1, h2, h3, h4, h5, h6, p {
 
 p {
     @media (orientation: portrait) {
-        font-size: 5lvmin;
+        font-size: 5vmin;
     }
     @media (orientation: landscape) {
-        font-size: 3lvmin;
+        @media (max-width: 1000px) {
+            font-size: 4vmin;
+        }
+        @media (min-width: 1000px) {
+            font-size: 3vmin;
+        }
     }
 }
 ul,li {
@@ -105,23 +110,23 @@ ul,li {
 
 .page-object {
     box-sizing: border-box;
-    padding: 2lvw 2lvw 2lvw 0;
+    padding: 2vw 2vw 2vw 0;
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 2lvw;
+    column-gap: 2vw;
     align-items: start;
     justify-content: left;
     width: 100%;
 }
 
 .sidebar-banner {
-    width: 1lvw;
+    width: 1vw;
     height: 100%;
 }
 
 /* Top banner */
 #banner {
-    font-size: 5lvmin;
+    font-size: 5vmin;
     width: 100%;
     height: calc(1em + 4 * var(--seperator-height));
     display: flex;
@@ -145,7 +150,7 @@ ul,li {
 /* Introduction */
 #introduction {
     box-sizing: border-box;
-    padding: 2lvw;
+    padding: 2vw;
     display: flex;
     flex-direction: column;: ;
     min-height: min-content;
@@ -154,10 +159,15 @@ ul,li {
 
 #introduction #header {
     @media (orientation: portrait) {
-        font-size: 20lvmax;
+        font-size: 20vmax;
     }
     @media (orientation: landscape) {
-        font-size: 10lvmax;
+        @media (max-width: 1000px) {
+            font-size: 15vmax;
+        }
+        @media (min-width: 1000px) {
+            font-size: 10vmax;
+        }
     }
     margin: 0;
 }
@@ -177,37 +187,37 @@ ul,li {
 
 /* Menu */
 #menu {
-    width: 100%;
+    width: 100vw;
     @media (orientation: portrait) {
-        height: fit-content;
+        box-sizing: border-box;
+        aspect-ratio: 1/1;
+        padding: calc(20vw / 3);
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        justify-content: center;
-        align-items: center;
+        grid-template-columns: min-content min-content;
+        grid-template-rows: min-content min-content;
+        gap: calc(20vw / 3);
     }
     @media (orientation: landscape) {
-        height: 20lvw;
+        height: 20vw;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        padding: 0;
     }
-    padding: 6lvw 2lvw 6lvw 2lvw;
-    row-gap: 6lvw;
 }
 
 #menu .button {
     @media (orientation: portrait) {
-        width: 40lvw;
+        width: 40vw;
     }
     @media (orientation: landscape) {
-        width: 14lvw
+        width: 14vw;
+        margin: 0 2vmax 0 2vmax;
     }
     aspect-ratio: 1/1;
     border-radius: var(--element-corner-radius);
-    margin: 0 2lvmax 0 2lvmax;
     box-sizing: border-box;
-    padding: 0.5lvmax;
+    padding: 0.5vmax;
     display: grid;
     grid-template-areas:
         'title title title'
@@ -224,13 +234,13 @@ ul,li {
 }
 
 @keyframes increase-button-size {
-    0% {width: 14lvw;
-        height: 14lvw;
-        margin: 0 2lvw 0 2lvw;}
+    0% {width: 14vw;
+        height: 14vw;
+        margin: 0 2vw 0 2vw;}
 
-    100% {width: 16lvw;
-        height: 16lvw;
-        margin: 0 1lvw 0 1lvw;}
+    100% {width: 16vw;
+        height: 16vw;
+        margin: 0 1vw 0 1vw;}
 }
 
 @media (orientation: landscape) and (pointer: fine) {
@@ -242,10 +252,10 @@ ul,li {
 #menu .button .read-text {
     grid-area: txt;
     @media (orientation: portrait) {
-        font-size: min(2lvmax, 4lvmin);
+        font-size: min(2vmax, 4vmin);
     }
     @media (orientation: landscape) {
-        font-size: 1lvmax;
+        font-size: 1vmax;
     }
     font-weight: bold;
     color: var(--color-white);
@@ -255,10 +265,10 @@ ul,li {
 #menu .button .title-text {
     grid-area: title;
     @media (orientation: portrait) {
-        font-size: min(4lvmax, 6lvmin);
+        font-size: min(4vmax, 6vmin);
     }
     @media (orientation: landscape) {
-        font-size: 2lvmax;
+        font-size: 2vmax;
     }
     font-weight: bold;
     color: var(--color-white);
@@ -268,10 +278,10 @@ ul,li {
 #menu .button .expand-arrow-circle {
     grid-area: arrow;
     @media (orientation: portrait) {
-        width: max(3lvmax, 8lvmin);
+        width: max(3vmax, 8vmin);
     }
     @media (orientation: landscape) {
-        width: 3lvmax;
+        width: 3vmax;
     }
     aspect-ratio: 1/1;
     clip-path: circle(50%);
@@ -283,10 +293,10 @@ ul,li {
     position: relative;
     grid-area: arrow;
     @media (orientation: portrait) {
-        max-height: max(2lvmax, 5.2lvmin);
+        max-height: max(2vmax, 5.2vmin);
     }
     @media (orientation: landscape) {
-        max-height: 2lvmax;
+        max-height: 2vmax;
     }
     justify-self: center;
 }
@@ -328,13 +338,13 @@ ul,li {
     width: 100%;
     padding: 0;
     @media (orientation: portrait) {
-        height: 40lvmax;
+        height: 40vmax;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
     }
     @media (orientation: landscape) {
-        height: 20lvmax;
+        height: 20vmax;
         display: flex;
     }
     position: relative;
@@ -381,9 +391,8 @@ ul,li {
 }
 
 .project-text-window {
-    min-height: 15lvmax;
-    max-height: 110em;
-    overflow-y: auto;
+    min-height: 15vmax;
+    overflow-y: hidden;
     background-color: light-dark(var(--color-white), var(--color-grey));
 }
 
@@ -396,10 +405,10 @@ ul,li {
 
 .section-text-header {
     @media (orientation: portrait) {
-        font-size: 7lvmax;
+        font-size: 7vmax;
     }
     @media (orientation: landscape) {
-        font-size: 5lvmax;
+        font-size: 5vmax;
     }
     font-weight: bold;
 }
@@ -415,7 +424,7 @@ ul,li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5lvmin;
+    height: 5vmin;
     width: 100%;
     background-color: light-dark(var(--color-grey), var(--color-white));
     border: none;
@@ -436,26 +445,26 @@ ul,li {
 }
 
 @keyframes open-project-gallery-landscape {
-    0% {height: 5lvmin;}
-    80% {height: 43lvmin;}
+    0% {height: 5vmin;}
+    80% {height: 43vmin;}
     100% {height: fit-content;}
 }
 
 @keyframes open-project-gallery-landscape-large {
-    0% {height: 5lvmin;}
-    80% {height: 80lvmin;}
+    0% {height: 5vmin;}
+    80% {height: 80vmin;}
     100% {height: fit-content;}
 }
 
 @keyframes open-project-gallery-portrait {
-    0% {height: 5lvmin;}
-    80% {height: 100lvmin;}
+    0% {height: 5vmin;}
+    80% {height: 100vmin;}
     100% {height: fit-content;}
 }
 
 @keyframes close-project-gallery {
-    0% {height: 45lvmin;}
-    100% {height: 5lvmin;}
+    0% {height: 45vmin;}
+    100% {height: 5vmin;}
 }
 
 .project-images-container .project-images-gallery {
@@ -488,7 +497,7 @@ ul,li {
         width: 100%;
     }
     @media (orientation: landscape) {
-        height: 35lvmin;
+        height: 35vmin;
     }
 }
 
@@ -497,7 +506,7 @@ ul,li {
         width: 45%;
     }
     @media (orientation: landscape) {
-        height: 35lvmin;
+        height: 35vmin;
     }
 }
 
@@ -506,14 +515,14 @@ ul,li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30lvw;
+    width: 30vw;
     aspect-ratio: 6/1;
-    border-radius: 30lvw;
+    border-radius: 30vw;
     background-color: light-dark(var(--color-grey), var(--color-white));
 }
 
 .project-in-development-bubble-text {
-    font-size: 3lvw;
+    font-size: 3vw;
     font-weight: bold;
     color: light-dark(var(--color-white), var(--color-black));
 }
@@ -550,14 +559,14 @@ ul,li {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10lvw;
+    border-radius: 10vw;
     opacity: 0;
     margin-bottom: 5%;
 }
 
 .read-more-bubble .read-more-bubble-text {
     color: inherit;
-    font-size: 1lvw;
+    font-size: 1vw;
 }
 
 /* About Me */
@@ -688,7 +697,7 @@ ul,li {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2lvmax;
+    margin-top: 2vmax;
 }
 
 #coding .project-code-logo-list {
@@ -696,12 +705,12 @@ ul,li {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    column-gap: 2lvmax;
-    margin-top: 2lvmax;
+    column-gap: 2vmax;
+    margin-top: 2vmax;
 }
 
 #coding .code-logo-list-item {
-    width: min(20%, 10lvmax);
+    width: min(20%, 10vmax);
     aspect-ratio: 1/1;
 }
 
@@ -722,15 +731,15 @@ ul,li {
             'gmail linkedin'
             'github _';
     gap: 1em;
-    grid-template-rows: auto 25lvmin 25lvmin;
-    grid-template-columns: 25lvmin 25lvmin;
+    grid-template-rows: auto 25vmin 25vmin;
+    grid-template-columns: 25vmin 25vmin;
     align-items: center;
     justify-items: center;
 }
 
 #contact-me #contact-title {
     grid-area: title;
-    font-size: 7lvmin;
+    font-size: 7vmin;
     font-weight: bold;
     justify-self: start;
 }
@@ -738,11 +747,11 @@ ul,li {
 #contact-me #contact-pages .contact-link-image {
     aspect-ratio: 1/1;
     border-radius: 10%;
-    height: 20lvmin;
+    height: 20vmin;
 }
 
 @keyframes increase-contact-link-image-size {
-    100% {height: 24lvmin}
+    100% {height: 24vmin}
 }
 
 #contact-me #contact-pages .contact-link-image:hover {
