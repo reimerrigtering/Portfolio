@@ -56,16 +56,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-    @media (orientation: portrait) {
+    @media (orientation: portrait) or (max-width: 1000px) {
         font-size: 5vmin;
     }
     @media (orientation: landscape) {
-        @media (max-width: 1000px) {
-            font-size: 4vmin;
-        }
-        @media (min-width: 1000px) {
-            font-size: 3vmin;
-        }
+        font-size: 3vmin;
     }
 }
 ul,li {
@@ -158,16 +153,11 @@ ul,li {
 }
 
 #introduction #header {
-    @media (orientation: portrait) {
+    @media (orientation: portrait) or (max-width: 1000px) {
         font-size: 20vmax;
     }
     @media (orientation: landscape) {
-        @media (max-width: 1000px) {
-            font-size: 15vmax;
-        }
-        @media (min-width: 1000px) {
-            font-size: 10vmax;
-        }
+        font-size: 10vmax;
     }
     margin: 0;
 }
