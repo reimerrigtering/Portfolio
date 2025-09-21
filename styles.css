@@ -328,7 +328,7 @@ ul,li {
     width: 100%;
     padding: 0;
     @media (orientation: portrait) {
-        aspect-ratio: 5/2;
+        aspect-ratio: 5/4;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
