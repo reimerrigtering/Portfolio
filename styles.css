@@ -734,23 +734,89 @@ ul,li {
     justify-self: start;
 }
 
-#contact-me #contact-pages .contact-link-image {
+#contact-me #contact-pages .contact-link {
+    height: 20vmin;
     aspect-ratio: 1/1;
     border-radius: 10%;
-    height: 20vmin;
+    position: relative;
 }
 
-@keyframes increase-contact-link-image-size {
+#contact-me #contact-pages .contact-link-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    position: absolute;
+}
+
+@keyframes increase-contact-link-resize {
     100% {height: 24vmin}
 }
 
-#contact-me #contact-pages .contact-link-image:hover {
-    animation: increase-contact-link-image-size 0.2s ease-in-out forwards;
+#contact-me #contact-pages .contact-link:hover {
+    animation: increase-contact-link-resize 0.2s ease-in-out forwards
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --border-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: red;
+}
+
+@property --border-width {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0;
+}
+
+#contact-me #contact-pages .contact-link-image-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    transform: translate(calc(-1 * var(--border-width)), calc(-1 * var(--border-width)));
+    border-radius: 12%;
+    z-index: -1;
+    background-image: conic-gradient(from var(--border-angle),
+        transparent 10%,
+        var(--border-color)
+        );
+}
+
+#contact-me #contact-pages .contact-link:hover .contact-link-image-border {
+    animation:
+            rotate-link-border 3s linear infinite,
+            expand-link-border 0.5s ease-in-out forwards,
+            recolor-link-border 10s linear infinite;
+}
+
+@keyframes expand-link-border {
+    0% {--border-width: 0;}
+    100% {--border-width: 1vmin;}
+}
+
+@keyframes rotate-link-border {
+    0% {--border-angle: 0deg;}
+    100% {--border-angle: 360deg;}
+}
+
+@keyframes recolor-link-border {
+    0% {--border-color: red}
+    20% {--border-color: yellow}
+    40% {--border-color: green}
+    60% {--border-color: blue}
+    80% {--border-color: deeppink}
+    100% {--border-color: red}
 }
 
 #contact-me #contact-pages #contact-gmail {
     grid-area: gmail;
-    background-color: light-dark(var(--color-grey), var(--color-white));
+    background-color: var(--color-white);
 }
 
 #contact-me #contact-pages #contact-linkedin {
@@ -759,4 +825,7 @@ ul,li {
 
 #contact-me #contact-pages #contact-github {
     grid-area: github;
+    box-sizing: border-box;
+    padding: 8%;
+    background-color: light-dark(var(--color-white), var(--color-grey))
 }
