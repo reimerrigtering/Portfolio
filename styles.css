@@ -65,9 +65,9 @@ p {
 }
 ul,li {
     list-style-type: none;
-    list-style-position:inside;
-    margin:0;
-    padding:0;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
 }
 
 .about-me-color {
@@ -147,7 +147,7 @@ ul,li {
     box-sizing: border-box;
     padding: 2vw;
     display: flex;
-    flex-direction: column;: ;
+    flex-direction: column;
     min-height: min-content;
     align-items: start;
 }
@@ -226,11 +226,12 @@ ul,li {
 @keyframes increase-button-size {
     0% {width: 14vw;
         height: 14vw;
-        margin: 0 2vw 0 2vw;}
-
+        margin: 0 2vw 0 2vw;
+    }
     100% {width: 16vw;
         height: 16vw;
-        margin: 0 1vw 0 1vw;}
+        margin: 0 1vw 0 1vw;
+    }
 }
 
 @media (orientation: landscape) and (pointer: fine) {
@@ -292,9 +293,9 @@ ul,li {
 }
 
 @keyframes animate-expand-arrow {
-    0% {left: 0}
-    20% {left: -5%}
-    100% {left: 10%}
+    0% {left: 0;}
+    20% {left: -5%;}
+    100% {left: 10%;}
 }
 
 @media (orientation: landscape) and (pointer: fine) {
@@ -521,11 +522,13 @@ ul,li {
     0% {
         opacity: 0;
         aspect-ratio: 1/1;
-        color: light-dark(#00000000, #ffffff00);}
+        color: light-dark(#00000000, #ffffff00);
+    }
     10% {
         opacity: 1;
         aspect-ratio: 1/1;
-        color: light-dark(#00000000, #ffffff00);}
+        color: light-dark(#00000000, #ffffff00);
+    }
     70% {
         opacity: 1;
         aspect-ratio: 9/1;
@@ -734,23 +737,90 @@ ul,li {
     justify-self: start;
 }
 
-#contact-me #contact-pages .contact-link-image {
+#contact-me #contact-pages .contact-link {
+    height: 20vmin;
     aspect-ratio: 1/1;
     border-radius: 10%;
-    height: 20vmin;
+    position: relative;
 }
 
-@keyframes increase-contact-link-image-size {
-    100% {height: 24vmin}
+#contact-me #contact-pages .contact-link-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    position: absolute;
 }
 
-#contact-me #contact-pages .contact-link-image:hover {
-    animation: increase-contact-link-image-size 0.2s ease-in-out forwards;
+@keyframes increase-contact-link-resize {
+    100% {height: 24vmin;}
+}
+
+@media (pointer: fine) {
+    #contact-me #contact-pages .contact-link:hover {
+        animation: increase-contact-link-resize 0.2s ease-in-out forwards;
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@property --border-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: red;
+}
+
+@property --border-width {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0;
+}
+
+#contact-me #contact-pages .contact-link-image-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    transform: translate(calc(-1 * var(--border-width)), calc(-1 * var(--border-width)));
+    border-radius: 12%;
+    z-index: -1;
+    background-image: conic-gradient(from var(--border-angle), transparent 10%, var(--border-color));
+}
+
+@media (pointer: fine) {
+    #contact-me #contact-pages .contact-link:hover .contact-link-image-border {
+        animation:
+                rotate-link-border 3s linear infinite,
+                expand-link-border 0.5s ease-in-out forwards,
+                recolor-link-border 10s linear infinite;
+    }
+}
+
+@keyframes expand-link-border {
+    0% {--border-width: 0;}
+    100% {--border-width: 1vmin;}
+}
+
+@keyframes rotate-link-border {
+    0% {--border-angle: 0deg;}
+    100% {--border-angle: 360deg;}
+}
+
+@keyframes recolor-link-border {
+    0% {--border-color: red;}
+    20% {--border-color: yellow;}
+    40% {--border-color: green;}
+    60% {--border-color: blue;}
+    80% {--border-color: deeppink;}
+    100% {--border-color: red;}
 }
 
 #contact-me #contact-pages #contact-gmail {
     grid-area: gmail;
-    background-color: light-dark(var(--color-grey), var(--color-white));
+    background-color: var(--color-white);
 }
 
 #contact-me #contact-pages #contact-linkedin {
@@ -759,4 +829,7 @@ ul,li {
 
 #contact-me #contact-pages #contact-github {
     grid-area: github;
+    box-sizing: border-box;
+    padding: 8%;
+    background-color: light-dark(var(--color-white), var(--color-grey));
 }
