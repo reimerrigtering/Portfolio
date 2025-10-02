@@ -787,7 +787,7 @@ ul,li {
     transform: translate(calc(-1 * var(--border-width)), calc(-1 * var(--border-width)));
     border-radius: 12%;
     z-index: -1;
-    background-image: conic-gradient(from var(--border-angle), transparent 10%, var(--border-color));
+    background-image: conic-gradient(from var(--border-angle), transparent 70%, var(--border-color));
 }
 
 @media (pointer: fine) {
@@ -795,13 +795,13 @@ ul,li {
         animation:
                 rotate-link-border 3s linear infinite,
                 expand-link-border 0.5s ease-in-out forwards,
-                recolor-link-border 10s linear infinite;
+                recolor-link-border 3s linear infinite;
     }
 }
 
 @keyframes expand-link-border {
     0% {--border-width: 0;}
-    100% {--border-width: 1vmin;}
+    100% {--border-width: 0.5vmin;}
 }
 
 @keyframes rotate-link-border {
