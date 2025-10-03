@@ -703,8 +703,9 @@ ul,li {
 }
 
 #coding .code-logo-list-item {
-    width: min(20%, 10vmax);
-    aspect-ratio: 1/1;
+    max-width: min(20%, 10vmax);
+    max-height: min(20%, 10vmax);
+    aspect-ratio: 1 / 1;
 }
 
 #coding .code-logo-image {
@@ -718,27 +719,26 @@ ul,li {
 }
 
 #contact-me #contact-pages {
-    display: grid;
-    grid-template-areas:
-            'title title'
-            'gmail linkedin'
-            'github _';
+    display: flex;
+    flex-direction: column;
     gap: 1em;
-    grid-template-rows: auto 25vmin 25vmin;
-    grid-template-columns: 25vmin 25vmin;
-    align-items: center;
-    justify-items: center;
 }
 
 #contact-me #contact-title {
     grid-area: title;
-    font-size: 7vmin;
-    font-weight: bold;
     justify-self: start;
 }
 
+#contact-me #contact-pages #content-links-collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: inherit;
+}
+
 #contact-me #contact-pages .contact-link {
-    height: 20vmin;
+    height: 24vmin;
+    margin: 3vmin;
     aspect-ratio: 1/1;
     border-radius: 10%;
     position: relative;
@@ -752,7 +752,7 @@ ul,li {
 }
 
 @keyframes increase-contact-link-resize {
-    100% {height: 24vmin;}
+    100% {height: 30vmin; margin: 0;}
 }
 
 @media (pointer: fine) {
