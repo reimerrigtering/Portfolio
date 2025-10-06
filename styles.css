@@ -87,17 +87,17 @@ ul,li {
 }
 
 @keyframes moving-background {
-    0% {background-position: 100% 0;}
-    100% {background-position: -100% 0;}
+    0% {background-position: -100% 0;}
+    100% {background-position: 100% 0;}
 }
 
 .seperator {
     width: 100%;
     height: var(--seperator-height);
-    background-image: repeating-linear-gradient(90deg,
-    var(--color-aqua),
-    var(--color-turquoise),
-    var(--color-aqua));
+    background-image: repeating-linear-gradient(70deg,
+    var(--color-aqua) 0% 10%,
+    var(--color-turquoise) 20% 40%,
+    var(--color-aqua) 50% 100%);
     background-position: 0 0;
     background-size: 200% 100%;
     animation: moving-background 60s infinite;
@@ -126,10 +126,10 @@ ul,li {
     height: calc(1em + 4 * var(--seperator-height));
     display: flex;
     align-items: center;
-    background-image: repeating-linear-gradient(90deg,
-    var(--color-aqua),
-    var(--color-turquoise),
-    var(--color-aqua));
+    background-image: repeating-linear-gradient(70deg,
+    var(--color-aqua) 0% 10%,
+    var(--color-turquoise) 20% 40%,
+    var(--color-aqua) 50% 100%);
     background-position: 0 0;
     background-size: 200% 100%;
     animation: moving-background 60s infinite;
